@@ -1,0 +1,522 @@
+{
+  "version": 1,
+  "commands": [
+    {
+      "name": "Admin",
+      "syntax": "[SteamID | Player]",
+      "classifications": ["runtime"],
+      "description": "Adds the specified player to the list of users with administrator privileges.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false }
+      ]
+    },
+    {
+      "name": "Admins",
+      "syntax": "",
+      "classifications": ["any"],
+      "description": "Outputs a list of the server's administrators to the server console.",
+      "params": []
+    },
+    {
+      "name": "Airdrop",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Immediately forces a dropship to fly over the map and perform an airdrop.",
+      "params": []
+    },
+    {
+      "name": "AllowP2PRelay",
+      "syntax": "[boolean]",
+      "classifications": ["runtime"],
+      "description": "Toggles usage of the ISteamNetworking member function AllowP2PPacketRelay.",
+      "params": [
+        { "name": "Relay", "types": ["boolean"], "optional": false }
+      ]
+    },
+    {
+      "name": "Animal",
+      "syntax": "[SteamID | Player]/[AnimalID]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Spawns an animal in front of the specified player, or the executing player if none is given.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Animal", "types": ["animal"], "optional": false }
+      ]
+    },
+    {
+      "name": "Ban",
+      "syntax": "[SteamID | Player]/[Reason]/[Duration]",
+      "classifications": ["runtime"],
+      "description": "Bans the specified player. Blank reason/duration defaults to \"unspecified\" for 365 days.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false },
+        { "name": "Reason", "types": ["string"], "optional": true, "default": "unspecified" },
+        { "name": "Duration", "types": ["duration"], "optional": true, "default": "31536000" }
+      ]
+    },
+    {
+      "name": "Bans",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Outputs a list of the server's player bans to the server console.",
+      "params": []
+    },
+    {
+      "name": "Chatrate",
+      "syntax": "[Number]",
+      "classifications": ["any"],
+      "description": "Assigns a cooldown between chat messages, in seconds.",
+      "params": [
+        { "name": "Number", "types": ["float"], "optional": false, "default": "0.25", "min": 0, "max": 60 }
+      ]
+    },
+    {
+      "name": "Cheats",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Allows the usage of cheat commands.",
+      "params": []
+    },
+    {
+      "name": "Cycle",
+      "syntax": "[Number]",
+      "classifications": ["any"],
+      "description": "Assigns the length of the day/night cycle in seconds.",
+      "params": [
+        { "name": "Number", "types": ["integer"], "optional": false, "default": "3600" }
+      ]
+    },
+    {
+      "name": "Day",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Sets the current time to daytime.",
+      "params": []
+    },
+    {
+      "name": "Debug",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Outputs information on the state of the server, to the server console.",
+      "params": []
+    },
+    {
+      "name": "EffectUI",
+      "syntax": "[EffectID]/[Token]...",
+      "classifications": ["runtime"],
+      "description": "Spawns a UI effect for the executing player.",
+      "params": [
+        { "name": "Effect", "types": ["effect"], "optional": false },
+        { "name": "Token", "types": ["string"], "optional": true }
+      ]
+    },
+    {
+      "name": "Experience",
+      "syntax": "[SteamID | Player]/[Experience]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Gives a player some experience points. Defaults to the executing player.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Experience", "types": ["integer"], "optional": false }
+      ]
+    },
+    {
+      "name": "Filter",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Filters out players with non-English, non-alphanumeric names.",
+      "params": []
+    },
+    {
+      "name": "Flag",
+      "syntax": "[SteamID | Player]/[Flag]/[Value]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Sets a player's flag. Defaults to the executing player.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Flag", "types": ["flag"], "optional": false },
+        { "name": "Value", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "GameMode",
+      "syntax": "[Class Name]",
+      "classifications": ["config"],
+      "description": "Assigns the game mode of the server.",
+      "params": [
+        { "name": "Class", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "Give",
+      "syntax": "[SteamID | Player]/[ItemID | ItemName | ItemFilename]/[Amount]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Gives a player an item. Defaults to the executing player and an amount of 1.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Item", "types": ["item"], "optional": false },
+        { "name": "Amount", "types": ["integer"], "optional": true, "default": "1", "min": 1 }
+      ]
+    },
+    {
+      "name": "Gold",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Marks the server as joinable only by Gold members.",
+      "params": []
+    },
+    {
+      "name": "GSLT",
+      "syntax": "[Login Token]",
+      "classifications": ["config"],
+      "description": "Sets the game server login token.",
+      "params": [
+        { "name": "Token", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "Help",
+      "syntax": "[Command]",
+      "classifications": ["any"],
+      "description": "Outputs information on commands, to the server console.",
+      "params": [
+        { "name": "Command", "types": ["string"], "optional": true }
+      ]
+    },
+    {
+      "name": "Hide_Admins",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Hides the visibility of admin labels from players.",
+      "params": []
+    },
+    {
+      "name": "Kick",
+      "syntax": "[SteamID | Player]/[Reason]",
+      "classifications": ["runtime"],
+      "description": "Disconnects the specified player from the server. Reason defaults to \"unspecified\".",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false },
+        { "name": "Reason", "types": ["string"], "optional": true, "default": "unspecified" }
+      ]
+    },
+    {
+      "name": "Kill",
+      "syntax": "[SteamID | Player]",
+      "classifications": ["runtime"],
+      "description": "Kills the specified player in-game.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false }
+      ]
+    },
+    {
+      "name": "Map",
+      "syntax": "[Level]",
+      "classifications": ["config"],
+      "description": "Sets the map that the server loads on startup.",
+      "params": [
+        { "name": "Level", "types": ["map"], "optional": false, "default": "PEI" }
+      ]
+    },
+    {
+      "name": "MaxPlayers",
+      "syntax": "[Number]",
+      "classifications": ["any"],
+      "description": "Sets the maximum number of connections the server is willing to accept.",
+      "params": [
+        { "name": "Number", "types": ["integer"], "optional": false, "default": "8", "min": 1, "max": 200 }
+      ]
+    },
+    {
+      "name": "Mode",
+      "syntax": "[Easy | Normal | Hard]",
+      "classifications": ["config"],
+      "description": "Assigns the difficulty of the server.",
+      "params": [
+        { "name": "Difficulty", "types": ["enum"], "optional": false, "default": "Normal", "values": ["Easy", "Normal", "Hard"] }
+      ]
+    },
+    {
+      "name": "Name",
+      "syntax": "[Text]",
+      "classifications": ["any"],
+      "description": "Assigns the name of the server as shown on the server list.",
+      "params": [
+        { "name": "Text", "types": ["string"], "optional": false, "default": "Unturned", "min": 5, "max": 50 }
+      ]
+    },
+    {
+      "name": "Night",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Sets the current time to night.",
+      "params": []
+    },
+    {
+      "name": "Owner",
+      "syntax": "[SteamID]",
+      "classifications": ["config"],
+      "description": "Sets the owner of the server.",
+      "params": [
+        { "name": "SteamID", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "Password",
+      "syntax": "[Text]",
+      "classifications": ["config"],
+      "description": "Assigns the password required for entry into the server.",
+      "params": [
+        { "name": "Password", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "Permit",
+      "syntax": "[SteamID]/[Tag]",
+      "classifications": ["runtime"],
+      "description": "Adds the specified player to the list of users allowed to join the server.",
+      "params": [
+        { "name": "SteamID", "types": ["string"], "optional": false },
+        { "name": "Tag", "types": ["string"], "optional": true }
+      ]
+    },
+    {
+      "name": "Permits",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Outputs a list of the players permitted to join the server, to the server console.",
+      "params": []
+    },
+    {
+      "name": "Perspective",
+      "syntax": "[First | Third | Both | Vehicle]",
+      "classifications": ["config"],
+      "description": "Assigns the perspective of the server.",
+      "params": [
+        { "name": "Perspective", "types": ["enum"], "optional": false, "default": "First", "values": ["First", "Third", "Both", "Vehicle"] }
+      ]
+    },
+    {
+      "name": "Players",
+      "syntax": "",
+      "classifications": ["any"],
+      "description": "Outputs a list of the current players on the server, to the server console.",
+      "params": []
+    },
+    {
+      "name": "Port",
+      "syntax": "[Number]",
+      "classifications": ["config"],
+      "description": "Assigns the port of the server.",
+      "params": [
+        { "name": "Port", "types": ["integer"], "optional": false, "default": "27015", "min": 1, "max": 65535 }
+      ]
+    },
+    {
+      "name": "PvE",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Disables player-versus-player combat, in favor of player-versus-environment combat.",
+      "params": []
+    },
+    {
+      "name": "Quest",
+      "syntax": "[SteamID | Player]/[Quest]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Gives a player a quest flag. Defaults to the executing player.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Quest", "types": ["quest"], "optional": false }
+      ]
+    },
+    {
+      "name": "Queue_Size",
+      "syntax": "[Number]",
+      "classifications": ["any"],
+      "description": "Sets the maximum number of queued connections the server is willing to hold on to.",
+      "params": [
+        { "name": "Number", "types": ["integer"], "optional": false, "default": "8", "min": 0, "max": 64 }
+      ]
+    },
+    {
+      "name": "Reload",
+      "syntax": "[GUID | Directory]",
+      "classifications": ["runtime"],
+      "description": "Reloads an asset specified by its GUID, or the contents of a directory.",
+      "params": [
+        { "name": "GUID", "types": ["guid"], "optional": false }
+      ]
+    },
+    {
+      "name": "Reputation",
+      "syntax": "[SteamID | Player]/[Reputation]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Gives a player some reputation. Defaults to the executing player.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Reputation", "types": ["integer"], "optional": false }
+      ]
+    },
+    {
+      "name": "ResetConfig",
+      "syntax": "",
+      "classifications": ["runtime"],
+      "description": "Resets the config file to the default values.",
+      "params": []
+    },
+    {
+      "name": "Save",
+      "syntax": "",
+      "classifications": ["any"],
+      "description": "Forces a proper save of the server state.",
+      "params": []
+    },
+    {
+      "name": "Say",
+      "syntax": "[Text]/[R]/[G]/[B]",
+      "classifications": ["runtime"],
+      "description": "Broadcasts a message to all of the connected clients, via the in-game chat.",
+      "params": [
+        { "name": "Text", "types": ["string"], "optional": false },
+        { "name": "Color", "types": ["color"], "optional": true, "default": "0 255 0" }
+      ]
+    },
+    {
+      "name": "Shutdown",
+      "syntax": "[Delay]/[Explanation]",
+      "classifications": ["any"],
+      "description": "Properly saves the server state, disconnects the clients, and closes the server.",
+      "params": [
+        { "name": "Delay", "types": ["integer"], "optional": true, "default": "0" },
+        { "name": "Explanation", "types": ["string"], "optional": true }
+      ]
+    },
+    {
+      "name": "Slay",
+      "syntax": "[SteamID | Player]/[Reason]",
+      "classifications": ["runtime"],
+      "description": "Kills the specified player in-game, and then permanently bans them.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false },
+        { "name": "Reason", "types": ["string"], "optional": true, "default": "unspecified" }
+      ]
+    },
+    {
+      "name": "Spy",
+      "syntax": "[SteamID | Player]",
+      "classifications": ["runtime"],
+      "description": "Requests a screenshot from the target player and saves it on the caller's computer as Spy.jpg.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false }
+      ]
+    },
+    {
+      "name": "Sync",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Allows players to share savedata between your servers.",
+      "params": []
+    },
+    {
+      "name": "Teleport",
+      "syntax": "[SteamID | Player]/[SteamID | Player | Location]",
+      "classifications": ["runtime"],
+      "description": "Teleports a player to either another player, a location node, a waypoint (via \"wp\"), or a bed.",
+      "params": [
+        { "name": "Source", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Target", "types": ["player", "location"], "optional": false }
+      ]
+    },
+    {
+      "name": "Time",
+      "syntax": "[Number]",
+      "classifications": ["runtime"],
+      "description": "Assigns the current time of the day-night cycle, in seconds.",
+      "params": [
+        { "name": "Number", "types": ["integer"], "optional": false }
+      ]
+    },
+    {
+      "name": "Timeout",
+      "syntax": "[Number]",
+      "classifications": ["any"],
+      "description": "Assigns a maximum ping threshold to the server before a client is kicked.",
+      "params": [
+        { "name": "Number", "types": ["integer"], "optional": false, "default": "750", "min": 50, "max": 10000 }
+      ]
+    },
+    {
+      "name": "Unadmin",
+      "syntax": "[SteamID | Player]",
+      "classifications": ["runtime"],
+      "description": "Removes the specified player from the list of users allowed to use admin commands in the chat.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false }
+      ]
+    },
+    {
+      "name": "Unban",
+      "syntax": "[SteamID]",
+      "classifications": ["runtime"],
+      "description": "Removes the specified player from the list of users not allowed to join the server.",
+      "params": [
+        { "name": "SteamID", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "UnlockNpcAchievement",
+      "syntax": "[SteamID | Player]/[AchievementID]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Grants a player the specified achievement.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": false },
+        { "name": "Achievement", "types": ["achievement"], "optional": false }
+      ]
+    },
+    {
+      "name": "Unpermit",
+      "syntax": "[SteamID]",
+      "classifications": ["runtime"],
+      "description": "Removes the specified player from the list of users permitted to join the server.",
+      "params": [
+        { "name": "SteamID", "types": ["string"], "optional": false }
+      ]
+    },
+    {
+      "name": "Vehicle",
+      "syntax": "[SteamID | Player]/[VehicleID | VehicleGUID | VehicleName | VehicleFilename]",
+      "classifications": ["runtime", "cheat"],
+      "description": "Spawns a vehicle in front of a player. Defaults to the executing player.",
+      "params": [
+        { "name": "Player", "types": ["player"], "optional": true, "default": "executing player" },
+        { "name": "Vehicle", "types": ["vehicle"], "optional": false }
+      ]
+    },
+    {
+      "name": "Weather",
+      "syntax": "[None | Disable | Storm | Blizzard | GUID]",
+      "classifications": ["runtime"],
+      "description": "Manipulates the current weather cycle.",
+      "params": [
+        { "name": "Weather", "types": ["enum", "guid"], "optional": false, "values": ["None", "Disable", "Storm", "Blizzard"] }
+      ]
+    },
+    {
+      "name": "Welcome",
+      "syntax": "[Text]/[R]/[G]/[B]",
+      "classifications": ["any"],
+      "description": "Sets a welcome message that is shown to clients once they connect.",
+      "params": [
+        { "name": "Text", "types": ["string"], "optional": false },
+        { "name": "Color", "types": ["color"], "optional": true, "default": "0 255 0" }
+      ]
+    },
+    {
+      "name": "Whitelisted",
+      "syntax": "",
+      "classifications": ["config"],
+      "description": "Makes the server joinable only by permitted players.",
+      "params": []
+    }
+  ]
+}

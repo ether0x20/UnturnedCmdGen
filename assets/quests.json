@@ -1,0 +1,7 @@
+[
+  { "id": "1", "name": "Find Aid" },
+  { "id": "2", "name": "Kill Zombies" },
+  { "id": "3", "name": "Craft Items" },
+  { "id": "4", "name": "Reach Location" },
+  { "id": "5", "name": "Talk to NPC" }
+]

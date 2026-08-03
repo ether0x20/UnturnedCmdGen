@@ -1,0 +1,7 @@
+[
+  { "id": "0",   "name": "None / Default" },
+  { "id": "1",   "name": "Spec Ops" },
+  { "id": "2",   "name": "Firefighter" },
+  { "id": "3",   "name": "Cossack" },
+  { "id": "255", "name": "All Skillsets" }
+]

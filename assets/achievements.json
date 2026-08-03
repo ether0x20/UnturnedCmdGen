@@ -1,0 +1,7 @@
+[
+  { "id": "1", "name": "Survivor" },
+  { "id": "2", "name": "Shooter" },
+  { "id": "3", "name": "Explorer" },
+  { "id": "4", "name": "Builder" },
+  { "id": "5", "name": "Fighter" }
+]

@@ -1,0 +1,16 @@
+[
+  { "id": "pei",        "name": "PEI" },
+  { "id": "washington", "name": "Washington" },
+  { "id": "yukon",      "name": "Yukon" },
+  { "id": "russia",     "name": "Russia" },
+  { "id": "germany",    "name": "Germany" },
+  { "id": "hawaii",     "name": "Hawaii" },
+  { "id": "elver",      "name": "Elver" },
+  { "id": "kuwait",     "name": "Kuwait" },
+  { "id": "ireland",    "name": "Ireland" },
+  { "id": "buak",       "name": "Buak" },
+  { "id": "arid",       "name": "Arid" },
+  { "id": "escauation", "name": "Escauation" },
+  { "id": "polaris",    "name": "Polaris" },
+  { "id": "athens",     "name": "Athens" }
+]

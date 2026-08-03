@@ -1,0 +1,113 @@
+[
+  {
+    "mapId": "pei",
+    "locations": [
+      "Stratford", "Montague", "Charlottetown", "Alberton", "Summerside",
+      "Kensington", "Tignish", "Wellington", "Belfast", "Souris",
+      "Georgetown", "O'Leary Peninsula", "St. Peter's Bay", "Bridgewater",
+      "Margate", "Hunter's Point", "Ann Arbor", "Crashed Plane", "Soccer Field",
+      "Mansion", "The Lagoon", "Devil's Castle", "Misty Peak"
+    ]
+  },
+  {
+    "mapId": "washington",
+    "locations": [
+      "Seattle", "Everett", "Tacoma", "Olympia", "Bellevue", "Kent",
+      "Renton", "Bothell", "Auburn", "Puyallup", "Kirkland", "Snoqualmie",
+      "Sammamish", "Paradise Point", "Alpine", "Blackrock", "North Bend",
+      "Lynnwood", "Mount Rainier", "Bellevue College", "SeaTac"
+    ]
+  },
+  {
+    "mapId": "yukon",
+    "locations": [
+      "Whitehorse", "Mayo", "Dawson City", "Haines Junction", "Carcross",
+      "Watson Lake", "Teslin", "Carmacks", "Ross River", "Burwash Landing",
+      "Old Crow", "Faro", "Beaver Creek"
+    ]
+  },
+  {
+    "mapId": "russia",
+    "locations": [
+      "Moscow", "St. Petersburg", "Murmansk", "Volgograd", "Novosibirsk",
+      "Irkutsk", "Yakutsk", "Vladivostok", "Sochi", "Tula", "Syzran",
+      "Kazan", "Omsk", "Ufa"
+    ]
+  },
+  {
+    "mapId": "germany",
+    "locations": [
+      "Berlin", "Hamburg", "Munich", "Cologne", "Frankfurt", "Stuttgart",
+      "Leipzig", "Dresden", "Dortmund", "Essen", "Bremen", "Hanover",
+      "Nuremberg", "Duisburg"
+    ]
+  },
+  {
+    "mapId": "hawaii",
+    "locations": [
+      "Honolulu", "Pearl City", "Waikiki", "Hilo", "Kailua", "Kaneohe",
+      "Kahului", "Kihei", "Lihue", "Kapaa", "Lahaina", "Hana",
+      "Makawao", "Wailuku"
+    ]
+  },
+  {
+    "mapId": "elver",
+    "locations": [
+      "Ward Peak", "Stagton", "Oakton", "Portland", "Eaglesfield",
+      "Riverside", "Fellows", "Ashford", "Halden", "Silverwood",
+      "Brent", "Bucksmith", "Eastwood", "Pioneer", "Ford"
+    ]
+  },
+  {
+    "mapId": "kuwait",
+    "locations": [
+      "Kuwait City", "Jahra", "Ahmadi", "Fahaheel", "Salmiya",
+      "Hawalli", "Al-Farwaniyah", "Mubarak Al-Kabeer", "Al-Jahra",
+      "Sabah Al-Salem", "Al-Nuwaiseeb", "Wafra"
+    ]
+  },
+  {
+    "mapId": "ireland",
+    "locations": [
+      "Dublin", "Cork", "Limerick", "Galway", "Waterford",
+      "Drogheda", "Dundalk", "Swords", "Bray", "Navan",
+      "Ennis", "Tralee", "Kilkenny"
+    ]
+  },
+  {
+    "mapId": "buak",
+    "locations": [
+      "Buak Shores", "Mangrove", "Docklands", "Lakeside", "Boulder Town",
+      "Fishing Village", "The Spire", "Redwood", "Campground", "Volcano"
+    ]
+  },
+  {
+    "mapId": "arid",
+    "locations": [
+      "Al Kahf", "The Bazaar", "Sandstone", "Oasis", "Lost Mine",
+      "Canyon Pass", "The Watchtower", "Mirage City", "Camel's Rest", "Dunes"
+    ]
+  },
+  {
+    "mapId": "escauation",
+    "locations": [
+      "Prison", "Salvation", "Havensfield", "Seafall", "Milltown",
+      "Fortress", "Summit", "Harbor", "Paradise", "The Cliffs"
+    ]
+  },
+  {
+    "mapId": "polaris",
+    "locations": [
+      "Aurora", "Frosthold", "Glacier Bay", "Icerun", "Snowcap",
+      "Northern Lights", "The Rift", "Polar Station", "Wolverine Den", "Northpoint"
+    ]
+  },
+  {
+    "mapId": "athens",
+    "locations": [
+      "Athens", "Piraeus", "Marathon", "Corinth", "Delphi",
+      "Larissa", "Thessaloniki", "Crete", "Rhodes", "Sparta",
+      "Patras", "Heraklion"
+    ]
+  }
+]

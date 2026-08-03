@@ -1,0 +1,16 @@
+[
+  { "id": "1",  "name": "Deer",      "nameZh": "鹿" },
+  { "id": "2",  "name": "Pig",       "nameZh": "猪" },
+  { "id": "3",  "name": "Cow",       "nameZh": "牛" },
+  { "id": "4",  "name": "Sheep",     "nameZh": "羊" },
+  { "id": "5",  "name": "Wolf",      "nameZh": "狼" },
+  { "id": "6",  "name": "Bear",      "nameZh": "熊" },
+  { "id": "7",  "name": "Rabbit",    "nameZh": "兔子" },
+  { "id": "8",  "name": "Moose",     "nameZh": "驼鹿" },
+  { "id": "9",  "name": "Turkey",    "nameZh": "火鸡" },
+  { "id": "10", "name": "Goat",      "nameZh": "山羊" },
+  { "id": "11", "name": "Chicken",   "nameZh": "鸡" },
+  { "id": "12", "name": "Bat",       "nameZh": "蝙蝠" },
+  { "id": "13", "name": "Crocodile", "nameZh": "鳄鱼" },
+  { "id": "14", "name": "Shark",     "nameZh": "鲨鱼" }
+]
