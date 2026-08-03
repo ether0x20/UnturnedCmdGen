@@ -233,9 +233,16 @@ if(WIN32)
     set(CPACK_NSIS_HELP_LINK "https://github.com/ether0x20/UnturnedCmdGen")
     set(CPACK_NSIS_URL_INFO_ABOUT "https://github.com/ether0x20/UnturnedCmdGen")
     set(CPACK_NSIS_CONTACT "Ethan Zhou <evil.jellyfish@outlook.com>")
-    set(CPACK_PACKAGE_EXECUTABLES
-        "UnturnedCmdGen;Unturned Command Generator")
-    set(CPACK_CREATE_DESKTOP_LINKS "UnturnedCmdGen")
+    # Manual shortcut creation — CPack 4.4 auto-generates "$INSTDIR\bin\..."
+    # and ignores DESTINATION ".", so we override with our own commands.
+    set(CPACK_PACKAGE_EXECUTABLES) # disable auto-generated shortcuts
+    set(CPACK_CREATE_DESKTOP_LINKS) # also handled manually below
+    set(CPACK_NSIS_CREATE_ICONS_EXTRA
+        "CreateDirectory '$SMPROGRAMS/$STARTMENU_FOLDER'
+CreateShortCut '$SMPROGRAMS/$STARTMENU_FOLDER/Unturned Command Generator.lnk' '$INSTDIR/UnturnedCmdGen.exe'
+StrCmp '$INSTALL_DESKTOP' '1' 0 +2
+CreateShortCut '$DESKTOP/Unturned Command Generator.lnk' '$INSTDIR/UnturnedCmdGen.exe'
+")
     set(CPACK_PACKAGE_FILE_NAME "unturnedcmdgen-${PROJECT_VERSION}-win64")
     # Version resource for the installer itself. Without these the file
     # properties show Publisher/Product as "(Unknown)".
