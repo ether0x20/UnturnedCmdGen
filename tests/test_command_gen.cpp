@@ -48,7 +48,7 @@ void TestCommandGen::giveGeneration()
     c.setParamValue(0, QStringLiteral("Ethan"));
     c.setParamValue(1, QStringLiteral("Maplestrike"));
     c.setParamValue(2, QStringLiteral("5"));
-    QCOMPARE(c.generatedString(), QStringLiteral("/give Ethan Maplestrike 5"));
+    QCOMPARE(c.generatedString(), QStringLiteral("/give Ethan/Maplestrike/5"));
 }
 
 void TestCommandGen::teleportGeneration()
@@ -64,7 +64,7 @@ void TestCommandGen::teleportGeneration()
     QCOMPARE(c.generatedString(), QStringLiteral("/teleport Seattle"));
     // With source player
     c.setParamValue(0, QStringLiteral("Ethan"));
-    QCOMPARE(c.generatedString(), QStringLiteral("/teleport Ethan Seattle"));
+    QCOMPARE(c.generatedString(), QStringLiteral("/teleport Ethan/Seattle"));
 }
 
 void TestCommandGen::formatVariants()
@@ -108,7 +108,7 @@ void TestCommandGen::optionalParams()
     // Leave optional Amount empty -> only player+item
     c.setParamValue(0, QStringLiteral("Ethan"));
     c.setParamValue(1, QStringLiteral("Maplestrike"));
-    QCOMPARE(c.generatedString(), QStringLiteral("/give Ethan Maplestrike"));
+    QCOMPARE(c.generatedString(), QStringLiteral("/give Ethan/Maplestrike"));
 }
 
 void TestCommandGen::missingRequiredIsIncomplete()

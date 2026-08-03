@@ -15,9 +15,9 @@ Built with **C++17 + Qt 6** and licensed under the **MIT License**.
   form (player, item, vehicle, location, enum, boolean, integer, float, color,
   duration, map, GUID, ...).
 - **Three output formats** with live preview and one-click copy:
-  - Server terminal: `teleport Ethan Seattle`
-  - In-game chat: `/teleport Ethan Seattle`
-  - In-game chat: `@teleport Ethan Seattle`
+  - Server terminal: `teleport Ethan/Seattle`
+  - In-game chat: `/teleport Ethan/Seattle`
+  - In-game chat: `@teleport Ethan/Seattle`
 - **Multi-type parameters** (e.g. Teleport target = player *or* map location;
   Weather = preset *or* custom GUID) via a mode selector.
 - **Lookup tables** with searchable, editable dropdowns for items, vehicles,

@@ -91,14 +91,14 @@ int main(int argc, char* argv[])
 
     itemCombo->setCurrentText(QStringLiteral("Maplestrike"));
     app.processEvents();
-    CHECK(commands.generatedString() == QStringLiteral("/give Maplestrike"),
+    CHECK(commands.generatedString() == QStringLiteral("/give 363"),
           qPrintable(QStringLiteral("give preview: %1").arg(commands.generatedString())));
 
-    // Chinese annotation resolves back to the English item name in commands.
+    // Chinese annotation resolves back to the item id in commands.
     // "俄制军刀" is the Chinese name of "Military Knife" in the bundled data.
     itemCombo->setCurrentText(QStringLiteral("俄制军刀"));
     app.processEvents();
-    CHECK(commands.generatedString() == QStringLiteral("/give Military Knife"),
+    CHECK(commands.generatedString() == QStringLiteral("/give 121"),
           qPrintable(QStringLiteral("chinese token: %1").arg(commands.generatedString())));
 
     // 3) Teleport: multi-type Target (player | location).

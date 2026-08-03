@@ -130,10 +130,12 @@ Mod enable/disable state is persisted to `mods.json` in the user data directory.
 
 | Field | Purpose |
 |-------|---------|
-| `name` | Shown in lookup dropdowns as `[id] name / 中文`; when selected it is used **as the parameter value** in the command (e.g. `/give Player Maplestrike`) |
+| `id` | **Used as the parameter value** in commands for content tables (e.g. `/give Player/363/5`). For players the SteamID is used verbatim. |
+| `name` | Shown in lookup dropdowns as `[id] name / 中文`; display only, never enters a command (except player names, which the game matches by name) |
 | `nameZh` | Chinese display in dropdowns + Chinese search; display only, never enters a command |
 | `mod` | Tags the entry in dropdowns (`[id] name / 中文 [Mod Name]`); display only, never enters a command |
-| `id` | Shown in dropdowns; for players, a manually typed SteamID is used verbatim |
+
+> Parameters in a command are separated by `/`, e.g. `@give Player/363/5`.
 
 ## 7. Quick Validation
 

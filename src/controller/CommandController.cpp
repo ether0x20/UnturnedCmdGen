@@ -89,6 +89,9 @@ void CommandController::generate()
     else if (m_format == Format::ChatAt)
         prefix = QStringLiteral("@");
 
+    // Parameters are separated by "/" (e.g. /give Player/ItemID/Amount); a
+    // single space separates the command name from the first parameter. Only
+    // color values ("R G B") carry several tokens, which are split into R/G/B.
     QStringList parts;
     for (int i = 0; i < m_current->params.size(); ++i) {
         if (!m_filled.contains(i))
@@ -96,13 +99,15 @@ void CommandController::generate()
         const QString token = m_values.value(i).trimmed();
         if (token.isEmpty())
             continue;
-        // Multi-token values (e.g. colors "0 255 0") split on whitespace.
-        parts.append(token.split(QLatin1Char(' '), Qt::SkipEmptyParts));
+        if (m_current->params[i].primaryType() == ParamType::Color)
+            parts.append(token.split(QLatin1Char(' '), Qt::SkipEmptyParts));
+        else
+            parts.append(token);
     }
 
     m_generated = prefix + cmdName;
     if (!parts.isEmpty())
-        m_generated += QLatin1Char(' ') + parts.join(QLatin1Char(' '));
+        m_generated += QLatin1Char(' ') + parts.join(QLatin1Char('/'));
 
     emit generatedStringChanged(m_generated);
 }

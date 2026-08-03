@@ -159,14 +159,20 @@ ParameterWidget::Editor ParameterWidget::createLookupEditor(const Parameter& par
     combo->setInsertPolicy(QComboBox::NoInsert);
 
     const auto& entries = m_data->table(tableType);
+    // The value substituted into the command: the numeric/game id for content
+    // tables (e.g. /give <player> 363 5), but the display name for players
+    // (the game accepts [SteamID | Player]).
+    const bool playerTable = tableType == QLatin1String("player");
     QStringList names;
     {
         const QSignalBlocker block(combo);
         for (const auto& e : entries) {
-            combo->addItem(m_data->entryLabel(e), e.name);
-            // nameZh stored in UserRole+1 so the token mapping can resolve a
-            // Chinese selection back to the English item name used in commands.
-            combo->setItemData(combo->count() - 1, e.nameZh, Qt::UserRole + 1);
+            const QString cmdValue = playerTable ? e.name : e.id;
+            combo->addItem(m_data->entryLabel(e), cmdValue);
+            // Matching roles: +1 = English name, +2 = Chinese annotation, so
+            // a name/Chinese selection still resolves back to the command value.
+            combo->setItemData(combo->count() - 1, e.name, Qt::UserRole + 1);
+            combo->setItemData(combo->count() - 1, e.nameZh, Qt::UserRole + 2);
             names.append(e.name);
             if (!e.nameZh.isEmpty())
                 names.append(e.nameZh);
@@ -180,7 +186,7 @@ ParameterWidget::Editor ParameterWidget::createLookupEditor(const Parameter& par
     completer->setFilterMode(Qt::MatchContains);
     combo->setCompleter(completer);
 
-    if (tableType == QLatin1String("player"))
+    if (playerTable)
         combo->setPlaceholderText(tr("(executing player) or SteamID"));
 
     ed.widget = combo;
@@ -191,11 +197,11 @@ ParameterWidget::Editor ParameterWidget::createLookupEditor(const Parameter& par
             return QString();
         for (int i = 0; i < combo->count(); ++i) {
             if (combo->itemText(i) == text) // picked the full "[id] name / 中文" entry
-                return combo->itemData(i).toString();
-            if (combo->itemData(i).toString().compare(text, Qt::CaseInsensitive) == 0)
-                return combo->itemData(i).toString();
-            if (combo->itemData(i, Qt::UserRole + 1).toString() == text) // Chinese name
-                return combo->itemData(i).toString();
+                return combo->itemData(i, Qt::UserRole).toString();
+            if (combo->itemData(i, Qt::UserRole + 1).toString().compare(text, Qt::CaseInsensitive) == 0)
+                return combo->itemData(i, Qt::UserRole).toString();
+            if (combo->itemData(i, Qt::UserRole + 2).toString() == text) // Chinese name
+                return combo->itemData(i, Qt::UserRole).toString();
         }
         return text;
     };
