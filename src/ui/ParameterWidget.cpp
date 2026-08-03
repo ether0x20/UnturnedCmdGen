@@ -163,7 +163,7 @@ ParameterWidget::Editor ParameterWidget::createLookupEditor(const Parameter& par
     {
         const QSignalBlocker block(combo);
         for (const auto& e : entries) {
-            combo->addItem(e.label(), e.name);
+            combo->addItem(m_data->entryLabel(e), e.name);
             // nameZh stored in UserRole+1 so the token mapping can resolve a
             // Chinese selection back to the English item name used in commands.
             combo->setItemData(combo->count() - 1, e.nameZh, Qt::UserRole + 1);

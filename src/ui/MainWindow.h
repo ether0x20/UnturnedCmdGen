@@ -30,6 +30,7 @@ private slots:
     void openImportDialog();
     void openExportDialog();
     void openTableManager(const QString& tableType);
+    void openModManager();
     void openSettingsDialog();
     void showAbout();
     void refreshStatus();

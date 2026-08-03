@@ -7,6 +7,10 @@ build/
 *.dll
 *.dylib
 
+# Built executable / Debian package
+UnturnedCmdGen
+unturnedcmdgen_*.deb
+
 # CMake
 CMakeCache.txt
 CMakeFiles/
@@ -26,3 +30,6 @@ Makefile
 # Runtime user data
 players.json
 UnturnedCmdGen.conf
+
+# Qt installation log (aqtinstall)
+aqtinstall.log

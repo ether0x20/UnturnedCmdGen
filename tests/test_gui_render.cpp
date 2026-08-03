@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QComboBox>
 #include <QCoreApplication>
+#include <QIcon>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTableWidget>
@@ -16,6 +17,7 @@
 #include "ui/CommandListWidget.h"
 #include "ui/ImportDialog.h"
 #include "ui/MainWindow.h"
+#include "ui/ModManagerDialog.h"
 #include "ui/OutputWidget.h"
 #include "ui/ParameterWidget.h"
 #include "ui/TableManagerDialog.h"
@@ -65,6 +67,10 @@ int main(int argc, char* argv[])
     // 1) Default command is selected and a preview shows.
     CHECK(!commands.generatedString().isEmpty(), "default preview generated");
 
+    // 1b) The embedded application icon is present.
+    QIcon appIcon(QStringLiteral(":/icons/unturned.png"));
+    CHECK(!appIcon.isNull(), "embedded icon loads from resources");
+
     // 2) Pick "Give" via the list widget (simulate the user clicking it).
     ParameterWidget* panel = win.findChild<ParameterWidget*>();
     CommandListWidget* list = win.findChild<CommandListWidget*>();
@@ -89,7 +95,8 @@ int main(int argc, char* argv[])
           qPrintable(QStringLiteral("give preview: %1").arg(commands.generatedString())));
 
     // Chinese annotation resolves back to the English item name in commands.
-    itemCombo->setCurrentText(QStringLiteral("军用刀"));
+    // "俄制军刀" is the Chinese name of "Military Knife" in the bundled data.
+    itemCombo->setCurrentText(QStringLiteral("俄制军刀"));
     app.processEvents();
     CHECK(commands.generatedString() == QStringLiteral("/give Military Knife"),
           qPrintable(QStringLiteral("chinese token: %1").arg(commands.generatedString())));
@@ -153,7 +160,7 @@ int main(int argc, char* argv[])
     QTableWidget* itemTbl = items.findChild<QTableWidget*>();
     CHECK(itemTbl != nullptr, "item manager has a table");
     if (itemTbl) {
-        CHECK(itemTbl->columnCount() == 4, "item manager has a Chinese Name column");
+        CHECK(itemTbl->columnCount() == 5, "item manager has a Mod column");
         bool zhCell = false;
         for (int r = 0; r < itemTbl->rowCount() && !zhCell; ++r) {
             const QTableWidgetItem* c = itemTbl->item(r, 2);
@@ -172,6 +179,81 @@ int main(int argc, char* argv[])
     vehicles.show();
     app.processEvents();
     vehicles.grab().save(QStringLiteral("/tmp/unturnedCmdGen_vehicles.png"));
+
+    // 6b) Mod tag shows in the Give item dropdown and can filter entries.
+    CHECK(data.addMod(QStringLiteral("test_mod"), QStringLiteral("Test Weapons")), "addMod succeeds");
+    TableEntry modItem;
+    modItem.id = QStringLiteral("9999");
+    modItem.name = QStringLiteral("Railgun");
+    modItem.nameZh = QStringLiteral("电磁炮");
+    modItem.mod = QStringLiteral("test_mod");
+    data.mutableTable(QStringLiteral("item")).append(modItem);
+    data.rebuildTableFilter(QStringLiteral("item"));
+
+    commands.selectCommand(QStringLiteral("Give"));
+    app.processEvents();
+    QComboBox* giveCombo = nullptr;
+    for (QComboBox* c : findCombos(panel)) {
+        if (c->isEditable() && c->isEnabled()) {
+            giveCombo = c;
+            break;
+        }
+    }
+    if (giveCombo) {
+        bool hasModTag = false;
+        for (int i = 0; i < giveCombo->count(); ++i) {
+            if (giveCombo->itemText(i).contains(QStringLiteral("Test Weapons")))
+                hasModTag = true;
+        }
+        CHECK(hasModTag, "mod-tagged item shows its mod in the dropdown");
+
+        // Disabling the mod removes the item from the dropdown. Note the
+        // parameter panel is rebuilt, so re-acquire the combo afterwards.
+        data.setModEnabled(QStringLiteral("test_mod"), false);
+        app.processEvents();
+        QComboBox* after = nullptr;
+        for (QComboBox* c : findCombos(panel)) {
+            if (c->isEditable() && c->isEnabled()) {
+                after = c;
+                break;
+            }
+        }
+        bool gone = !after;
+        if (after) {
+            gone = true;
+            for (int i = 0; i < after->count(); ++i) {
+                if (after->itemText(i).contains(QStringLiteral("Railgun")))
+                    gone = false;
+            }
+        }
+        CHECK(gone, "disabled mod items disappear from the dropdown");
+        data.setModEnabled(QStringLiteral("test_mod"), true);
+        app.processEvents();
+    }
+
+    // 6c) Mod manager dialog renders with the mod list.
+    ModManagerDialog modsDlg(&data, &tables);
+    modsDlg.resize(860, 420);
+    modsDlg.show();
+    app.processEvents();
+    QTableWidget* modTbl = modsDlg.findChild<QTableWidget*>();
+    CHECK(modTbl != nullptr, "mod manager has a table");
+    if (modTbl) {
+        bool foundMod = false;
+        for (int r = 0; r < modTbl->rowCount() && !foundMod; ++r) {
+            const QTableWidgetItem* nameItem = modTbl->item(r, 0);
+            if (nameItem && nameItem->text().contains(QStringLiteral("Test Weapons")))
+                foundMod = true;
+        }
+        CHECK(foundMod, "mod manager lists the added mod");
+    }
+    modsDlg.grab().save(QStringLiteral("/tmp/unturnedCmdGen_mods.png"));
+
+    // Remove the test mod so it doesn't leak into other checks.
+    data.removeMod(QStringLiteral("test_mod"));
+    data.rebuildAllFilters();
+    commands.selectCommand(QStringLiteral("Give"));
+    app.processEvents();
 
     // Render PNGs for the record.
     win.grab().save(QStringLiteral("/tmp/unturnedCmdGen_default.png"));

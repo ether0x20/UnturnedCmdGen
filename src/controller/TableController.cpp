@@ -12,7 +12,10 @@ TableController::TableController(AppData* data, QObject* parent)
 {
 }
 
-bool TableController::importJson(const QString& path, const QString& tableType, bool merge)
+const QString TableController::kForceVanilla = QStringLiteral("vanilla");
+
+bool TableController::importJson(const QString& path, const QString& tableType, bool merge,
+                                 const QString& modOverride)
 {
     const QJsonArray arr = JsonHelper::readArrayFile(path);
     if (arr.isEmpty())
@@ -27,6 +30,7 @@ bool TableController::importJson(const QString& path, const QString& tableType, 
                              JsonHelper::v(o, QStringLiteral("steamId"), QString())).toString();
         e.name = o.value(QStringLiteral("name")).toString();
         e.nameZh = o.value(QStringLiteral("nameZh")).toString();
+        e.mod = o.value(QStringLiteral("mod")).toString();
         e.note = JsonHelper::v(o, QStringLiteral("note"), QString()).toString();
         if (e.name.isEmpty() && e.nameZh.isEmpty() && e.id.isEmpty())
             continue;
@@ -34,6 +38,15 @@ bool TableController::importJson(const QString& path, const QString& tableType, 
     }
     if (entries.isEmpty())
         return false;
+
+    // Apply the user's mod override to every imported entry.
+    if (modOverride == kForceVanilla) {
+        for (auto& e : entries)
+            e.mod.clear();
+    } else if (!modOverride.isEmpty()) {
+        for (auto& e : entries)
+            e.mod = modOverride;
+    }
 
     if (merge) {
         auto& dst = m_data->mutableTable(tableType);
@@ -52,6 +65,10 @@ bool TableController::importJson(const QString& path, const QString& tableType, 
     } else {
         m_data->mutableTable(tableType) = entries;
     }
+    m_data->rebuildTableFilter(tableType);
+    // Register any mod ids introduced by the file and persist the registry.
+    m_data->discoverMods();
+    m_data->saveMods();
     emit m_data->tableChanged(tableType);
     return true;
 }
@@ -59,12 +76,15 @@ bool TableController::importJson(const QString& path, const QString& tableType, 
 bool TableController::exportJson(const QString& path, const QString& tableType) const
 {
     QJsonArray arr;
-    for (const auto& e : m_data->table(tableType)) {
+    // Export the full raw table so mod data is never lost on export.
+    for (const auto& e : m_data->rawTable(tableType)) {
         QJsonObject o;
         o.insert(QStringLiteral("id"), e.id);
         o.insert(QStringLiteral("name"), e.name);
         if (!e.nameZh.isEmpty())
             o.insert(QStringLiteral("nameZh"), e.nameZh);
+        if (!e.mod.isEmpty())
+            o.insert(QStringLiteral("mod"), e.mod);
         if (!e.note.isEmpty())
             o.insert(QStringLiteral("note"), e.note);
         arr.append(o);

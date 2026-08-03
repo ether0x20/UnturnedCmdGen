@@ -66,6 +66,8 @@ ctest --test-dir build --output-on-failure   # run with QT_QPA_PLATFORM=offscree
 ## Usage
 
 1. Select a command from the left panel (search + classification filters).
+   Commands marked with **⚠** are *cheat* commands — they require `/cheats` to
+   be enabled on the server before they take effect.
 2. Fill the parameters; required fields are highlighted if missing.
 3. Choose the output format (Terminal / Chat (/) / Chat (@)).
 4. **Copy** the result, or **Send** it to the server if an RCON/TCP bridge is
@@ -93,6 +95,11 @@ tests/           Logic unit tests + headless GUI smoke test
 
 ## Notes
 
+- In the command list, a **⚠** (warning triangle) after a command name marks it
+  as a *cheat* command (its `classifications` in `assets/commands.json` include
+  `cheat`, e.g. `Give`, `Vehicle`, `Animal`, `Experience`). Such commands only
+  work once `Cheats` has been enabled on the server; use the **Cheat** filter
+  checkbox in the left panel to show or hide them.
 - Item/vehicle/animal data shipped with the program is a starter set; import
   your own (official or mod) tables for full coverage.
 - The player table is stored in the user data directory (e.g.

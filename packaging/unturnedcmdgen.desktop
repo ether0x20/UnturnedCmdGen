@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Unturned Command Generator
+Name[zh_CN]=Unturned 指令生成器
+GenericName=Unturned server command generator
+Comment=Generate Unturned server commands in terminal or chat format
+Comment[zh_CN]=以终端或游戏内聊天格式生成 Unturned 服务器指令
+Exec=UnturnedCmdGen
+Icon=unturnedcmdgen
+Terminal=false
+Categories=Game;Utility;
+StartupNotify=true

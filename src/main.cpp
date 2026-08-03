@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QIcon>
 #include <QMessageBox>
 #include <QObject>
 #include <QString>
@@ -10,6 +11,7 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
     QApplication::setApplicationName(QStringLiteral("UnturnedCmdGen"));
     QApplication::setOrganizationName(QStringLiteral("UnturnedCmdGen"));
+    app.setWindowIcon(QIcon(QStringLiteral(":/icons/unturned.png")));
 
     AppController controller;
     if (!controller.initialize()) {

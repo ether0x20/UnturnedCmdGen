@@ -21,6 +21,7 @@
 #include "model/AppData.h"
 #include "ui/CommandListWidget.h"
 #include "ui/ImportDialog.h"
+#include "ui/ModManagerDialog.h"
 #include "ui/OutputWidget.h"
 #include "ui/ParameterWidget.h"
 #include "ui/SettingsDialog.h"
@@ -38,7 +39,7 @@ MainWindow::MainWindow(AppData* data, CommandController* commands,
     , m_lang(lang)
 {
     setWindowTitle(QStringLiteral("Unturned Command Generator"));
-    resize(960, 640);
+    resize(1348, 820);
 
     // --- Central splitter ------------------------------------------------
     m_splitter = new QSplitter(Qt::Horizontal, this);
@@ -83,6 +84,8 @@ MainWindow::MainWindow(AppData* data, CommandController* commands,
         const QString label = TableManagerDialog::displayName(key);
         manageActs.append(dataMenu->addAction(tr("Manage %1...").arg(label)));
     }
+    dataMenu->addSeparator();
+    QAction* modsAct = dataMenu->addAction(tr("Manage Mods..."));
 
     auto* settingsMenu = menuBar()->addMenu(tr("Settings"));
     QAction* settingsAct = settingsMenu->addAction(tr("Preferences..."));
@@ -107,6 +110,7 @@ MainWindow::MainWindow(AppData* data, CommandController* commands,
         const QString key = kManageOrder[i];
         connect(manageActs[i], &QAction::triggered, this, [this, key] { openTableManager(key); });
     }
+    connect(modsAct, &QAction::triggered, this, &MainWindow::openModManager);
     connect(settingsAct, &QAction::triggered, this, &MainWindow::openSettingsDialog);
     connect(enAct, &QAction::triggered, this, [this] { emit languageRequested(QStringLiteral("en")); });
     connect(zhAct, &QAction::triggered, this, [this] { emit languageRequested(QStringLiteral("zh_CN")); });
@@ -137,7 +141,7 @@ void MainWindow::reloadSettings()
 
 void MainWindow::openImportDialog()
 {
-    ImportDialog dlg(m_data, m_tables, this);
+    ImportDialog dlg(m_data, m_tables, QString(), this);
     dlg.exec();
 }
 
@@ -161,7 +165,14 @@ void MainWindow::openExportDialog()
 
 void MainWindow::openTableManager(const QString& tableType)
 {
-    TableManagerDialog dlg(m_data, m_tables, tableType, this);
+    TableManagerDialog dlg(m_data, m_tables, tableType, QString(), this);
+    dlg.exec();
+    refreshStatus();
+}
+
+void MainWindow::openModManager()
+{
+    ModManagerDialog dlg(m_data, m_tables, this);
     dlg.exec();
     refreshStatus();
 }

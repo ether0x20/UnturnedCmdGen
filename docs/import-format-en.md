@@ -22,6 +22,7 @@ The file must be a top-level **JSON array**; each element is an **object** repre
 | `id` | string | no* | Primary key. Game ID for items/vehicles etc.; SteamID for players. Stored as a string (write numbers as strings). |
 | `name` | string | no* | English display name. **One of the required fields.** |
 | `nameZh` | string | no | Chinese annotation, shown in dropdowns as `[id] name / 中文` and used for Chinese search. |
+| `mod` | string | no | ID of the mod this entry belongs to (empty = vanilla). Unknown mod IDs are auto-registered on import. |
 | `note` | string | no | Extra info, display only. |
 
 > *Rule: `id`, `name` and `nameZh` cannot all be empty, otherwise the entry is skipped.
@@ -41,7 +42,8 @@ The file must be a top-level **JSON array**; each element is an **object** repre
 ```json
 [
   { "id": "116", "name": "Military Knife", "nameZh": "军用刀", "note": "melee" },
-  { "id": "363", "name": "Maple Rifle", "nameZh": "枫木步枪" }
+  { "id": "363", "name": "Maple Rifle", "nameZh": "枫木步枪" },
+  { "id": "9001", "name": "Plasma Rifle", "nameZh": "等离子步枪", "mod": "weapons_pack" }
 ]
 ```
 
@@ -49,7 +51,8 @@ The file must be a top-level **JSON array**; each element is an **object** repre
 ```json
 [
   { "id": "1", "name": "Offroader", "nameZh": "越野车" },
-  { "id": "17", "name": "Helicopter", "nameZh": "直升机", "note": "rare spawn" }
+  { "id": "17", "name": "Helicopter", "nameZh": "直升机", "note": "rare spawn" },
+  { "id": "9001", "name": "Hovercraft", "nameZh": "气垫船", "mod": "future_vehicles" }
 ]
 ```
 
@@ -90,6 +93,12 @@ The program asks you to choose between **Merge or Replace**:
 - **Merge**: appends to the existing table; entries with a duplicate `id` are skipped.
 - **Replace**: clears the whole table first, then keeps only the imported content.
 
+You can also tag the imported entries with a **Mod**:
+
+- **(Keep as in file)**: keep each entry's `mod` field as written in the JSON (default). Unknown mod IDs are registered automatically.
+- **(Vanilla)**: clears the `mod` field on every imported entry.
+- Any specific mod: overrides the `mod` field of every imported entry.
+
 **Import failure** occurs when: the file is not valid JSON, the top level is not an array, or every entry is skipped (`id`/`name`/`nameZh` all empty). A hint points you to the import tutorial.
 
 ## 5. In-Application Table Management
@@ -97,12 +106,25 @@ The program asks you to choose between **Merge or Replace**:
 Imported data (including the bundled seed data) can be managed per table from the **`Data` menu**:
 
 - `Manage Items...` / `Manage Vehicles...` / `Manage Animals...` / `Manage Effects...` etc.
-- The dialog supports **CRUD** on the `ID / Name / Chinese Name / Note` columns.
+- The dialog supports **CRUD** on the `ID / Name / Chinese Name / Mod / Note` columns (the player table omits the Chinese and Mod columns).
+- Rows whose mod is **disabled** are shown greyed out but remain fully editable.
 - Clicking **Save** writes back to the table's source JSON file:
   - Player table → `players.json` in the user data directory
   - Other tables → the corresponding JSON in the program's `assets/` directory (e.g. `assets/items.json`)
 
 > Note: if the `assets/` directory is read-only (e.g. the program is installed to a system directory), saving edits will fail. Use `File → Export JSON...` first, or place the data files somewhere writable.
+
+## 5b. Mod Management
+
+`Data → Manage Mods...` opens the mod resource manager:
+
+- Lists every known mod (plus the implicit **Vanilla** mod) with per-table entry counts.
+- **Enable/Disable** checkboxes filter that mod's entries out of the command selection dropdowns immediately (management dialogs still show them greyed out).
+- **Add Mod** / **Remove** manage the registry; removing a mod also deletes all of its entries.
+- **Import Mod Data...** opens the import dialog with the selected mod preselected.
+- **Manage Entries...** opens a table manager filtered to the selected mod.
+
+Mod enable/disable state is persisted to `mods.json` in the user data directory.
 
 ## 6. Which Field Goes Into a Command
 
@@ -110,6 +132,7 @@ Imported data (including the bundled seed data) can be managed per table from th
 |-------|---------|
 | `name` | Shown in lookup dropdowns as `[id] name / 中文`; when selected it is used **as the parameter value** in the command (e.g. `/give Player Maplestrike`) |
 | `nameZh` | Chinese display in dropdowns + Chinese search; display only, never enters a command |
+| `mod` | Tags the entry in dropdowns (`[id] name / 中文 [Mod Name]`); display only, never enters a command |
 | `id` | Shown in dropdowns; for players, a manually typed SteamID is used verbatim |
 
 ## 7. Quick Validation

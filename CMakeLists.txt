@@ -1,11 +1,34 @@
 cmake_minimum_required(VERSION 3.16)
-project(unturnedCmdGen VERSION 0.1.0 LANGUAGES CXX)
+project(unturnedCmdGen VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets Network)
+
+# When cross-compiling for Windows on Linux, the Qt6::moc/uic/rcc targets point
+# at Windows .exe binaries that cannot run on the host. Point them at the host
+# Qt's tools instead (moc output is platform-independent C++).
+if(CMAKE_CROSSCOMPILING)
+    find_program(HOST_MOC moc
+        PATHS "${QT_HOST_PATH}/lib/qt6/libexec" NO_DEFAULT_PATH)
+    find_program(HOST_UIC uic
+        PATHS "${QT_HOST_PATH}/lib/qt6/libexec" NO_DEFAULT_PATH)
+    find_program(HOST_RCC rcc
+        PATHS "${QT_HOST_PATH}/lib/qt6/libexec" NO_DEFAULT_PATH)
+    if(HOST_MOC)
+        set_target_properties(Qt6::moc PROPERTIES IMPORTED_LOCATION "${HOST_MOC}")
+        message(STATUS "Cross build: Qt6::moc -> ${HOST_MOC}")
+    endif()
+    if(HOST_UIC)
+        set_target_properties(Qt6::uic PROPERTIES IMPORTED_LOCATION "${HOST_UIC}")
+    endif()
+    if(HOST_RCC)
+        set_target_properties(Qt6::rcc PROPERTIES IMPORTED_LOCATION "${HOST_RCC}")
+    endif()
+endif()
 
 # --- Test target -----------------------------------------------------------
 include(CTest)
@@ -32,6 +55,7 @@ option(BUILD_GUI_TEST "Build the headless GUI render test" OFF)
 if(BUILD_GUI_TEST)
     add_executable(test_gui_render
         tests/test_gui_render.cpp
+        resources.qrc
         src/model/Command.cpp
         src/model/AppData.cpp
         src/controller/CommandController.cpp
@@ -45,6 +69,7 @@ if(BUILD_GUI_TEST)
         src/ui/SettingsDialog.cpp
         src/ui/ImportDialog.cpp
         src/ui/TableManagerDialog.cpp
+        src/ui/ModManagerDialog.cpp
         src/util/JsonHelper.cpp
         src/util/Translator.cpp
     )
@@ -71,6 +96,7 @@ set(SOURCES
     src/ui/SettingsDialog.cpp
     src/ui/ImportDialog.cpp
     src/ui/TableManagerDialog.cpp
+    src/ui/ModManagerDialog.cpp
     src/util/JsonHelper.cpp
     src/util/Translator.cpp
 )
@@ -89,11 +115,18 @@ set(HEADERS
     src/ui/SettingsDialog.h
     src/ui/ImportDialog.h
     src/ui/TableManagerDialog.h
+    src/ui/ModManagerDialog.h
+    src/model/ModInfo.h
     src/util/JsonHelper.h
     src/util/Translator.h
 )
 
-add_executable(unturnedCmdGen ${SOURCES} ${HEADERS})
+add_executable(unturnedCmdGen ${SOURCES} ${HEADERS}
+    resources.qrc)
+
+# The installed binary is "UnturnedCmdGen" (capitalized), matching the desktop
+# entry and the package branding.
+set_target_properties(unturnedCmdGen PROPERTIES OUTPUT_NAME "UnturnedCmdGen")
 
 target_include_directories(unturnedCmdGen PRIVATE src)
 
@@ -117,3 +150,33 @@ add_custom_command(TARGET unturnedCmdGen POST_BUILD
 install(TARGETS unturnedCmdGen DESTINATION bin)
 install(DIRECTORY assets/ DESTINATION share/unturnedCmdGen/assets)
 install(DIRECTORY translations/ DESTINATION share/unturnedCmdGen/translations)
+
+# Desktop integration (used by the .deb package).
+install(FILES packaging/unturnedcmdgen.desktop
+        DESTINATION share/applications)
+install(FILES packaging/unturnedcmdgen.svg
+        DESTINATION share/icons/hicolor/scalable/apps)
+
+# --- Packaging (deb) --------------------------------------------------------
+set(CPACK_GENERATOR "DEB")
+set(CPACK_PACKAGE_NAME "unturnedcmdgen")
+set(CPACK_PACKAGE_VENDOR "Ethan Zhou")
+set(CPACK_PACKAGE_CONTACT "Ethan Zhou <evil.jellyfish@outlook.com>")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Unturned server command generator")
+set(CPACK_DEBIAN_PACKAGE_DESCRIPTION
+    "Generates Unturned server commands in terminal or in-game chat format with ease.")
+set(CPACK_DEBIAN_PACKAGE_SECTION "games")
+set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
+set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://github.com/ether0x20/UnturnedCmdGen")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Ethan Zhou <evil.jellyfish@outlook.com>")
+# Compute Depends automatically from the binary's shared library requirements,
+# falling back to the known Qt6 runtime packages.
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+set(CPACK_DEBIAN_PACKAGE_DEPENDS
+    "libqt6core6t64, libqt6gui6t64, libqt6widgets6t64, libqt6network6t64")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
+set(CPACK_PACKAGE_FILE_NAME
+    "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}_${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
+
+include(CPack)

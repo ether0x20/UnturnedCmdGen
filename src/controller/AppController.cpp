@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QCoreApplication>
 #include <QDir>
+#include <QFileInfo>
 #include <QSettings>
 #include <QStandardPaths>
 #include <QTimer>
@@ -36,9 +37,23 @@ bool AppController::initialize()
         return false;
     m_data->loadPlayers();
 
-    // Translations live next to the executable, alongside assets/.
-    m_lang->setTranslationsDir(QCoreApplication::applicationDirPath()
-                               + QStringLiteral("/translations"));
+    // Translations live next to the executable, alongside assets/, or under
+    // /usr/share/unturnedCmdGen/translations for an installed .deb.
+    const QString exeDir = QCoreApplication::applicationDirPath();
+    QString translationsDir = exeDir + QStringLiteral("/translations");
+    if (!QFileInfo::exists(translationsDir + QStringLiteral("/zh_CN.json"))) {
+        const QStringList candidates = {
+            exeDir + QStringLiteral("/../share/unturnedCmdGen/translations"),
+            QStringLiteral("/usr/share/unturnedCmdGen/translations")
+        };
+        for (const QString& c : candidates) {
+            if (QFileInfo::exists(c + QStringLiteral("/zh_CN.json"))) {
+                translationsDir = c;
+                break;
+            }
+        }
+    }
+    m_lang->setTranslationsDir(translationsDir);
 
     // Apply the saved language before the first window is created.
     QSettings s(QStringLiteral("UnturnedCmdGen"), QStringLiteral("UnturnedCmdGen"));
