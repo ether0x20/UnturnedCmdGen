@@ -1,75 +1,5137 @@
 [
-  { "id": "2",    "name": "Flashlight",              "nameZh": "手电筒",             "note": "tactical" },
-  { "id": "9",    "name": "Headlamp",                "nameZh": "头灯",               "note": "tactical" },
-  { "id": "18",   "name": "Bandage",                 "nameZh": "绷带",               "note": "medical" },
-  { "id": "19",   "name": "Dressing",                "nameZh": "敷料",               "note": "medical" },
-  { "id": "20",   "name": "Firstaid Kit",            "nameZh": "急救包",             "note": "medical" },
-  { "id": "22",   "name": "Colt",                    "nameZh": "柯尔特手枪",         "note": "firearm" },
-  { "id": "23",   "name": "Zubeknakov",              "nameZh": "祖贝纳科夫步枪",     "note": "firearm" },
-  { "id": "27",   "name": "Military Knife",          "nameZh": "军用刀",             "note": "melee" },
-  { "id": "33",   "name": "Maplestrike",             "nameZh": "枫木突击步枪",       "note": "firearm" },
-  { "id": "35",   "name": "Timberwolf",              "nameZh": "森林狼狙击枪",       "note": "firearm" },
-  { "id": "36",   "name": "Civilian Knife",          "nameZh": "民用刀",             "note": "melee" },
-  { "id": "37",   "name": "Saw",                     "nameZh": "锯子",               "note": "melee" },
-  { "id": "38",   "name": "Chainsaw",                "nameZh": "电锯",               "note": "melee" },
-  { "id": "40",   "name": "Canteen",                 "nameZh": "水壶",               "note": "food" },
-  { "id": "42",   "name": "Canned Beans",            "nameZh": "罐装豆子",           "note": "food" },
-  { "id": "43",   "name": "Canned Pasta",            "nameZh": "罐装意面",           "note": "food" },
-  { "id": "44",   "name": "Canned Soda",             "nameZh": "罐装汽水",           "note": "food" },
-  { "id": "45",   "name": "Canned Tuna",             "nameZh": "罐装金枪鱼",         "note": "food" },
-  { "id": "46",   "name": "Canned Vegetables",       "nameZh": "罐装蔬菜",           "note": "food" },
-  { "id": "47",   "name": "Canned Stew",             "nameZh": "罐装炖菜",           "note": "food" },
-  { "id": "48",   "name": "Energy Bar",              "nameZh": "能量棒",             "note": "food" },
-  { "id": "49",   "name": "Beef Jerky",              "nameZh": "牛肉干",             "note": "food" },
-  { "id": "50",   "name": "Cereal",                  "nameZh": "麦片",               "note": "food" },
-  { "id": "51",   "name": "Granola Bar",             "nameZh": "燕麦棒",             "note": "food" },
-  { "id": "52",   "name": "Chocolate Bar",           "nameZh": "巧克力棒",           "note": "food" },
-  { "id": "60",   "name": "Sportshot",               "nameZh": "运动霰弹枪",         "note": "firearm" },
-  { "id": "64",   "name": "Maple Rifle",             "nameZh": "枫木步枪",           "note": "firearm" },
-  { "id": "66",   "name": "Viper",                   "nameZh": "蝰蛇手枪",           "note": "firearm" },
-  { "id": "68",   "name": "Heartbreaker",            "nameZh": "碎心者",             "note": "firearm" },
-  { "id": "69",   "name": "Ace",                     "nameZh": "王牌手枪",           "note": "firearm" },
-  { "id": "70",   "name": "Sabertooth",              "nameZh": "剑齿虎突击步枪",     "note": "firearm" },
-  { "id": "71",   "name": "Dragonfang",              "nameZh": "龙牙手枪",           "note": "firearm" },
-  { "id": "72",   "name": "Grizzly",                 "nameZh": "灰熊机枪",           "note": "firearm" },
-  { "id": "73",   "name": "Matamorez",               "nameZh": "马塔莫雷兹狙击枪",   "note": "firearm" },
-  { "id": "74",   "name": "Ekho",                    "nameZh": "回声手枪",           "note": "firearm" },
-  { "id": "75",   "name": "Fury",                    "nameZh": "狂暴手枪",           "note": "firearm" },
-  { "id": "76",   "name": "Rifle",                   "nameZh": "步枪",               "note": "firearm" },
-  { "id": "77",   "name": "Ranger",                  "nameZh": "游侠手枪",           "note": "firearm" },
-  { "id": "78",   "name": "Nightraider",             "nameZh": "夜袭者突击步枪",     "note": "firearm" },
-  { "id": "79",   "name": "Eaglefire",               "nameZh": "鹰火突击步枪",       "note": "firearm" },
-  { "id": "80",   "name": "Fusilaut",                "nameZh": "自动步枪",           "note": "firearm" },
-  { "id": "81",   "name": "Maplestrike",             "nameZh": "枫木突击步枪",       "note": "firearm" },
-  { "id": "82",   "name": "Rook",                    "nameZh": "车鸦手枪",           "note": "firearm" },
-  { "id": "83",   "name": "Scalar",                  "nameZh": "标量手枪",           "note": "firearm" },
-  { "id": "84",   "name": "Bluntforce",              "nameZh": "钝击霰弹枪",         "note": "firearm" },
-  { "id": "85",   "name": "Avenger",                 "nameZh": "复仇者手枪",         "note": "firearm" },
-  { "id": "86",   "name": "Kryzkarek",               "nameZh": "克雷兹卡雷克步枪",   "note": "firearm" },
-  { "id": "87",   "name": "Hawkhound",               "nameZh": "鹰犬手枪",           "note": "firearm" },
-  { "id": "88",   "name": "Bulldog",                 "nameZh": "斗牛犬突击步枪",     "note": "firearm" },
-  { "id": "89",   "name": "Lugar",                   "nameZh": "卢加手枪",           "note": "firearm" },
-  { "id": "90",   "name": "Yuri",                    "nameZh": "尤里机枪",           "note": "firearm" },
-  { "id": "91",   "name": "Hell's Fury",             "nameZh": "地狱之怒",           "note": "firearm" },
-  { "id": "92",   "name": "Peacemaker",              "nameZh": "和平缔造者手枪",     "note": "firearm" },
-  { "id": "93",   "name": "Nykorev",                 "nameZh": "尼科列夫机枪",       "note": "firearm" },
-  { "id": "94",   "name": "Surgical Blade",          "nameZh": "手术刀",             "note": "melee" },
-  { "id": "95",   "name": "Kitchen Knife",           "nameZh": "厨房刀",             "note": "melee" },
-  { "id": "100",  "name": "Machete",                 "nameZh": "砍刀",               "note": "melee" },
-  { "id": "116",  "name": "Maple Log",               "nameZh": "枫木原木",           "note": "resource" },
-  { "id": "117",  "name": "Birch Log",               "nameZh": "桦木原木",           "note": "resource" },
-  { "id": "118",  "name": "Pine Log",                "nameZh": "松木原木",           "note": "resource" },
-  { "id": "119",  "name": "Plank",                   "nameZh": "木板",               "note": "building" },
-  { "id": "120",  "name": "Metal Sheet",             "nameZh": "金属板",             "note": "building" },
-  { "id": "121",  "name": "Nails",                   "nameZh": "钉子",               "note": "building" },
-  { "id": "200",  "name": "Stone",                   "nameZh": "石头",               "note": "resource" },
-  { "id": "201",  "name": "Rocks",                   "nameZh": "岩石",               "note": "resource" },
-  { "id": "250",  "name": "Wooden Door",             "nameZh": "木门",               "note": "building" },
-  { "id": "251",  "name": "Metal Door",              "nameZh": "金属门",             "note": "building" },
-  { "id": "300",  "name": "Cell Phone",              "nameZh": "手机",               "note": "tool" },
-  { "id": "301",  "name": "Walkie-Talkie",           "nameZh": "对讲机",             "note": "tool" },
-  { "id": "302",  "name": "Flashlight Mount",        "nameZh": "手电筒支架",         "note": "tactical" },
-  { "id": "400",  "name": "Water Bottle",            "nameZh": "水瓶",               "note": "food" },
-  { "id": "401",  "name": "Empty Can",               "nameZh": "空罐",               "note": "food" },
-  { "id": "500",  "name": "Trail Mix",               "nameZh": "什锦干果",           "note": "food" }
+  {
+    "id": "2",
+    "name": "Work Jeans",
+    "nameZh": "工作牛仔裤"
+  },
+  {
+    "id": "3",
+    "name": "Orange Hoodie",
+    "nameZh": "橙色连帽衫"
+  },
+  {
+    "id": "4",
+    "name": "Eaglefire",
+    "nameZh": "鹰火半自动步枪"
+  },
+  {
+    "id": "5",
+    "name": "Eaglefire Iron Sights",
+    "nameZh": "鹰火瞄准镜"
+  },
+  {
+    "id": "6",
+    "name": "Military Magazine",
+    "nameZh": "军用弹匣"
+  },
+  {
+    "id": "7",
+    "name": "Military Suppressor",
+    "nameZh": "军用消音器"
+  },
+  {
+    "id": "8",
+    "name": "Vertical Grip",
+    "nameZh": "垂直握把"
+  },
+  {
+    "id": "9",
+    "name": "Red Daypack",
+    "nameZh": "红色背包"
+  },
+  {
+    "id": "10",
+    "name": "Police Vest",
+    "nameZh": "警用防弹背心"
+  },
+  {
+    "id": "11",
+    "name": "Red Bandana",
+    "nameZh": "红色面巾"
+  },
+  {
+    "id": "13",
+    "name": "Canned Beans",
+    "nameZh": "罐装豆子"
+  },
+  {
+    "id": "14",
+    "name": "Bottled Water",
+    "nameZh": "水瓶"
+  },
+  {
+    "id": "15",
+    "name": "Medkit",
+    "nameZh": "医疗包"
+  },
+  {
+    "id": "16",
+    "name": "Camp Axe",
+    "nameZh": "伐木斧子"
+  },
+  {
+    "id": "17",
+    "name": "Military Drum",
+    "nameZh": "军用弹鼓"
+  },
+  {
+    "id": "18",
+    "name": "Timberwolf",
+    "nameZh": "森林狼军用狙击步枪"
+  },
+  {
+    "id": "19",
+    "name": "Timberwolf Iron Sights",
+    "nameZh": "森林狼瞄准镜"
+  },
+  {
+    "id": "20",
+    "name": "Timberwolf Magazine",
+    "nameZh": "森林狼弹匣"
+  },
+  {
+    "id": "21",
+    "name": "8x Scope",
+    "nameZh": "8倍狙击瞄准镜"
+  },
+  {
+    "id": "22",
+    "name": "Red Cross Scope",
+    "nameZh": "十字狙击瞄准镜"
+  },
+  {
+    "id": "27",
+    "name": "Tophat",
+    "nameZh": "美式高礼帽"
+  },
+  {
+    "id": "28",
+    "name": "Gas Can (Portable)",
+    "nameZh": "油桶"
+  },
+  {
+    "id": "29",
+    "name": "Maple Fortification",
+    "nameZh": "枫木窗户挡板"
+  },
+  {
+    "id": "30",
+    "name": "Maple Barricade",
+    "nameZh": "枫木路障"
+  },
+  {
+    "id": "31",
+    "name": "Maple Floor",
+    "nameZh": "枫木地板"
+  },
+  {
+    "id": "32",
+    "name": "Maple Doorway",
+    "nameZh": "枫木门框"
+  },
+  {
+    "id": "33",
+    "name": "Maple Wall",
+    "nameZh": "枫木墙"
+  },
+  {
+    "id": "34",
+    "name": "Maple Window",
+    "nameZh": "枫木窗户框"
+  },
+  {
+    "id": "35",
+    "name": "Maple Roof",
+    "nameZh": "枫木天花板"
+  },
+  {
+    "id": "36",
+    "name": "Maple Pillar",
+    "nameZh": "枫木柱子"
+  },
+  {
+    "id": "37",
+    "name": "Birch Log",
+    "nameZh": "桦树原木"
+  },
+  {
+    "id": "38",
+    "name": "Birch Stick",
+    "nameZh": "桦木棍"
+  },
+  {
+    "id": "39",
+    "name": "Maple Log",
+    "nameZh": "枫树原木"
+  },
+  {
+    "id": "40",
+    "name": "Maple Stick",
+    "nameZh": "枫木棍"
+  },
+  {
+    "id": "41",
+    "name": "Pine Log",
+    "nameZh": "松树原木"
+  },
+  {
+    "id": "42",
+    "name": "Pine Stick",
+    "nameZh": "松木棍"
+  },
+  {
+    "id": "43",
+    "name": "Low Caliber Military Ammunition Crate",
+    "nameZh": "军用弹药箱(小口径)"
+  },
+  {
+    "id": "44",
+    "name": "Low Caliber Civilian Ammunition Box",
+    "nameZh": "民用弹药箱(小口径)"
+  },
+  {
+    "id": "45",
+    "name": "Birch Barricade",
+    "nameZh": "桦木路障"
+  },
+  {
+    "id": "46",
+    "name": "Pine Barricade",
+    "nameZh": "松木路障"
+  },
+  {
+    "id": "47",
+    "name": "Birch Fortification",
+    "nameZh": "桦木窗户挡板"
+  },
+  {
+    "id": "48",
+    "name": "Pine Fortification",
+    "nameZh": "松木窗户挡板"
+  },
+  {
+    "id": "49",
+    "name": "Birch Doorway",
+    "nameZh": "桦木门框"
+  },
+  {
+    "id": "50",
+    "name": "Pine Doorway",
+    "nameZh": "松木门框"
+  },
+  {
+    "id": "51",
+    "name": "Birch Floor",
+    "nameZh": "桦木地板"
+  },
+  {
+    "id": "52",
+    "name": "Pine Floor",
+    "nameZh": "松木地板"
+  },
+  {
+    "id": "53",
+    "name": "Birch Pillar",
+    "nameZh": "桦木柱子"
+  },
+  {
+    "id": "54",
+    "name": "Pine Pillar",
+    "nameZh": "松木柱子"
+  },
+  {
+    "id": "55",
+    "name": "Birch Roof",
+    "nameZh": "桦木天花板"
+  },
+  {
+    "id": "56",
+    "name": "Pine Roof",
+    "nameZh": "松木天花板"
+  },
+  {
+    "id": "57",
+    "name": "Birch Wall",
+    "nameZh": "桦木墙"
+  },
+  {
+    "id": "58",
+    "name": "Pine Wall",
+    "nameZh": "松木墙"
+  },
+  {
+    "id": "59",
+    "name": "Birch Window",
+    "nameZh": "桦木窗户框"
+  },
+  {
+    "id": "60",
+    "name": "Pine Window",
+    "nameZh": "松木窗户框"
+  },
+  {
+    "id": "61",
+    "name": "Maple Plank",
+    "nameZh": "枫木木板"
+  },
+  {
+    "id": "62",
+    "name": "Birch Plank",
+    "nameZh": "桦木板"
+  },
+  {
+    "id": "63",
+    "name": "Pine Plank",
+    "nameZh": "松木木板"
+  },
+  {
+    "id": "64",
+    "name": "Rope",
+    "nameZh": "绳子"
+  },
+  {
+    "id": "65",
+    "name": "Wire",
+    "nameZh": "金属线"
+  },
+  {
+    "id": "66",
+    "name": "Cloth",
+    "nameZh": "布"
+  },
+  {
+    "id": "67",
+    "name": "Metal Scrap",
+    "nameZh": "金属碎片"
+  },
+  {
+    "id": "68",
+    "name": "Metal Sheet",
+    "nameZh": "金属板"
+  },
+  {
+    "id": "69",
+    "name": "Tape",
+    "nameZh": "胶带"
+  },
+  {
+    "id": "70",
+    "name": "Glue",
+    "nameZh": "胶水"
+  },
+  {
+    "id": "71",
+    "name": "Nails",
+    "nameZh": "钉子"
+  },
+  {
+    "id": "72",
+    "name": "Can",
+    "nameZh": "铁罐"
+  },
+  {
+    "id": "73",
+    "name": "Explosives (Raw)",
+    "nameZh": "炸药"
+  },
+  {
+    "id": "74",
+    "name": "Bricks",
+    "nameZh": "砖块"
+  },
+  {
+    "id": "75",
+    "name": "Chemicals",
+    "nameZh": "化学药剂"
+  },
+  {
+    "id": "76",
+    "name": "Blowtorch",
+    "nameZh": "焊枪"
+  },
+  {
+    "id": "77",
+    "name": "Canned Tomato Soup",
+    "nameZh": "西红柿罐头"
+  },
+  {
+    "id": "78",
+    "name": "Canned Chicken Soup",
+    "nameZh": "鸡汤罐头"
+  },
+  {
+    "id": "79",
+    "name": "Canned Tuna",
+    "nameZh": "金枪鱼罐头"
+  },
+  {
+    "id": "80",
+    "name": "Canned Cola",
+    "nameZh": "灌装可乐"
+  },
+  {
+    "id": "81",
+    "name": "MRE",
+    "nameZh": "军粮(MRE)"
+  },
+  {
+    "id": "82",
+    "name": "Chips",
+    "nameZh": "炸土豆条"
+  },
+  {
+    "id": "83",
+    "name": "Chocolate Bar",
+    "nameZh": "巧克力棒"
+  },
+  {
+    "id": "84",
+    "name": "Candy Bar",
+    "nameZh": "糖果棒"
+  },
+  {
+    "id": "85",
+    "name": "Granola Bar",
+    "nameZh": "杂粮棒"
+  },
+  {
+    "id": "86",
+    "name": "Energy Bar",
+    "nameZh": "能量棒"
+  },
+  {
+    "id": "87",
+    "name": "Canned Pasta",
+    "nameZh": "罐装面条"
+  },
+  {
+    "id": "88",
+    "name": "Canned Bacon",
+    "nameZh": "罐装培根"
+  },
+  {
+    "id": "89",
+    "name": "Canned Beef",
+    "nameZh": "罐装牛肉"
+  },
+  {
+    "id": "90",
+    "name": "Canned Sardines",
+    "nameZh": "罐装沙丁鱼"
+  },
+  {
+    "id": "91",
+    "name": "Apple Juice",
+    "nameZh": "苹果汁"
+  },
+  {
+    "id": "92",
+    "name": "Grape Juice",
+    "nameZh": "葡萄汁"
+  },
+  {
+    "id": "93",
+    "name": "Bottled Energy",
+    "nameZh": "瓶装能量饮料"
+  },
+  {
+    "id": "94",
+    "name": "Bottled Coconut",
+    "nameZh": "瓶装椰汁"
+  },
+  {
+    "id": "95",
+    "name": "Bandage",
+    "nameZh": "绷带"
+  },
+  {
+    "id": "96",
+    "name": "Splint",
+    "nameZh": "夹板"
+  },
+  {
+    "id": "97",
+    "name": "Colt",
+    "nameZh": "柯尔特民用手枪"
+  },
+  {
+    "id": "98",
+    "name": "Colt Magazine",
+    "nameZh": "柯尔特弹匣"
+  },
+  {
+    "id": "99",
+    "name": "Cobra",
+    "nameZh": "眼镜蛇自动手枪"
+  },
+  {
+    "id": "100",
+    "name": "Cobra Magazine",
+    "nameZh": "眼镜蛇弹匣"
+  },
+  {
+    "id": "101",
+    "name": "Schofield",
+    "nameZh": "斯科菲尔德民用步枪"
+  },
+  {
+    "id": "102",
+    "name": "Schofield Iron Sights",
+    "nameZh": "斯科菲尔德弹匣"
+  },
+  {
+    "id": "103",
+    "name": "Schofield Clip",
+    "nameZh": "斯科菲尔德瞄准镜"
+  },
+  {
+    "id": "104",
+    "name": "Fire Axe",
+    "nameZh": "消防服"
+  },
+  {
+    "id": "105",
+    "name": "Baseball Bat",
+    "nameZh": "棒球棒"
+  },
+  {
+    "id": "106",
+    "name": "Hockey Stick",
+    "nameZh": "曲棍球棒"
+  },
+  {
+    "id": "107",
+    "name": "Ace",
+    "nameZh": "王牌左轮手枪"
+  },
+  {
+    "id": "108",
+    "name": "Ace Clip",
+    "nameZh": "王牌左轮弹匣"
+  },
+  {
+    "id": "109",
+    "name": "Hawkhound",
+    "nameZh": "猎鹰犬民用步枪"
+  },
+  {
+    "id": "110",
+    "name": "Hawkhound Iron Sights",
+    "nameZh": "猎鹰犬瞄准镜"
+  },
+  {
+    "id": "111",
+    "name": "Hawkhound Magazine",
+    "nameZh": "猎鹰犬弹匣"
+  },
+  {
+    "id": "112",
+    "name": "Bluntforce",
+    "nameZh": "泵式霰弹枪"
+  },
+  {
+    "id": "113",
+    "name": "12 Gauge Shells",
+    "nameZh": "泵式霰弹枪子弹"
+  },
+  {
+    "id": "114",
+    "name": "Bluntforce Iron Sights",
+    "nameZh": "泵式霰弹枪瞄准镜"
+  },
+  {
+    "id": "115",
+    "name": "Pink Berry (Raw Mauve Berries)",
+    "nameZh": "粉色浆果"
+  },
+  {
+    "id": "116",
+    "name": "Honeybadger",
+    "nameZh": "蜜獾卡宾枪"
+  },
+  {
+    "id": "118",
+    "name": "Honeybadger Iron Sights",
+    "nameZh": "蜜獾瞄准镜"
+  },
+  {
+    "id": "119",
+    "name": "Low Caliber Ranger Ammunition Box",
+    "nameZh": "俄制突击弹药箱（小口径）"
+  },
+  {
+    "id": "120",
+    "name": "Kitchen Knife",
+    "nameZh": "菜刀"
+  },
+  {
+    "id": "121",
+    "name": "Military Knife",
+    "nameZh": "俄制军刀"
+  },
+  {
+    "id": "122",
+    "name": "Zubeknakov",
+    "nameZh": "AK47突击自动步枪(AK)"
+  },
+  {
+    "id": "123",
+    "name": "Ranger Magazine",
+    "nameZh": "AK47步枪弹匣"
+  },
+  {
+    "id": "124",
+    "name": "Zubeknakov Iron Sights",
+    "nameZh": "AK47瞄准镜"
+  },
+  {
+    "id": "125",
+    "name": "Ranger Drum",
+    "nameZh": "俄制弹鼓"
+  },
+  {
+    "id": "126",
+    "name": "Nykorev",
+    "nameZh": "PKM机枪"
+  },
+  {
+    "id": "127",
+    "name": "Nykorev Box",
+    "nameZh": "PKM弹匣"
+  },
+  {
+    "id": "128",
+    "name": "Nykorev Iron Sights",
+    "nameZh": "PKM瞄准镜"
+  },
+  {
+    "id": "129",
+    "name": "Snayperskya",
+    "nameZh": "SVD狙击步枪"
+  },
+  {
+    "id": "130",
+    "name": "Snayperskya Magazine",
+    "nameZh": "SVD狙击步枪弹匣"
+  },
+  {
+    "id": "131",
+    "name": "Snayperskya Iron Sights",
+    "nameZh": "SVD狙击步枪瞄准镜"
+  },
+  {
+    "id": "132",
+    "name": "Dragonfang",
+    "nameZh": "龙牙轻机枪"
+  },
+  {
+    "id": "133",
+    "name": "Dragonfang Box",
+    "nameZh": "龙牙轻机枪弹匣"
+  },
+  {
+    "id": "134",
+    "name": "Dragonfang Iron Sights",
+    "nameZh": "龙牙轻机枪瞄准镜"
+  },
+  {
+    "id": "135",
+    "name": "Golf Club",
+    "nameZh": "高尔夫球杆"
+  },
+  {
+    "id": "136",
+    "name": "Sledgehammer",
+    "nameZh": "大铁锤"
+  },
+  {
+    "id": "137",
+    "name": "Butcher Knife",
+    "nameZh": "屠刀"
+  },
+  {
+    "id": "138",
+    "name": "Hammer",
+    "nameZh": "锤子"
+  },
+  {
+    "id": "139",
+    "name": "Swiss Knife",
+    "nameZh": "瑞士军刀"
+  },
+  {
+    "id": "140",
+    "name": "Butterfly Knife",
+    "nameZh": "蝴蝶刀"
+  },
+  {
+    "id": "141",
+    "name": "Saw",
+    "nameZh": "手锯"
+  },
+  {
+    "id": "142",
+    "name": "Rake",
+    "nameZh": "钉耙"
+  },
+  {
+    "id": "143",
+    "name": "Bipod",
+    "nameZh": "双脚架"
+  },
+  {
+    "id": "144",
+    "name": "Ranger Suppressor",
+    "nameZh": "俄制消音器"
+  },
+  {
+    "id": "145",
+    "name": "Horizontal Grip",
+    "nameZh": "水平握把"
+  },
+  {
+    "id": "146",
+    "name": "Red Dot Sight",
+    "nameZh": "红点瞄准镜"
+  },
+  {
+    "id": "147",
+    "name": "Red Halo Sight",
+    "nameZh": "全息瞄准镜"
+  },
+  {
+    "id": "148",
+    "name": "Red Chevron Scope",
+    "nameZh": "山形瞄准镜"
+  },
+  {
+    "id": "149",
+    "name": "Military Barrel",
+    "nameZh": "军用枪管"
+  },
+  {
+    "id": "150",
+    "name": "Military Muzzle",
+    "nameZh": "军用消焰器"
+  },
+  {
+    "id": "151",
+    "name": "Tactical Laser",
+    "nameZh": "战术激光辅瞄器"
+  },
+  {
+    "id": "152",
+    "name": "Tactical Light",
+    "nameZh": "战术灯光辅瞄器"
+  },
+  {
+    "id": "153",
+    "name": "7x Scope",
+    "nameZh": "7x 瞄准镜"
+  },
+  {
+    "id": "154",
+    "name": "Orange Shirt",
+    "nameZh": "橙色衬衫"
+  },
+  {
+    "id": "155",
+    "name": "Orange Tee",
+    "nameZh": "橙色短袖T恤"
+  },
+  {
+    "id": "156",
+    "name": "Orange Parka",
+    "nameZh": "橙色长袖外套"
+  },
+  {
+    "id": "157",
+    "name": "Purple Hoodie",
+    "nameZh": "紫色连帽衫"
+  },
+  {
+    "id": "158",
+    "name": "Purple Shirt",
+    "nameZh": "紫色衬衫"
+  },
+  {
+    "id": "159",
+    "name": "Purple Tee",
+    "nameZh": "紫色T恤"
+  },
+  {
+    "id": "160",
+    "name": "Purple Parka",
+    "nameZh": "紫色长袖外套"
+  },
+  {
+    "id": "161",
+    "name": "Green Hoodie",
+    "nameZh": "绿色连帽衫"
+  },
+  {
+    "id": "162",
+    "name": "Green Parka",
+    "nameZh": "绿色长袖外套"
+  },
+  {
+    "id": "163",
+    "name": "Green Shirt",
+    "nameZh": "绿色衬衫"
+  },
+  {
+    "id": "164",
+    "name": "Green Tee",
+    "nameZh": "绿色短袖T恤"
+  },
+  {
+    "id": "165",
+    "name": "Red Hoodie",
+    "nameZh": "红色连帽衫"
+  },
+  {
+    "id": "166",
+    "name": "Red Parka",
+    "nameZh": "红色长袖外套"
+  },
+  {
+    "id": "167",
+    "name": "Red Shirt",
+    "nameZh": "红色衬衫"
+  },
+  {
+    "id": "168",
+    "name": "Red Tee",
+    "nameZh": "红色T恤"
+  },
+  {
+    "id": "169",
+    "name": "Yellow Hoodie",
+    "nameZh": "黄色连帽衫"
+  },
+  {
+    "id": "170",
+    "name": "Yellow Parka",
+    "nameZh": "黄色长袖外套"
+  },
+  {
+    "id": "171",
+    "name": "Yellow Shirt",
+    "nameZh": "黄色衬衫"
+  },
+  {
+    "id": "172",
+    "name": "Yellow Tee",
+    "nameZh": "黄色T恤"
+  },
+  {
+    "id": "173",
+    "name": "Blue Hoodie",
+    "nameZh": "蓝色连帽衫"
+  },
+  {
+    "id": "174",
+    "name": "Blue Parka",
+    "nameZh": "蓝色长袖外套"
+  },
+  {
+    "id": "175",
+    "name": "Blue Shirt",
+    "nameZh": "蓝色衬衫"
+  },
+  {
+    "id": "176",
+    "name": "Blue Tee",
+    "nameZh": "蓝色T恤"
+  },
+  {
+    "id": "177",
+    "name": "White Hoodie",
+    "nameZh": "白色连帽衫"
+  },
+  {
+    "id": "178",
+    "name": "White Parka",
+    "nameZh": "白色长袖外套"
+  },
+  {
+    "id": "179",
+    "name": "White Shirt",
+    "nameZh": "白色衬衫"
+  },
+  {
+    "id": "180",
+    "name": "White Tee",
+    "nameZh": "白色T恤"
+  },
+  {
+    "id": "181",
+    "name": "Black Hoodie",
+    "nameZh": "黑色罩帽卫衣"
+  },
+  {
+    "id": "182",
+    "name": "Black Parka",
+    "nameZh": "黑色长袖外衣"
+  },
+  {
+    "id": "183",
+    "name": "Black Shirt",
+    "nameZh": "黑色衬衫"
+  },
+  {
+    "id": "184",
+    "name": "Black T-Shirt",
+    "nameZh": "黑色T恤"
+  },
+  {
+    "id": "185",
+    "name": "Black Bandana",
+    "nameZh": "黑色蒙面巾"
+  },
+  {
+    "id": "186",
+    "name": "Blue Bandana",
+    "nameZh": "蓝色蒙面巾"
+  },
+  {
+    "id": "187",
+    "name": "Green Bandana",
+    "nameZh": "绿色蒙面巾"
+  },
+  {
+    "id": "188",
+    "name": "Orange Bandana",
+    "nameZh": "橙色面巾"
+  },
+  {
+    "id": "189",
+    "name": "Purple Bandana",
+    "nameZh": "紫色面巾"
+  },
+  {
+    "id": "190",
+    "name": "White Bandana",
+    "nameZh": "白色面巾"
+  },
+  {
+    "id": "191",
+    "name": "Yellow Bandana",
+    "nameZh": "黄色面巾"
+  },
+  {
+    "id": "192",
+    "name": "Black Toque",
+    "nameZh": "黑色帽子"
+  },
+  {
+    "id": "193",
+    "name": "Blue Toque",
+    "nameZh": "蓝色帽子"
+  },
+  {
+    "id": "194",
+    "name": "Green Toque",
+    "nameZh": "绿色帽子"
+  },
+  {
+    "id": "195",
+    "name": "Orange Toque",
+    "nameZh": "橙色帽子"
+  },
+  {
+    "id": "196",
+    "name": "Purple Toque",
+    "nameZh": "紫色帽子"
+  },
+  {
+    "id": "197",
+    "name": "Red Toque",
+    "nameZh": "红色帽子"
+  },
+  {
+    "id": "198",
+    "name": "White Toque",
+    "nameZh": "白色帽子"
+  },
+  {
+    "id": "199",
+    "name": "Yellow Toque",
+    "nameZh": "黄色帽子"
+  },
+  {
+    "id": "200",
+    "name": "Black Daypack",
+    "nameZh": "黑色背包"
+  },
+  {
+    "id": "201",
+    "name": "Blue Daypack",
+    "nameZh": "蓝色背包"
+  },
+  {
+    "id": "202",
+    "name": "Green Daypack",
+    "nameZh": "绿色背包"
+  },
+  {
+    "id": "203",
+    "name": "Orange Daypack",
+    "nameZh": "橙色背包"
+  },
+  {
+    "id": "204",
+    "name": "Purple Daypack",
+    "nameZh": "紫色背包"
+  },
+  {
+    "id": "205",
+    "name": "White Daypack",
+    "nameZh": "白色背包"
+  },
+  {
+    "id": "206",
+    "name": "Yellow Daypack",
+    "nameZh": "黄色背包"
+  },
+  {
+    "id": "207",
+    "name": "Outfit Jeans",
+    "nameZh": "休闲牛仔裤"
+  },
+  {
+    "id": "208",
+    "name": "Cowboy Jeans",
+    "nameZh": "牛仔裤"
+  },
+  {
+    "id": "209",
+    "name": "Cargo Pants",
+    "nameZh": "工装裤"
+  },
+  {
+    "id": "210",
+    "name": "Buds",
+    "nameZh": "线控随身听耳机"
+  },
+  {
+    "id": "211",
+    "name": "Plaid Shirt",
+    "nameZh": "格子衬衫"
+  },
+  {
+    "id": "212",
+    "name": "Khaki Pants",
+    "nameZh": "卡其裤"
+  },
+  {
+    "id": "213",
+    "name": "Corduroy Pants",
+    "nameZh": "灯芯绒裤"
+  },
+  {
+    "id": "214",
+    "name": "Trouser Pants",
+    "nameZh": "休闲裤"
+  },
+  {
+    "id": "215",
+    "name": "Black Sweatervest",
+    "nameZh": "黑色毛衣背心"
+  },
+  {
+    "id": "216",
+    "name": "Blue Sweatervest",
+    "nameZh": "蓝色毛衣背心"
+  },
+  {
+    "id": "217",
+    "name": "Green Sweatervest",
+    "nameZh": "绿色毛衣背心"
+  },
+  {
+    "id": "218",
+    "name": "Orange Sweatervest",
+    "nameZh": "橙色毛衣背心"
+  },
+  {
+    "id": "219",
+    "name": "Purple Sweatervest",
+    "nameZh": "紫色毛衣背心"
+  },
+  {
+    "id": "220",
+    "name": "Red Sweatervest",
+    "nameZh": "红色毛衣背心"
+  },
+  {
+    "id": "221",
+    "name": "White Sweatervest",
+    "nameZh": "白色毛衣背心"
+  },
+  {
+    "id": "222",
+    "name": "Yellow Sweatervest",
+    "nameZh": "黄色毛衣背心"
+  },
+  {
+    "id": "223",
+    "name": "Police Top",
+    "nameZh": "警服"
+  },
+  {
+    "id": "224",
+    "name": "Police Bottom",
+    "nameZh": "警裤"
+  },
+  {
+    "id": "225",
+    "name": "Police Cap",
+    "nameZh": "警帽"
+  },
+  {
+    "id": "226",
+    "name": "Khaki Shorts",
+    "nameZh": "卡其短裤"
+  },
+  {
+    "id": "227",
+    "name": "Cargo Shorts",
+    "nameZh": "工装短裤"
+  },
+  {
+    "id": "228",
+    "name": "Corduroy Shorts",
+    "nameZh": "灯芯绒短裤"
+  },
+  {
+    "id": "229",
+    "name": "Trouser Shorts",
+    "nameZh": "休闲短裤"
+  },
+  {
+    "id": "230",
+    "name": "Chef Top",
+    "nameZh": "厨师制服"
+  },
+  {
+    "id": "231",
+    "name": "Chef Bottom",
+    "nameZh": "厨师裤子"
+  },
+  {
+    "id": "232",
+    "name": "Construction Top",
+    "nameZh": "工人服上衣"
+  },
+  {
+    "id": "233",
+    "name": "Firefighter Top",
+    "nameZh": "消防服上衣"
+  },
+  {
+    "id": "234",
+    "name": "Firefighter Bottom",
+    "nameZh": "消防服裤子"
+  },
+  {
+    "id": "235",
+    "name": "Ghillie Top",
+    "nameZh": "吉利服上衣"
+  },
+  {
+    "id": "236",
+    "name": "Ghillie Bottom",
+    "nameZh": "吉利服裤子"
+  },
+  {
+    "id": "237",
+    "name": "Ghillie Hood",
+    "nameZh": "吉利服头罩"
+  },
+  {
+    "id": "238",
+    "name": "Ghillie Vest",
+    "nameZh": "吉利服背心"
+  },
+  {
+    "id": "239",
+    "name": "Chef Hat",
+    "nameZh": "厨师帽"
+  },
+  {
+    "id": "240",
+    "name": "Construction Helmet",
+    "nameZh": "建筑工帽"
+  },
+  {
+    "id": "241",
+    "name": "Firefighter Helmet",
+    "nameZh": "消防帽"
+  },
+  {
+    "id": "242",
+    "name": "Farmer Top",
+    "nameZh": "农夫装上衣"
+  },
+  {
+    "id": "243",
+    "name": "Farmer Bottom",
+    "nameZh": "农夫装裤子"
+  },
+  {
+    "id": "244",
+    "name": "Farmer Hat",
+    "nameZh": "农夫帽子"
+  },
+  {
+    "id": "245",
+    "name": "Black Travelpack",
+    "nameZh": "黑色旅行背包"
+  },
+  {
+    "id": "246",
+    "name": "Blue Travelpack",
+    "nameZh": "蓝色旅行背包"
+  },
+  {
+    "id": "247",
+    "name": "Green Travelpack",
+    "nameZh": "绿色旅行背包"
+  },
+  {
+    "id": "248",
+    "name": "Orange Travelpack",
+    "nameZh": "橙色旅行背包"
+  },
+  {
+    "id": "249",
+    "name": "Purple Travelpack",
+    "nameZh": "紫色旅行背包"
+  },
+  {
+    "id": "250",
+    "name": "Red Travelpack",
+    "nameZh": "红色旅行背包"
+  },
+  {
+    "id": "251",
+    "name": "White Travelpack",
+    "nameZh": "白色旅行背包"
+  },
+  {
+    "id": "252",
+    "name": "Yellow Travelpack",
+    "nameZh": "黄色旅行背包"
+  },
+  {
+    "id": "253",
+    "name": "Alicepack",
+    "nameZh": "爱丽丝背包"
+  },
+  {
+    "id": "254",
+    "name": "Fragmentation Grenade",
+    "nameZh": "手雷"
+  },
+  {
+    "id": "255",
+    "name": "Blue Flare",
+    "nameZh": "蓝色夜光棒"
+  },
+  {
+    "id": "256",
+    "name": "Green Flare",
+    "nameZh": "绿色夜光棒"
+  },
+  {
+    "id": "257",
+    "name": "Orange Flare",
+    "nameZh": "橙色夜光棒"
+  },
+  {
+    "id": "258",
+    "name": "Purple Flare",
+    "nameZh": "紫色夜光棒"
+  },
+  {
+    "id": "259",
+    "name": "Red Flare",
+    "nameZh": "红色夜光棒"
+  },
+  {
+    "id": "260",
+    "name": "Yellow Flare",
+    "nameZh": "黄色夜光棒"
+  },
+  {
+    "id": "261",
+    "name": "Black Smoke",
+    "nameZh": "黑色烟雾弹"
+  },
+  {
+    "id": "262",
+    "name": "Blue Smoke",
+    "nameZh": "蓝色烟雾弹"
+  },
+  {
+    "id": "263",
+    "name": "Green Smoke",
+    "nameZh": "绿色烟雾弹"
+  },
+  {
+    "id": "264",
+    "name": "Orange Smoke",
+    "nameZh": "橙色烟雾弹"
+  },
+  {
+    "id": "265",
+    "name": "Purple Smoke",
+    "nameZh": "紫色烟雾弹"
+  },
+  {
+    "id": "266",
+    "name": "Red Smoke",
+    "nameZh": "红色烟雾弹"
+  },
+  {
+    "id": "267",
+    "name": "White Smoke",
+    "nameZh": "白色烟雾弹"
+  },
+  {
+    "id": "268",
+    "name": "Yellow Smoke",
+    "nameZh": "黄色烟雾弹"
+  },
+  {
+    "id": "269",
+    "name": "Vaccine",
+    "nameZh": "疫苗"
+  },
+  {
+    "id": "270",
+    "name": "Raw Amber Berry",
+    "nameZh": "琥珀色浆果"
+  },
+  {
+    "id": "271",
+    "name": "Raw Indigo Berry",
+    "nameZh": "靛蓝色浆果"
+  },
+  {
+    "id": "272",
+    "name": "Raw Jade Berry",
+    "nameZh": "翡翠色浆果"
+  },
+  {
+    "id": "273",
+    "name": "Raw Russet Berry",
+    "nameZh": "赤褐色浆果"
+  },
+  {
+    "id": "274",
+    "name": "Raw Teal Berry",
+    "nameZh": "水鸭色浆果"
+  },
+  {
+    "id": "275",
+    "name": "Raw Vermillion Berry",
+    "nameZh": "朱红色浆果"
+  },
+  {
+    "id": "276",
+    "name": "Flashlight",
+    "nameZh": "手电筒"
+  },
+  {
+    "id": "277",
+    "name": "Carjack (Car Lift)",
+    "nameZh": "千斤顶"
+  },
+  {
+    "id": "278",
+    "name": "Santa Hat",
+    "nameZh": "圣诞帽"
+  },
+  {
+    "id": "279",
+    "name": "Santa Top",
+    "nameZh": "圣诞外套"
+  },
+  {
+    "id": "280",
+    "name": "Santa Bottom",
+    "nameZh": "圣诞裤子"
+  },
+  {
+    "id": "281",
+    "name": "Maple Door",
+    "nameZh": "枫木门框"
+  },
+  {
+    "id": "282",
+    "name": "Birch Door",
+    "nameZh": "桦木门框"
+  },
+  {
+    "id": "283",
+    "name": "Pine Door",
+    "nameZh": "松木门框"
+  },
+  {
+    "id": "284",
+    "name": "Jail Door",
+    "nameZh": "监狱门"
+  },
+  {
+    "id": "285",
+    "name": "Metal Bar",
+    "nameZh": "金属条"
+  },
+  {
+    "id": "286",
+    "name": "Vault Door",
+    "nameZh": "金库门"
+  },
+  {
+    "id": "287",
+    "name": "Bar Fortification",
+    "nameZh": "铁窗格"
+  },
+  {
+    "id": "288",
+    "name": "Black Bedroll",
+    "nameZh": "黑色床"
+  },
+  {
+    "id": "289",
+    "name": "Blue Bedroll",
+    "nameZh": "蓝色床"
+  },
+  {
+    "id": "290",
+    "name": "Green Bedroll",
+    "nameZh": "绿色床"
+  },
+  {
+    "id": "291",
+    "name": "Orange Bedroll",
+    "nameZh": "橙色床"
+  },
+  {
+    "id": "292",
+    "name": "Purple bedroll",
+    "nameZh": "紫色床"
+  },
+  {
+    "id": "293",
+    "name": "Red Bedroll",
+    "nameZh": "红色床"
+  },
+  {
+    "id": "294",
+    "name": "White Bedroll",
+    "nameZh": "白色床"
+  },
+  {
+    "id": "295",
+    "name": "Yellow Bedroll",
+    "nameZh": "黄色床"
+  },
+  {
+    "id": "296",
+    "name": "16x Scope",
+    "nameZh": "16x 瞄准镜"
+  },
+  {
+    "id": "297",
+    "name": "Grizzly",
+    "nameZh": "巴雷特军用狙击步枪"
+  },
+  {
+    "id": "298",
+    "name": "Grizzly Magazine",
+    "nameZh": "巴雷特狙弹匣"
+  },
+  {
+    "id": "299",
+    "name": "Grizzly Iron Sights",
+    "nameZh": "巴雷特狙机械瞄准镜"
+  },
+  {
+    "id": "300",
+    "name": "Shadowstalker",
+    "nameZh": "电磁炮/轨道炮"
+  },
+  {
+    "id": "301",
+    "name": "Rail",
+    "nameZh": "轨道炮弹"
+  },
+  {
+    "id": "302",
+    "name": "Shadowstalker Scope",
+    "nameZh": "电磁枪狙击瞄准镜"
+  },
+  {
+    "id": "303",
+    "name": "Prisoner Top",
+    "nameZh": "囚服上衣"
+  },
+  {
+    "id": "304",
+    "name": "Prisoner Bottom",
+    "nameZh": "囚服裤子"
+  },
+  {
+    "id": "305",
+    "name": "RCMP Bottom",
+    "nameZh": "加拿大皇家骑警裤子"
+  },
+  {
+    "id": "306",
+    "name": "RCMP Top",
+    "nameZh": "加拿大皇家骑警上衣"
+  },
+  {
+    "id": "307",
+    "name": "Forest Military Top",
+    "nameZh": "军用上衣"
+  },
+  {
+    "id": "308",
+    "name": "Forest Military Bottom",
+    "nameZh": "军用裤子"
+  },
+  {
+    "id": "309",
+    "name": "Forest Military Helmet",
+    "nameZh": "军用头盔"
+  },
+  {
+    "id": "310",
+    "name": "Forest Military Vest",
+    "nameZh": "军用防弹背心"
+  },
+  {
+    "id": "311",
+    "name": "Medic Top",
+    "nameZh": "医生上衣"
+  },
+  {
+    "id": "312",
+    "name": "Medic Bottom",
+    "nameZh": "医生裤子"
+  },
+  {
+    "id": "313",
+    "name": "RCMP Hat",
+    "nameZh": "加拿大皇家骑警帽"
+  },
+  {
+    "id": "314",
+    "name": "Grocer Top",
+    "nameZh": "食品店员上衣"
+  },
+  {
+    "id": "315",
+    "name": "Grocer Bottom",
+    "nameZh": "食品店员裤子"
+  },
+  {
+    "id": "316",
+    "name": "Maple Stairs",
+    "nameZh": "枫木楼梯"
+  },
+  {
+    "id": "317",
+    "name": "Pine Stairs",
+    "nameZh": "松木楼梯"
+  },
+  {
+    "id": "318",
+    "name": "Birch Stairs",
+    "nameZh": "桦木楼梯"
+  },
+  {
+    "id": "319",
+    "name": "Maple Hole",
+    "nameZh": "枫木阁楼口"
+  },
+  {
+    "id": "320",
+    "name": "Pine Hole",
+    "nameZh": "松木阁楼口"
+  },
+  {
+    "id": "321",
+    "name": "Birch Hole",
+    "nameZh": "桦木阁楼口"
+  },
+  {
+    "id": "322",
+    "name": "Maple Ramp",
+    "nameZh": "枫木斜坡"
+  },
+  {
+    "id": "323",
+    "name": "Birch Ramp",
+    "nameZh": "桦木斜坡"
+  },
+  {
+    "id": "324",
+    "name": "Pine Ramp",
+    "nameZh": "松木斜坡"
+  },
+  {
+    "id": "325",
+    "name": "Maple Ladder",
+    "nameZh": "枫木梯子"
+  },
+  {
+    "id": "326",
+    "name": "Birch Ladder",
+    "nameZh": "桦木梯子"
+  },
+  {
+    "id": "327",
+    "name": "Pine Ladder",
+    "nameZh": "松木梯子"
+  },
+  {
+    "id": "328",
+    "name": "Metal Locker",
+    "nameZh": "保险箱"
+  },
+  {
+    "id": "329",
+    "name": "Carrot",
+    "nameZh": "胡萝卜"
+  },
+  {
+    "id": "330",
+    "name": "Carrot Seed",
+    "nameZh": "胡萝卜种子"
+  },
+  {
+    "id": "331",
+    "name": "Planter",
+    "nameZh": "种植箱"
+  },
+  {
+    "id": "332",
+    "name": "Fertilizer",
+    "nameZh": "化肥(金坷垃)"
+  },
+  {
+    "id": "333",
+    "name": "Binoculars",
+    "nameZh": "望远镜"
+  },
+  {
+    "id": "334",
+    "name": "Military Nightvision",
+    "nameZh": "军用夜视仪"
+  },
+  {
+    "id": "335",
+    "name": "Corn",
+    "nameZh": "玉米"
+  },
+  {
+    "id": "336",
+    "name": "Corn Seed",
+    "nameZh": "玉米种子"
+  },
+  {
+    "id": "337",
+    "name": "Canteen",
+    "nameZh": "水罐"
+  },
+  {
+    "id": "338",
+    "name": "Lettuce",
+    "nameZh": "莴苣"
+  },
+  {
+    "id": "339",
+    "name": "Lettuce Seed",
+    "nameZh": "莴苣种子"
+  },
+  {
+    "id": "340",
+    "name": "Tomato",
+    "nameZh": "番茄"
+  },
+  {
+    "id": "341",
+    "name": "tomato Seed",
+    "nameZh": "番茄种子"
+  },
+  {
+    "id": "342",
+    "name": "Potato",
+    "nameZh": "土豆"
+  },
+  {
+    "id": "343",
+    "name": "Potato Seed",
+    "nameZh": "土豆种子"
+  },
+  {
+    "id": "344",
+    "name": "Wheat",
+    "nameZh": "小麦"
+  },
+  {
+    "id": "345",
+    "name": "Wheat Seed",
+    "nameZh": "小麦种子"
+  },
+  {
+    "id": "346",
+    "name": "Crossbow",
+    "nameZh": "十字弓"
+  },
+  {
+    "id": "347",
+    "name": "Arrow",
+    "nameZh": "箭矢"
+  },
+  {
+    "id": "348",
+    "name": "Maple Arrow",
+    "nameZh": "枫木箭"
+  },
+  {
+    "id": "349",
+    "name": "Crossbow Iron Sights",
+    "nameZh": "十字弓瞄准镜"
+  },
+  {
+    "id": "351",
+    "name": "Birch Arrow",
+    "nameZh": "桦木箭"
+  },
+  {
+    "id": "352",
+    "name": "Pine Arrow",
+    "nameZh": "松木箭"
+  },
+  {
+    "id": "353",
+    "name": "Maple Bow",
+    "nameZh": "枫木弓"
+  },
+  {
+    "id": "355",
+    "name": "Birch Bow",
+    "nameZh": "桦木弓"
+  },
+  {
+    "id": "356",
+    "name": "Pine Bow",
+    "nameZh": "松木弓"
+  },
+  {
+    "id": "357",
+    "name": "Compound Bow",
+    "nameZh": "复合弓"
+  },
+  {
+    "id": "358",
+    "name": "Compound Iron Sights",
+    "nameZh": "复合弓瞄准镜"
+  },
+  {
+    "id": "359",
+    "name": "Maple Torch",
+    "nameZh": "枫木火把"
+  },
+  {
+    "id": "360",
+    "name": "Birch Torch",
+    "nameZh": "桦木火把"
+  },
+  {
+    "id": "361",
+    "name": "Pine Torch",
+    "nameZh": "松木火把"
+  },
+  {
+    "id": "362",
+    "name": "Campfire",
+    "nameZh": "篝火"
+  },
+  {
+    "id": "363",
+    "name": "Maplestrike",
+    "nameZh": "M4A1军用自动突击步枪"
+  },
+  {
+    "id": "364",
+    "name": "Maplestrike Iron Sights",
+    "nameZh": "M4A1瞄准镜"
+  },
+  {
+    "id": "365",
+    "name": "Sandbag",
+    "nameZh": "沙袋"
+  },
+  {
+    "id": "366",
+    "name": "Maple Crate",
+    "nameZh": "枫木储物箱"
+  },
+  {
+    "id": "367",
+    "name": "Birch Crate",
+    "nameZh": "桦木储物箱"
+  },
+  {
+    "id": "368",
+    "name": "Pine Crate",
+    "nameZh": "松木储物箱"
+  },
+  {
+    "id": "369",
+    "name": "Metal Floor",
+    "nameZh": "金属地板"
+  },
+  {
+    "id": "370",
+    "name": "Metal Doorway",
+    "nameZh": "金属门框"
+  },
+  {
+    "id": "371",
+    "name": "Metal Wall",
+    "nameZh": "金属墙"
+  },
+  {
+    "id": "372",
+    "name": "Metal Window",
+    "nameZh": "金属窗户框"
+  },
+  {
+    "id": "373",
+    "name": "Metal Roof",
+    "nameZh": "金属天花板"
+  },
+  {
+    "id": "374",
+    "name": "Metal Pillar",
+    "nameZh": "金属柱子"
+  },
+  {
+    "id": "375",
+    "name": "Metal Stairs",
+    "nameZh": "金属楼梯"
+  },
+  {
+    "id": "376",
+    "name": "Metal Hole",
+    "nameZh": "金属阁楼口"
+  },
+  {
+    "id": "377",
+    "name": "Metal Ramp",
+    "nameZh": "金属斜坡"
+  },
+  {
+    "id": "378",
+    "name": "Metal Door",
+    "nameZh": "金属门框"
+  },
+  {
+    "id": "379",
+    "name": "Metal Ladder",
+    "nameZh": "金属梯子"
+  },
+  {
+    "id": "380",
+    "name": "Masterkey",
+    "nameZh": "双管霰弹猎枪"
+  },
+  {
+    "id": "381",
+    "name": "20 Gauge Shells",
+    "nameZh": "双管霰弹猎枪子弹"
+  },
+  {
+    "id": "382",
+    "name": "Caltrop",
+    "nameZh": "铁蒺藜"
+  },
+  {
+    "id": "383",
+    "name": "Maple Spikes",
+    "nameZh": "枫木尖刺陷阱"
+  },
+  {
+    "id": "384",
+    "name": "Birch Spikes",
+    "nameZh": "桦木尖刺陷阱"
+  },
+  {
+    "id": "385",
+    "name": "Pine Spikes",
+    "nameZh": "松木尖刺陷阱"
+  },
+  {
+    "id": "386",
+    "name": "Barbed Wire",
+    "nameZh": "带刺铁丝网"
+  },
+  {
+    "id": "387",
+    "name": "Adrenaline",
+    "nameZh": "肾上腺素"
+  },
+  {
+    "id": "388",
+    "name": "Morphine",
+    "nameZh": "吗啡"
+  },
+  {
+    "id": "389",
+    "name": "Antibiotics",
+    "nameZh": "抗生素"
+  },
+  {
+    "id": "390",
+    "name": "Painkillers",
+    "nameZh": "止痛药"
+  },
+  {
+    "id": "391",
+    "name": "Vitamins",
+    "nameZh": "维他命"
+  },
+  {
+    "id": "392",
+    "name": "Purification Tablets",
+    "nameZh": "药片"
+  },
+  {
+    "id": "393",
+    "name": "Rag",
+    "nameZh": "碎布"
+  },
+  {
+    "id": "394",
+    "name": "Dressing",
+    "nameZh": "强效绷带"
+  },
+  {
+    "id": "395",
+    "name": "Blood Bag",
+    "nameZh": "血袋"
+  },
+  {
+    "id": "396",
+    "name": "Crushed Mauve Berries (Refined)",
+    "nameZh": "粉碎的粉色浆果"
+  },
+  {
+    "id": "397",
+    "name": "Crushed Amber Berries (Refined)",
+    "nameZh": "粉碎的琥珀色浆果"
+  },
+  {
+    "id": "398",
+    "name": "Crushed Indigo Berries (Refined)",
+    "nameZh": "粉碎的靛蓝色浆果"
+  },
+  {
+    "id": "399",
+    "name": "Crushed Jade Berries (Refined)",
+    "nameZh": "粉碎的翡翠色浆果"
+  },
+  {
+    "id": "400",
+    "name": "Crushed Russet Berries (Refined)",
+    "nameZh": "粉碎的赤褐色浆果"
+  },
+  {
+    "id": "401",
+    "name": "Crushed Teal Berries (Refined)",
+    "nameZh": "粉碎的水鸭色浆果"
+  },
+  {
+    "id": "402",
+    "name": "Crushed Vermillion Berries (Refined)",
+    "nameZh": "粉碎的朱红色浆果"
+  },
+  {
+    "id": "403",
+    "name": "Suturekit",
+    "nameZh": "缝合包"
+  },
+  {
+    "id": "404",
+    "name": "Cough Syrup",
+    "nameZh": "止咳糖浆"
+  },
+  {
+    "id": "405",
+    "name": "Mechanic Top",
+    "nameZh": "维修工上衣"
+  },
+  {
+    "id": "406",
+    "name": "Mechanic Bottom",
+    "nameZh": "维修工裤子"
+  },
+  {
+    "id": "407",
+    "name": "Engineer Top",
+    "nameZh": "火车司机上衣"
+  },
+  {
+    "id": "408",
+    "name": "Engineer Bottom",
+    "nameZh": "火车司机裤子"
+  },
+  {
+    "id": "410",
+    "name": "Black Poncho",
+    "nameZh": "黑色斗篷"
+  },
+  {
+    "id": "411",
+    "name": "Blue Poncho",
+    "nameZh": "蓝色斗篷"
+  },
+  {
+    "id": "412",
+    "name": "Green Poncho",
+    "nameZh": "绿色斗篷"
+  },
+  {
+    "id": "413",
+    "name": "Orange Poncho",
+    "nameZh": "橙色斗篷"
+  },
+  {
+    "id": "414",
+    "name": "Purple Poncho",
+    "nameZh": "紫色斗篷"
+  },
+  {
+    "id": "415",
+    "name": "Red Poncho",
+    "nameZh": "红色斗篷"
+  },
+  {
+    "id": "416",
+    "name": "White Poncho",
+    "nameZh": "白色斗篷"
+  },
+  {
+    "id": "417",
+    "name": "Yellow Poncho",
+    "nameZh": "黄色斗篷"
+  },
+  {
+    "id": "420",
+    "name": "Biker Jacket",
+    "nameZh": "骑士夹克"
+  },
+  {
+    "id": "421",
+    "name": "Suit Top",
+    "nameZh": "西装上衣"
+  },
+  {
+    "id": "422",
+    "name": "Suit Bottom",
+    "nameZh": "西装裤子"
+  },
+  {
+    "id": "423",
+    "name": "Engineer Hat",
+    "nameZh": "火车司机帽子"
+  },
+  {
+    "id": "424",
+    "name": "Fedora",
+    "nameZh": "爵士帽"
+  },
+  {
+    "id": "425",
+    "name": "Black Cap",
+    "nameZh": "黑色鸭舌帽"
+  },
+  {
+    "id": "426",
+    "name": "Blue Cap",
+    "nameZh": "蓝色鸭舌帽"
+  },
+  {
+    "id": "427",
+    "name": "Green Cap",
+    "nameZh": "绿色鸭舌帽"
+  },
+  {
+    "id": "428",
+    "name": "Orange Cap",
+    "nameZh": "橙色鸭舌帽"
+  },
+  {
+    "id": "429",
+    "name": "Purple Cap",
+    "nameZh": "紫色鸭舌帽"
+  },
+  {
+    "id": "430",
+    "name": "Red Cap",
+    "nameZh": "红色鸭舌帽"
+  },
+  {
+    "id": "431",
+    "name": "White Cap",
+    "nameZh": "白色鸭舌帽"
+  },
+  {
+    "id": "432",
+    "name": "Yellow Cap",
+    "nameZh": "黄色鸭舌帽"
+  },
+  {
+    "id": "433",
+    "name": "Desert Beret",
+    "nameZh": "沙漠贝雷帽"
+  },
+  {
+    "id": "434",
+    "name": "Black Balaclava",
+    "nameZh": "黑色面罩"
+  },
+  {
+    "id": "435",
+    "name": "Blue Balaclava",
+    "nameZh": "蓝色面罩"
+  },
+  {
+    "id": "436",
+    "name": "Green Balaclava",
+    "nameZh": "绿色面罩"
+  },
+  {
+    "id": "437",
+    "name": "Orange Balaclava",
+    "nameZh": "橙色面罩"
+  },
+  {
+    "id": "438",
+    "name": "Purple Balaclava",
+    "nameZh": "紫色面罩"
+  },
+  {
+    "id": "439",
+    "name": "Red Balaclava",
+    "nameZh": "红色面罩"
+  },
+  {
+    "id": "440",
+    "name": "White Balaclava",
+    "nameZh": "白色面罩"
+  },
+  {
+    "id": "441",
+    "name": "Yellow Balaclava",
+    "nameZh": "黄色面罩"
+  },
+  {
+    "id": "442",
+    "name": "Maple Rampart",
+    "nameZh": "枫木矮墙"
+  },
+  {
+    "id": "443",
+    "name": "Maple Post",
+    "nameZh": "枫木矮柱"
+  },
+  {
+    "id": "444",
+    "name": "Birch Rampart",
+    "nameZh": "桦木矮墙"
+  },
+  {
+    "id": "445",
+    "name": "Pine Rampart",
+    "nameZh": "松木矮墙"
+  },
+  {
+    "id": "446",
+    "name": "Metal Rampart",
+    "nameZh": "金属矮墙"
+  },
+  {
+    "id": "447",
+    "name": "Birch Post",
+    "nameZh": "桦木矮柱"
+  },
+  {
+    "id": "448",
+    "name": "Pine Post",
+    "nameZh": "松木矮柱"
+  },
+  {
+    "id": "449",
+    "name": "Metal Post",
+    "nameZh": "金属矮柱"
+  },
+  {
+    "id": "450",
+    "name": "Maple Garage",
+    "nameZh": "枫木车库门框"
+  },
+  {
+    "id": "451",
+    "name": "Maple Gate",
+    "nameZh": "枫木车库门"
+  },
+  {
+    "id": "452",
+    "name": "Birch Garage",
+    "nameZh": "桦木车库门框"
+  },
+  {
+    "id": "453",
+    "name": "Pine Garage",
+    "nameZh": "松木车库门框"
+  },
+  {
+    "id": "454",
+    "name": "Metal Garage",
+    "nameZh": "金属车库门框"
+  },
+  {
+    "id": "455",
+    "name": "Birch Gate",
+    "nameZh": "桦木车库门框"
+  },
+  {
+    "id": "456",
+    "name": "Pine Gate",
+    "nameZh": "松木车库门框"
+  },
+  {
+    "id": "457",
+    "name": "Metal Gate",
+    "nameZh": "金属车库门框"
+  },
+  {
+    "id": "458",
+    "name": "Generator",
+    "nameZh": "便携式发电机"
+  },
+  {
+    "id": "459",
+    "name": "Spotlight",
+    "nameZh": "照明灯"
+  },
+  {
+    "id": "460",
+    "name": "Bread",
+    "nameZh": "面包片"
+  },
+  {
+    "id": "461",
+    "name": "Tuna Sandwich",
+    "nameZh": "金枪鱼三明治"
+  },
+  {
+    "id": "462",
+    "name": "Milk Box",
+    "nameZh": "盒装牛奶"
+  },
+  {
+    "id": "463",
+    "name": "Orange Juice",
+    "nameZh": "盒装橙汁"
+  },
+  {
+    "id": "464",
+    "name": "Cheese",
+    "nameZh": "奶酪"
+  },
+  {
+    "id": "465",
+    "name": "Soda",
+    "nameZh": "罐装汽水"
+  },
+  {
+    "id": "466",
+    "name": "Grilled Cheese Sandwich",
+    "nameZh": "奶酪三明治"
+  },
+  {
+    "id": "467",
+    "name": "BLT Sandwich",
+    "nameZh": "培根三明治"
+  },
+  {
+    "id": "468",
+    "name": "Ham Sandwich",
+    "nameZh": "火腿三明治"
+  },
+  {
+    "id": "469",
+    "name": "Canned Ham",
+    "nameZh": "罐装火腿"
+  },
+  {
+    "id": "470",
+    "name": "Eggs",
+    "nameZh": "鸡蛋"
+  },
+  {
+    "id": "471",
+    "name": "Cake",
+    "nameZh": "蛋糕"
+  },
+  {
+    "id": "472",
+    "name": "Bottled Cola",
+    "nameZh": "瓶装可乐"
+  },
+  {
+    "id": "473",
+    "name": "Bottled Soda",
+    "nameZh": "瓶装苏打水"
+  },
+  {
+    "id": "474",
+    "name": "Maple Rifle",
+    "nameZh": "自制枫木步枪"
+  },
+  {
+    "id": "475",
+    "name": "Rifle Iron Sights",
+    "nameZh": "步枪瞄准镜"
+  },
+  {
+    "id": "476",
+    "name": "Makeshift Scope",
+    "nameZh": "自制瞄准镜"
+  },
+  {
+    "id": "477",
+    "name": "Makeshift Muffler",
+    "nameZh": "自制消音器"
+  },
+  {
+    "id": "478",
+    "name": "Rifle Clip",
+    "nameZh": "步枪弹匣"
+  },
+  {
+    "id": "479",
+    "name": "Birch Rifle",
+    "nameZh": "自制桦木步枪"
+  },
+  {
+    "id": "480",
+    "name": "Pine Rifle",
+    "nameZh": "自制松木步枪"
+  },
+  {
+    "id": "481",
+    "name": "Maple Bottle",
+    "nameZh": "枫木水壶"
+  },
+  {
+    "id": "482",
+    "name": "Birch Bottle",
+    "nameZh": "桦木水壶"
+  },
+  {
+    "id": "483",
+    "name": "Pine Bottle",
+    "nameZh": "松木水壶"
+  },
+  {
+    "id": "484",
+    "name": "Sportshot",
+    "nameZh": "竞技步枪"
+  },
+  {
+    "id": "485",
+    "name": "Sportshot Magazine",
+    "nameZh": "竞技步枪弹匣"
+  },
+  {
+    "id": "486",
+    "name": "Sportshot Iron Sights",
+    "nameZh": "竞技步枪瞄准镜"
+  },
+  {
+    "id": "487",
+    "name": "Makeshift Bat",
+    "nameZh": "狼牙棒"
+  },
+  {
+    "id": "488",
+    "name": "Desert Eagle (Desert Falcon)",
+    "nameZh": "沙漠之鹰手枪"
+  },
+  {
+    "id": "489",
+    "name": "Desert Eagle Magazine (Desert Falcon Magazine)",
+    "nameZh": "沙鹰弹匣"
+  },
+  {
+    "id": "490",
+    "name": "Chainsaw",
+    "nameZh": "电锯"
+  },
+  {
+    "id": "491",
+    "name": "Gold Aviators",
+    "nameZh": "黄金边框护目镜"
+  },
+  {
+    "id": "503",
+    "name": "Fishing Rod",
+    "nameZh": "鱼竿"
+  },
+  {
+    "id": "504",
+    "name": "Raw Trout",
+    "nameZh": "生鳟鱼"
+  },
+  {
+    "id": "505",
+    "name": "Raw Salmon",
+    "nameZh": "生三文鱼"
+  },
+  {
+    "id": "506",
+    "name": "Birch Rod",
+    "nameZh": "桦木鱼竿"
+  },
+  {
+    "id": "507",
+    "name": "Maple Rod",
+    "nameZh": "枫木鱼竿"
+  },
+  {
+    "id": "508",
+    "name": "Pine Rod",
+    "nameZh": "松木鱼竿"
+  },
+  {
+    "id": "509",
+    "name": "Fishing Hat",
+    "nameZh": "渔夫帽"
+  },
+  {
+    "id": "510",
+    "name": "Fishing Top",
+    "nameZh": "渔夫上衣"
+  },
+  {
+    "id": "511",
+    "name": "Fishing Bottom",
+    "nameZh": "渔夫裤子"
+  },
+  {
+    "id": "512",
+    "name": "Cooked Trout",
+    "nameZh": "熟鳟鱼"
+  },
+  {
+    "id": "513",
+    "name": "Cooked Salmon",
+    "nameZh": "熟三文鱼"
+  },
+  {
+    "id": "514",
+    "name": "Raw Venison",
+    "nameZh": "生鹿肉"
+  },
+  {
+    "id": "515",
+    "name": "Cooked Venison",
+    "nameZh": "熟鹿肉"
+  },
+  {
+    "id": "516",
+    "name": "Leather",
+    "nameZh": "皮革"
+  },
+  {
+    "id": "517",
+    "name": "Leather Top",
+    "nameZh": "皮制上衣"
+  },
+  {
+    "id": "518",
+    "name": "Leather Bottom",
+    "nameZh": "皮质裤子"
+  },
+  {
+    "id": "519",
+    "name": "Rocket Launcher",
+    "nameZh": "RPG火箭筒"
+  },
+  {
+    "id": "520",
+    "name": "Rocket",
+    "nameZh": "RPG火箭弹"
+  },
+  {
+    "id": "521",
+    "name": "Rocket Iron Sights",
+    "nameZh": "RPG火箭筒瞄准镜"
+  },
+  {
+    "id": "548",
+    "name": "Designer Jeans",
+    "nameZh": "名牌牛仔裤"
+  },
+  {
+    "id": "727",
+    "name": "Medic Glasses",
+    "nameZh": "医用眼镜"
+  },
+  {
+    "id": "892",
+    "name": "Small One Way Plate",
+    "nameZh": "小型单向玻璃"
+  },
+  {
+    "id": "893",
+    "name": "Small Bulletproof Plate",
+    "nameZh": "小型防弹玻璃"
+  },
+  {
+    "id": "894",
+    "name": "Small Weak Plate",
+    "nameZh": "小型脆弱玻璃"
+  },
+  {
+    "id": "1000",
+    "name": "Matamorez",
+    "nameZh": "VSS狙击步枪"
+  },
+  {
+    "id": "1001",
+    "name": "Matamorez Iron Sights",
+    "nameZh": "VSS狙击步枪瞄准镜"
+  },
+  {
+    "id": "1002",
+    "name": "Matamorez Barrel (Unobtainable)",
+    "nameZh": "VSS枪管"
+  },
+  {
+    "id": "1003",
+    "name": "Matamorez Magazine",
+    "nameZh": "VSS狙击步枪弹匣"
+  },
+  {
+    "id": "1004",
+    "name": "Red Kobra Sight",
+    "nameZh": "T形瞄准镜"
+  },
+  {
+    "id": "1005",
+    "name": "Matamorez Box",
+    "nameZh": "VSS狙击步枪弹匣"
+  },
+  {
+    "id": "1006",
+    "name": "Cobra Box",
+    "nameZh": "眼镜蛇弹匣"
+  },
+  {
+    "id": "1007",
+    "name": "Adaptive Chambering Attachment",
+    "nameZh": "枪膛升级（提升连发频率）"
+  },
+  {
+    "id": "1008",
+    "name": "Rangefinder",
+    "nameZh": "激光测距仪"
+  },
+  {
+    "id": "1009",
+    "name": "Desert Beret",
+    "nameZh": "沙漠色贝雷帽"
+  },
+  {
+    "id": "1010",
+    "name": "Desert Military Helmet",
+    "nameZh": "沙漠色军用头盔"
+  },
+  {
+    "id": "1011",
+    "name": "Desert Military Top",
+    "nameZh": "沙漠色军用上衣"
+  },
+  {
+    "id": "1012",
+    "name": "Desert Military Bottom",
+    "nameZh": "沙漠色军用裤子"
+  },
+  {
+    "id": "1013",
+    "name": "Desert Military Vest",
+    "nameZh": "沙漠色军用防弹背心"
+  },
+  {
+    "id": "1014",
+    "name": "Leather Pack",
+    "nameZh": "皮质背包"
+  },
+  {
+    "id": "1015",
+    "name": "Biohazard Top",
+    "nameZh": "防化服上衣"
+  },
+  {
+    "id": "1016",
+    "name": "Biohazard Bottom",
+    "nameZh": "防化服裤子"
+  },
+  {
+    "id": "1017",
+    "name": "Biohazard Hood",
+    "nameZh": "防化服头盔"
+  },
+  {
+    "id": "1018",
+    "name": "Sabertooth",
+    "nameZh": "剑齿虎半自动步枪"
+  },
+  {
+    "id": "1019",
+    "name": "Sabertooth Iron Sights",
+    "nameZh": "剑齿虎瞄准镜"
+  },
+  {
+    "id": "1020",
+    "name": "Sabertooth Magazine",
+    "nameZh": "剑齿虎弹匣"
+  },
+  {
+    "id": "1021",
+    "name": "Avenger",
+    "nameZh": "复仇者手枪"
+  },
+  {
+    "id": "1022",
+    "name": "Avenger Magazine",
+    "nameZh": "复仇者弹匣"
+  },
+  {
+    "id": "1023",
+    "name": "Police Baton",
+    "nameZh": "警棍"
+  },
+  {
+    "id": "1024",
+    "name": "Peacemaker",
+    "nameZh": "P90冲锋枪"
+  },
+  {
+    "id": "1025",
+    "name": "Peacemaker Iron Sights",
+    "nameZh": "P90瞄准镜"
+  },
+  {
+    "id": "1026",
+    "name": "Peacemaker Magazine",
+    "nameZh": "P90弹匣"
+  },
+  {
+    "id": "1027",
+    "name": "Viper",
+    "nameZh": "MP5冲锋枪"
+  },
+  {
+    "id": "1028",
+    "name": "Viper Iron Sights",
+    "nameZh": "MP5瞄准镜"
+  },
+  {
+    "id": "1029",
+    "name": "Viper Magazine",
+    "nameZh": "MP5弹匣"
+  },
+  {
+    "id": "1030",
+    "name": "Frying Pan",
+    "nameZh": "平底锅"
+  },
+  {
+    "id": "1031",
+    "name": "Shovel",
+    "nameZh": "铁铲"
+  },
+  {
+    "id": "1032",
+    "name": "Crowbar",
+    "nameZh": "撬棍"
+  },
+  {
+    "id": "1033",
+    "name": "Paddle",
+    "nameZh": "船桨"
+  },
+  {
+    "id": "1034",
+    "name": "Pitchfork",
+    "nameZh": "干草叉"
+  },
+  {
+    "id": "1035",
+    "name": "Machete",
+    "nameZh": "弯刀"
+  },
+  {
+    "id": "1036",
+    "name": "Katana",
+    "nameZh": "武士刀"
+  },
+  {
+    "id": "1037",
+    "name": "Heartbreaker",
+    "nameZh": "负心人步枪"
+  },
+  {
+    "id": "1038",
+    "name": "Heartbreaker Iron Sights",
+    "nameZh": "负心人瞄准镜"
+  },
+  {
+    "id": "1039",
+    "name": "Kryzkarek",
+    "nameZh": "PMM手枪"
+  },
+  {
+    "id": "1040",
+    "name": "Kryzkarek Magazine",
+    "nameZh": "PMM弹匣"
+  },
+  {
+    "id": "1041",
+    "name": "Yuri",
+    "nameZh": "PP19野牛冲锋枪"
+  },
+  {
+    "id": "1042",
+    "name": "Yuri Magazine",
+    "nameZh": "PP19野牛弹匣"
+  },
+  {
+    "id": "1043",
+    "name": "Yuri Iron Sights",
+    "nameZh": "PP19野牛瞄准镜"
+  },
+  {
+    "id": "1044",
+    "name": "Civilian Nightvision",
+    "nameZh": "民用夜视仪"
+  },
+  {
+    "id": "1045",
+    "name": "Pumpkin Seed",
+    "nameZh": "南瓜种子"
+  },
+  {
+    "id": "1046",
+    "name": "Pumpkin",
+    "nameZh": "南瓜"
+  },
+  {
+    "id": "1047",
+    "name": "Pumpkin Pie",
+    "nameZh": "南瓜派"
+  },
+  {
+    "id": "1048",
+    "name": "Hockey Mask",
+    "nameZh": "曲棍球面具"
+  },
+  {
+    "id": "1049",
+    "name": "Jack-o-Lantern Torch",
+    "nameZh": "南瓜灯"
+  },
+  {
+    "id": "1050",
+    "name": "Safezone Radiator",
+    "nameZh": "僵尸屏蔽器"
+  },
+  {
+    "id": "1051",
+    "name": "$5 Note",
+    "nameZh": "5美元"
+  },
+  {
+    "id": "1052",
+    "name": "$10 Note",
+    "nameZh": "10美元"
+  },
+  {
+    "id": "1053",
+    "name": "$20 Note",
+    "nameZh": "20美元"
+  },
+  {
+    "id": "1054",
+    "name": "$50 Note",
+    "nameZh": "50美元"
+  },
+  {
+    "id": "1055",
+    "name": "$100 Note",
+    "nameZh": "100美元"
+  },
+  {
+    "id": "1056",
+    "name": "Loonie",
+    "nameZh": "1美元"
+  },
+  {
+    "id": "1057",
+    "name": "Toonie",
+    "nameZh": "2美元"
+  },
+  {
+    "id": "1058",
+    "name": "Large Maple Plate",
+    "nameZh": "枫木板(大)"
+  },
+  {
+    "id": "1059",
+    "name": "Small Maple Plate",
+    "nameZh": "枫木板(小)"
+  },
+  {
+    "id": "1060",
+    "name": "Large Maple Frame",
+    "nameZh": "枫木框架(大)"
+  },
+  {
+    "id": "1061",
+    "name": "Small Maple Frame",
+    "nameZh": "枫木框架(小)"
+  },
+  {
+    "id": "1062",
+    "name": "Maple Siding",
+    "nameZh": "枫木墙板"
+  },
+  {
+    "id": "1063",
+    "name": "Maple Pipe",
+    "nameZh": "枫木小柱"
+  },
+  {
+    "id": "1064",
+    "name": "Large Birch Plate",
+    "nameZh": "桦木板(大)"
+  },
+  {
+    "id": "1065",
+    "name": "Small Birch Plate",
+    "nameZh": "桦木板(小)"
+  },
+  {
+    "id": "1066",
+    "name": "Large Birch Frame",
+    "nameZh": "桦木框架(大)"
+  },
+  {
+    "id": "1067",
+    "name": "Small Birch Frame",
+    "nameZh": "桦木框架(小)"
+  },
+  {
+    "id": "1068",
+    "name": "Birch Siding",
+    "nameZh": "桦木墙板"
+  },
+  {
+    "id": "1069",
+    "name": "Birch Pipe",
+    "nameZh": "桦木小柱"
+  },
+  {
+    "id": "1070",
+    "name": "Large Pine Plate",
+    "nameZh": "松木板(大)"
+  },
+  {
+    "id": "1071",
+    "name": "Small Pine Plate",
+    "nameZh": "松木板(小)"
+  },
+  {
+    "id": "1072",
+    "name": "Large Pine Frame",
+    "nameZh": "松木框架(大)"
+  },
+  {
+    "id": "1073",
+    "name": "Small Pine Frame",
+    "nameZh": "松木框架(小)"
+  },
+  {
+    "id": "1074",
+    "name": "Pine Siding",
+    "nameZh": "松木墙板"
+  },
+  {
+    "id": "1075",
+    "name": "Pine Pipe",
+    "nameZh": "松木小柱子"
+  },
+  {
+    "id": "1076",
+    "name": "Amber Pie",
+    "nameZh": "琥珀色的浆果派"
+  },
+  {
+    "id": "1077",
+    "name": "Indigo Pie",
+    "nameZh": "靛蓝色的浆果派"
+  },
+  {
+    "id": "1078",
+    "name": "Jade Pie",
+    "nameZh": "翡翠色的浆果派"
+  },
+  {
+    "id": "1079",
+    "name": "Mauve Pie",
+    "nameZh": "粉色的浆果派"
+  },
+  {
+    "id": "1080",
+    "name": "Russet Pie",
+    "nameZh": "赤褐色的浆果派"
+  },
+  {
+    "id": "1081",
+    "name": "Teal Pie",
+    "nameZh": "水鸭色的浆果派"
+  },
+  {
+    "id": "1082",
+    "name": "Vermillion Pie",
+    "nameZh": "朱红色的浆果派"
+  },
+  {
+    "id": "1083",
+    "name": "Maple Doorframe",
+    "nameZh": "枫木门框架"
+  },
+  {
+    "id": "1084",
+    "name": "Maple Garageframe",
+    "nameZh": "枫木车库门框"
+  },
+  {
+    "id": "1085",
+    "name": "Birch Doorframe",
+    "nameZh": "桦木门框架"
+  },
+  {
+    "id": "1086",
+    "name": "Birch Garageframe",
+    "nameZh": "桦木车库门框"
+  },
+  {
+    "id": "1087",
+    "name": "Pine Doorframe",
+    "nameZh": "松木门框架"
+  },
+  {
+    "id": "1088",
+    "name": "Pine Garageframe",
+    "nameZh": "松木车库门框"
+  },
+  {
+    "id": "1089",
+    "name": "Metal Doorframe",
+    "nameZh": "金属门框架"
+  },
+  {
+    "id": "1090",
+    "name": "Metal Garageframe",
+    "nameZh": "金属车库门框"
+  },
+  {
+    "id": "1091",
+    "name": "Large Metal Plate",
+    "nameZh": "金属板(大)"
+  },
+  {
+    "id": "1092",
+    "name": "Small Metal Plate",
+    "nameZh": "金属板(小）"
+  },
+  {
+    "id": "1093",
+    "name": "Metal Siding",
+    "nameZh": "金属墙板"
+  },
+  {
+    "id": "1094",
+    "name": "Metal Pipe",
+    "nameZh": "金属小柱子"
+  },
+  {
+    "id": "1095",
+    "name": "Maple Sign",
+    "nameZh": "枫木告示牌"
+  },
+  {
+    "id": "1096",
+    "name": "Birch Sign",
+    "nameZh": "桦木告示牌"
+  },
+  {
+    "id": "1097",
+    "name": "Pine Sign",
+    "nameZh": "松木告示牌"
+  },
+  {
+    "id": "1098",
+    "name": "Locked Metal Sign",
+    "nameZh": "金属告示牌"
+  },
+  {
+    "id": "1099",
+    "name": "Makeshift Vehicle",
+    "nameZh": "四人自制车辆"
+  },
+  {
+    "id": "1100",
+    "name": "C4 Sticky Grenade",
+    "nameZh": "C4"
+  },
+  {
+    "id": "1101",
+    "name": "Landmine",
+    "nameZh": "地雷"
+  },
+  {
+    "id": "1102",
+    "name": "Claymore",
+    "nameZh": "阔剑地雷"
+  },
+  {
+    "id": "1103",
+    "name": "Umbrella",
+    "nameZh": "黑色雨伞"
+  },
+  {
+    "id": "1104",
+    "name": "Amber Berry Seed",
+    "nameZh": "黄色浆果的种子"
+  },
+  {
+    "id": "1105",
+    "name": "Indigo Berry Seed",
+    "nameZh": "I靛蓝色浆果的种子"
+  },
+  {
+    "id": "1106",
+    "name": "Jade Berry Seed",
+    "nameZh": "翡翠色浆果的种子"
+  },
+  {
+    "id": "1107",
+    "name": "Mauve Berry Seed",
+    "nameZh": "粉色浆果的种子"
+  },
+  {
+    "id": "1108",
+    "name": "Russet Berry Seed",
+    "nameZh": "赤褐色浆果的种子"
+  },
+  {
+    "id": "1109",
+    "name": "Teal Berry Seed",
+    "nameZh": "水鸭色浆果的种子"
+  },
+  {
+    "id": "1110",
+    "name": "Vermillion Berry Seed",
+    "nameZh": "朱红色浆果的种子"
+  },
+  {
+    "id": "1111",
+    "name": "6 Seater Makeshift Vehicle",
+    "nameZh": "六人位自制车辆"
+  },
+  {
+    "id": "1112",
+    "name": "1 Seater Makeshift Vehicle",
+    "nameZh": "一人位自制车辆"
+  },
+  {
+    "id": "1113",
+    "name": "Snare",
+    "nameZh": "捕兽夹"
+  },
+  {
+    "id": "1114",
+    "name": "Maple Jerrycan",
+    "nameZh": "枫木油桶"
+  },
+  {
+    "id": "1115",
+    "name": "Birch Jerrycan",
+    "nameZh": "桦木油桶"
+  },
+  {
+    "id": "1116",
+    "name": "Pine Jerrycan",
+    "nameZh": "松木油桶"
+  },
+  {
+    "id": "1117",
+    "name": "Pork",
+    "nameZh": "猪肉"
+  },
+  {
+    "id": "1118",
+    "name": "Bacon",
+    "nameZh": "培根三明治"
+  },
+  {
+    "id": "1119",
+    "name": "Barbwire Fence",
+    "nameZh": "带刺的铁丝围栏"
+  },
+  {
+    "id": "1120",
+    "name": "Raw Beef",
+    "nameZh": "生牛肉"
+  },
+  {
+    "id": "1121",
+    "name": "Cooked Beef",
+    "nameZh": "熟牛肉"
+  },
+  {
+    "id": "1122",
+    "name": "Blue umbrella",
+    "nameZh": "蓝色雨伞"
+  },
+  {
+    "id": "1123",
+    "name": "Green Umbrella",
+    "nameZh": "绿色雨伞"
+  },
+  {
+    "id": "1124",
+    "name": "Orange Umbrella",
+    "nameZh": "橙色雨伞"
+  },
+  {
+    "id": "1125",
+    "name": "Purple Umbrella",
+    "nameZh": "紫色雨伞"
+  },
+  {
+    "id": "1126",
+    "name": "Red Umbrella",
+    "nameZh": "红色雨伞"
+  },
+  {
+    "id": "1127",
+    "name": "White umbrella",
+    "nameZh": "白色雨伞"
+  },
+  {
+    "id": "1128",
+    "name": "Yellow Umbrella",
+    "nameZh": "黄色雨伞"
+  },
+  {
+    "id": "1129",
+    "name": "Heatstim",
+    "nameZh": "暖宝宝"
+  },
+  {
+    "id": "1130",
+    "name": "Ornamental Barbed Wire",
+    "nameZh": "带刺的铁丝环网(圣诞)"
+  },
+  {
+    "id": "1131",
+    "name": "Ornamental Barbed Wire Fence",
+    "nameZh": "带刺的铁丝围栏(圣诞)"
+  },
+  {
+    "id": "1132",
+    "name": "Snowball",
+    "nameZh": "雪球(手雷)"
+  },
+  {
+    "id": "1133",
+    "name": "Black Scarf",
+    "nameZh": "黑色围巾"
+  },
+  {
+    "id": "1134",
+    "name": "Blue Scarf",
+    "nameZh": "蓝色围巾"
+  },
+  {
+    "id": "1135",
+    "name": "Green Scarf",
+    "nameZh": "绿色围巾"
+  },
+  {
+    "id": "1136",
+    "name": "Orange Scarf",
+    "nameZh": "橙色围巾"
+  },
+  {
+    "id": "1137",
+    "name": "Purple Scarf",
+    "nameZh": "紫色围巾"
+  },
+  {
+    "id": "1138",
+    "name": "Red Scarf",
+    "nameZh": "红色围巾"
+  },
+  {
+    "id": "1139",
+    "name": "White Scarf",
+    "nameZh": "白色围巾"
+  },
+  {
+    "id": "1140",
+    "name": "Yellow Scarf",
+    "nameZh": "黄色围巾"
+  },
+  {
+    "id": "1143",
+    "name": "Sawed-off shotgun",
+    "nameZh": "短管霰弹枪"
+  },
+  {
+    "id": "1144",
+    "name": "Large Birch Plate (Equilateral)",
+    "nameZh": "巨大的等边三角形(桦木)"
+  },
+  {
+    "id": "1145",
+    "name": "Large Birch Plate (Right)",
+    "nameZh": "巨大的直角三角形(桦木)"
+  },
+  {
+    "id": "1146",
+    "name": "Large Maple Plate (Equilateral)",
+    "nameZh": "巨大的等边三角形(枫木)"
+  },
+  {
+    "id": "1147",
+    "name": "Large Maple Plate (Right)",
+    "nameZh": "巨大的直角三角形(枫木)"
+  },
+  {
+    "id": "1148",
+    "name": "Large Pine Plate (Equilateral)",
+    "nameZh": "巨大的等边三角形(松木)"
+  },
+  {
+    "id": "1149",
+    "name": "Large Pine Plate Right",
+    "nameZh": "巨大的直角三角形(松木)"
+  },
+  {
+    "id": "1150",
+    "name": "Small Birch Plate (Equilateral)",
+    "nameZh": "较小的等边三角形(桦木)"
+  },
+  {
+    "id": "1151",
+    "name": "Small Birch Plate (Right)",
+    "nameZh": "较小的直角三角形(桦木)"
+  },
+  {
+    "id": "1152",
+    "name": "Small Maple Plate (Equilateral)",
+    "nameZh": "较小的等边三角形(枫木)"
+  },
+  {
+    "id": "1153",
+    "name": "Small Maple Plate (Right)",
+    "nameZh": "较小的直角三角形(枫木)"
+  },
+  {
+    "id": "1154",
+    "name": "Small Pine Plate (Equilateral)",
+    "nameZh": "较小的等边三角形(松木)"
+  },
+  {
+    "id": "1155",
+    "name": "Small Pine Plate (Right)",
+    "nameZh": "较小的直角三角形(松木)"
+  },
+  {
+    "id": "1156",
+    "name": "Thief Top",
+    "nameZh": "小偷T恤"
+  },
+  {
+    "id": "1157",
+    "name": "Thief Bottom",
+    "nameZh": "小偷裤子"
+  },
+  {
+    "id": "1158",
+    "name": "Claim Flag",
+    "nameZh": "领地旗帜"
+  },
+  {
+    "id": "1159",
+    "name": "Maple Syrup",
+    "nameZh": "枫糖浆"
+  },
+  {
+    "id": "1160",
+    "name": "Pancake",
+    "nameZh": "煎饼"
+  },
+  {
+    "id": "1161",
+    "name": "Waffle",
+    "nameZh": "I华夫饼干"
+  },
+  {
+    "id": "1162",
+    "name": "Dough",
+    "nameZh": "生面团"
+  },
+  {
+    "id": "1163",
+    "name": "Doughnut",
+    "nameZh": "甜甜圈"
+  },
+  {
+    "id": "1164",
+    "name": "Pizza",
+    "nameZh": "披萨"
+  },
+  {
+    "id": "1165",
+    "name": "Nailgun",
+    "nameZh": "钉枪"
+  },
+  {
+    "id": "1166",
+    "name": "Nailgun magazine",
+    "nameZh": "钉枪弹匣"
+  },
+  {
+    "id": "1168",
+    "name": "Civilian Armor Vest",
+    "nameZh": "民用护甲"
+  },
+  {
+    "id": "1169",
+    "name": "Spec Ops Vest",
+    "nameZh": "特种部队护甲"
+  },
+  {
+    "id": "1170",
+    "name": "Spec Ops Rucksack",
+    "nameZh": "特种部队帆布背包"
+  },
+  {
+    "id": "1171",
+    "name": "Spec Ops Top",
+    "nameZh": "特种部队上衣"
+  },
+  {
+    "id": "1172",
+    "name": "Spec Ops Bottom",
+    "nameZh": "特种部队长裤"
+  },
+  {
+    "id": "1173",
+    "name": "Makeshift Armor",
+    "nameZh": "自制护甲"
+  },
+  {
+    "id": "1174",
+    "name": "Scythe",
+    "nameZh": "长柄镰刀"
+  },
+  {
+    "id": "1175",
+    "name": "Chart",
+    "nameZh": "手绘地图"
+  },
+  {
+    "id": "1176",
+    "name": "GPS",
+    "nameZh": "GPS"
+  },
+  {
+    "id": "1177",
+    "name": "Military Tracer Magazine",
+    "nameZh": "军用曳光弹弹匣"
+  },
+  {
+    "id": "1178",
+    "name": "Diving Tank",
+    "nameZh": "潜水用氧气瓶"
+  },
+  {
+    "id": "1179",
+    "name": "Wetsuit Top",
+    "nameZh": "潜水上衣"
+  },
+  {
+    "id": "1180",
+    "name": "Wetsuit Bottom",
+    "nameZh": "潜水裤"
+  },
+  {
+    "id": "1181",
+    "name": "Snorkel",
+    "nameZh": "潜水呼吸管"
+  },
+  {
+    "id": "1182",
+    "name": "Black Duffelbag",
+    "nameZh": "黑色行李包"
+  },
+  {
+    "id": "1183",
+    "name": "Blue Duffelbag",
+    "nameZh": "蓝色行李包"
+  },
+  {
+    "id": "1184",
+    "name": "Green Duffelbag",
+    "nameZh": "绿色行李包"
+  },
+  {
+    "id": "1185",
+    "name": "Orange Duffelbag",
+    "nameZh": "橙色行李包"
+  },
+  {
+    "id": "1186",
+    "name": "Purple Duffelbag",
+    "nameZh": "紫色行李包"
+  },
+  {
+    "id": "1187",
+    "name": "Red Duffelbag",
+    "nameZh": "红色行李包"
+  },
+  {
+    "id": "1188",
+    "name": "White Duffelbag",
+    "nameZh": "白色行李包"
+  },
+  {
+    "id": "1189",
+    "name": "Yellow Duffelbag",
+    "nameZh": "黄色行李包"
+  },
+  {
+    "id": "1190",
+    "name": "Ranger Muzzle",
+    "nameZh": "俄制消焰器"
+  },
+  {
+    "id": "1191",
+    "name": "Ranger Barrell",
+    "nameZh": "俄制枪管"
+  },
+  {
+    "id": "1192",
+    "name": "High Calibur Military Ammo",
+    "nameZh": "军用弹药箱（大口径）"
+  },
+  {
+    "id": "1193",
+    "name": "High Calibur Ranger Ammo",
+    "nameZh": "俄制弹药箱（大口径）"
+  },
+  {
+    "id": "1194",
+    "name": "Horde Beacon",
+    "nameZh": "尸潮生成器"
+  },
+  {
+    "id": "1195",
+    "name": "Handcuffs",
+    "nameZh": "手铐"
+  },
+  {
+    "id": "1196",
+    "name": "Handcuffs Key",
+    "nameZh": "手铐钥匙"
+  },
+  {
+    "id": "1197",
+    "name": "Cable Tie",
+    "nameZh": "线缆绳"
+  },
+  {
+    "id": "1198",
+    "name": "Pickaxe",
+    "nameZh": "丁字稿"
+  },
+  {
+    "id": "1199",
+    "name": "Miner Lamp / Headlamp",
+    "nameZh": "矿工头灯"
+  },
+  {
+    "id": "1200",
+    "name": "Military Fragmentation Magazine",
+    "nameZh": "军用爆裂弹弹匣"
+  },
+  {
+    "id": "1201",
+    "name": "Military Nightvision Scope",
+    "nameZh": "军用夜视瞄准镜"
+  },
+  {
+    "id": "1202",
+    "name": "Maple Rifle Rack",
+    "nameZh": "枫木枪架"
+  },
+  {
+    "id": "1203",
+    "name": "Birch Rifle Rack",
+    "nameZh": "桦木枪架"
+  },
+  {
+    "id": "1204",
+    "name": "Pine Rifle Rack",
+    "nameZh": "松木枪架"
+  },
+  {
+    "id": "1205",
+    "name": "Maple Trophy Case",
+    "nameZh": "枫木展示柜"
+  },
+  {
+    "id": "1206",
+    "name": "Birch Trophy Case",
+    "nameZh": "桦木展示柜"
+  },
+  {
+    "id": "1207",
+    "name": "Pine Trophy Case",
+    "nameZh": "松木展示柜"
+  },
+  {
+    "id": "1208",
+    "name": "Rain Barrel",
+    "nameZh": "雨桶"
+  },
+  {
+    "id": "1209",
+    "name": "Explosive Arrow",
+    "nameZh": "爆炸箭"
+  },
+  {
+    "id": "1210",
+    "name": "Brick Doorway",
+    "nameZh": "红砖门框"
+  },
+  {
+    "id": "1211",
+    "name": "Brick Garage",
+    "nameZh": "红砖车库门框"
+  },
+  {
+    "id": "1212",
+    "name": "Brick Pillar",
+    "nameZh": "红砖支柱"
+  },
+  {
+    "id": "1213",
+    "name": "Brick Post",
+    "nameZh": "红砖矮柱"
+  },
+  {
+    "id": "1214",
+    "name": "Brick Rampart",
+    "nameZh": "红砖矮墙"
+  },
+  {
+    "id": "1215",
+    "name": "Brick Wall",
+    "nameZh": "红砖墙"
+  },
+  {
+    "id": "1216",
+    "name": "Brick Window",
+    "nameZh": "红砖窗户"
+  },
+  {
+    "id": "1217",
+    "name": "Brick Doorframe",
+    "nameZh": "红砖门框架"
+  },
+  {
+    "id": "1218",
+    "name": "Brick Garageframe",
+    "nameZh": "红砖车库框架"
+  },
+  {
+    "id": "1219",
+    "name": "Oil Derrick (Pump Jack)",
+    "nameZh": "石油钻井机"
+  },
+  {
+    "id": "1220",
+    "name": "Metal Rifle Rack",
+    "nameZh": "金属枪架"
+  },
+  {
+    "id": "1221",
+    "name": "Metal Trophy Case",
+    "nameZh": "金属展示柜"
+  },
+  {
+    "id": "1222",
+    "name": "Cagelight",
+    "nameZh": "笼式灯"
+  },
+  {
+    "id": "1223",
+    "name": "Maple Shutter",
+    "nameZh": "松木百叶窗"
+  },
+  {
+    "id": "1224",
+    "name": "Birch Shutter",
+    "nameZh": "桦木百叶窗"
+  },
+  {
+    "id": "1225",
+    "name": "Pine Shutter",
+    "nameZh": "枫木百叶窗"
+  },
+  {
+    "id": "1226",
+    "name": "Metal Shutter",
+    "nameZh": "金属百叶窗"
+  },
+  {
+    "id": "1227",
+    "name": "Tanktrap",
+    "nameZh": "坦克陷阱"
+  },
+  {
+    "id": "1228",
+    "name": "Water Tank",
+    "nameZh": "水箱"
+  },
+  {
+    "id": "1229",
+    "name": "Fuel Tank",
+    "nameZh": "油箱"
+  },
+  {
+    "id": "1230",
+    "name": "Industrial Generator",
+    "nameZh": "工业发电机"
+  },
+  {
+    "id": "1231",
+    "name": "Maple Flag",
+    "nameZh": "枫木旗帜"
+  },
+  {
+    "id": "1232",
+    "name": "Birch Flag",
+    "nameZh": "桦木旗帜"
+  },
+  {
+    "id": "1233",
+    "name": "Pine Flag",
+    "nameZh": "松木旗帜"
+  },
+  {
+    "id": "1234",
+    "name": "Metal Flag",
+    "nameZh": "金属旗帜"
+  },
+  {
+    "id": "1235",
+    "name": "Maple Doubledoor",
+    "nameZh": "枫木双扇门"
+  },
+  {
+    "id": "1236",
+    "name": "Birch Doubledoor",
+    "nameZh": "桦木双扇门"
+  },
+  {
+    "id": "1237",
+    "name": "Pine Doubledoor",
+    "nameZh": "松木双扇门"
+  },
+  {
+    "id": "1238",
+    "name": "Metal Doubledoor",
+    "nameZh": "金属双扇门"
+  },
+  {
+    "id": "1239",
+    "name": "Slippery Metal Plate",
+    "nameZh": "巨大的金属滑板"
+  },
+  {
+    "id": "1240",
+    "name": "Remote Detonator",
+    "nameZh": "触发器"
+  },
+  {
+    "id": "1241",
+    "name": "Breaching Charge (Demolition Charge)",
+    "nameZh": "遥控炸弹"
+  },
+  {
+    "id": "1242",
+    "name": "Makeshift Grenade",
+    "nameZh": "自制手榴弹"
+  },
+  {
+    "id": "1243",
+    "name": "Cot / Bedframe",
+    "nameZh": "床"
+  },
+  {
+    "id": "1244",
+    "name": "Sentry Gun / Auto Turret",
+    "nameZh": "自动哨兵塔(中立)"
+  },
+  {
+    "id": "1245",
+    "name": "Maple Counter",
+    "nameZh": "枫木柜台"
+  },
+  {
+    "id": "1246",
+    "name": "Birch Counter",
+    "nameZh": "桦木柜台"
+  },
+  {
+    "id": "1247",
+    "name": "Pine Counter",
+    "nameZh": "松木柜台"
+  },
+  {
+    "id": "1248",
+    "name": "Metal Counter",
+    "nameZh": "金属柜台"
+  },
+  {
+    "id": "1249",
+    "name": "Fridge",
+    "nameZh": "冰箱"
+  },
+  {
+    "id": "1250",
+    "name": "Oven",
+    "nameZh": "烤箱"
+  },
+  {
+    "id": "1251",
+    "name": "Maple Counter Sink",
+    "nameZh": "水池(枫木)"
+  },
+  {
+    "id": "1252",
+    "name": "Birch Counter Sink",
+    "nameZh": "水池(桦木)"
+  },
+  {
+    "id": "1253",
+    "name": "Pine Counter Sink",
+    "nameZh": "水池(松木)"
+  },
+  {
+    "id": "1254",
+    "name": "Metal Counter Sink",
+    "nameZh": "水池(金属)"
+  },
+  {
+    "id": "1255",
+    "name": "Lamp",
+    "nameZh": "灯"
+  },
+  {
+    "id": "1256",
+    "name": "Couch",
+    "nameZh": "沙发"
+  },
+  {
+    "id": "1257",
+    "name": "Maple Library",
+    "nameZh": "枫木图书柜"
+  },
+  {
+    "id": "1258",
+    "name": "Birch Library",
+    "nameZh": "桦木图书柜"
+  },
+  {
+    "id": "1259",
+    "name": "Pine Library",
+    "nameZh": "松木图书柜"
+  },
+  {
+    "id": "1260",
+    "name": "Metal Library",
+    "nameZh": "金属图书柜"
+  },
+  {
+    "id": "1261",
+    "name": "Oxygenator",
+    "nameZh": "充氧器"
+  },
+  {
+    "id": "1262",
+    "name": "Triangular Maple Floor",
+    "nameZh": "三角枫木地基"
+  },
+  {
+    "id": "1263",
+    "name": "Triangular Birch Floor",
+    "nameZh": "三角桦木地基"
+  },
+  {
+    "id": "1264",
+    "name": "Triangular Pine Floor",
+    "nameZh": "三角松木地基"
+  },
+  {
+    "id": "1265",
+    "name": "Triangular Metal Floor",
+    "nameZh": "三角金属地基"
+  },
+  {
+    "id": "1266",
+    "name": "Triangular Maple Roof",
+    "nameZh": "三角枫木屋顶"
+  },
+  {
+    "id": "1267",
+    "name": "Triangular Birch Roof",
+    "nameZh": "三角桦木屋顶"
+  },
+  {
+    "id": "1268",
+    "name": "Triangular Pine Roof",
+    "nameZh": "三角松木屋顶"
+  },
+  {
+    "id": "1269",
+    "name": "Triangular Metal Roof",
+    "nameZh": "三角金属屋顶"
+  },
+  {
+    "id": "1270",
+    "name": "Gasmask",
+    "nameZh": "防毒面具"
+  },
+  {
+    "id": "1271",
+    "name": "Radiation Filter",
+    "nameZh": "滤波器"
+  },
+  {
+    "id": "1272",
+    "name": "Wall mounted blue flare",
+    "nameZh": "蓝色照明弹"
+  },
+  {
+    "id": "1273",
+    "name": "Wall mounted green flare",
+    "nameZh": "绿色照明弹"
+  },
+  {
+    "id": "1274",
+    "name": "Wall mounted orange flare",
+    "nameZh": "橙色照明弹"
+  },
+  {
+    "id": "1275",
+    "name": "Wall mounted purple flare",
+    "nameZh": "紫色照明弹"
+  },
+  {
+    "id": "1276",
+    "name": "Wall mounted red flare",
+    "nameZh": "红色照明弹"
+  },
+  {
+    "id": "1277",
+    "name": "Wall mounted yellow flare",
+    "nameZh": "黄色照明弹"
+  },
+  {
+    "id": "1278",
+    "name": "Maple Wardrobe",
+    "nameZh": "枫木衣柜"
+  },
+  {
+    "id": "1279",
+    "name": "Birch Wardrobe",
+    "nameZh": "桦木衣柜"
+  },
+  {
+    "id": "1280",
+    "name": "Pine Wardrobe",
+    "nameZh": "松木衣柜"
+  },
+  {
+    "id": "1281",
+    "name": "Metal Wardrobe",
+    "nameZh": "金属衣柜"
+  },
+  {
+    "id": "1282",
+    "name": "Umbrella / Parasol",
+    "nameZh": "雨伞"
+  },
+  {
+    "id": "1283",
+    "name": "Cooler",
+    "nameZh": "冷藏柜"
+  },
+  {
+    "id": "1284",
+    "name": "Maple Rectangular Table",
+    "nameZh": "枫木长方桌"
+  },
+  {
+    "id": "1285",
+    "name": "Birch Rectangular Table",
+    "nameZh": "桦木长方桌"
+  },
+  {
+    "id": "1286",
+    "name": "Pine Rectangular Table",
+    "nameZh": "松木长方桌"
+  },
+  {
+    "id": "1287",
+    "name": "Metal Rectangular Table",
+    "nameZh": "金属长方桌"
+  },
+  {
+    "id": "1288",
+    "name": "Maple Circular Table",
+    "nameZh": "枫木圆桌"
+  },
+  {
+    "id": "1289",
+    "name": "Birch Circular Table",
+    "nameZh": "桦木圆桌"
+  },
+  {
+    "id": "1290",
+    "name": "Pine Circular Table",
+    "nameZh": "松木圆桌"
+  },
+  {
+    "id": "1291",
+    "name": "Metal Circular Table",
+    "nameZh": "金属圆桌"
+  },
+  {
+    "id": "1292",
+    "name": "Maple Square Table",
+    "nameZh": "枫木方桌"
+  },
+  {
+    "id": "1293",
+    "name": "Birch Square Table",
+    "nameZh": "桦木方桌"
+  },
+  {
+    "id": "1294",
+    "name": "Pine Square Table",
+    "nameZh": "松木方桌"
+  },
+  {
+    "id": "1295",
+    "name": "Metal Square Table",
+    "nameZh": "金属方桌"
+  },
+  {
+    "id": "1296",
+    "name": "Beach Chair",
+    "nameZh": "沙滩椅"
+  },
+  {
+    "id": "1297",
+    "name": "Weak Glass",
+    "nameZh": "脆弱玻璃"
+  },
+  {
+    "id": "1298",
+    "name": "Bulletproof Glass",
+    "nameZh": "防弹玻璃"
+  },
+  {
+    "id": "1299",
+    "name": "One Way Glass",
+    "nameZh": "单向玻璃"
+  },
+  {
+    "id": "1300",
+    "name": "Tank Cannon",
+    "nameZh": "坦克大炮"
+  },
+  {
+    "id": "1302",
+    "name": "Missile",
+    "nameZh": "导弹"
+  },
+  {
+    "id": "1303",
+    "name": "Blue Couch",
+    "nameZh": "蓝色沙发"
+  },
+  {
+    "id": "1304",
+    "name": "Green Couch",
+    "nameZh": "绿色沙发"
+  },
+  {
+    "id": "1305",
+    "name": "Orange Couch",
+    "nameZh": "橙色沙发"
+  },
+  {
+    "id": "1306",
+    "name": "Purple Couch",
+    "nameZh": "紫色沙发"
+  },
+  {
+    "id": "1307",
+    "name": "Red Couch",
+    "nameZh": "红色沙发"
+  },
+  {
+    "id": "1308",
+    "name": "Yellow Couch",
+    "nameZh": "黄色沙发"
+  },
+  {
+    "id": "1309",
+    "name": "Blue Cot",
+    "nameZh": "蓝色的床"
+  },
+  {
+    "id": "1310",
+    "name": "Green Cot",
+    "nameZh": "绿色的床"
+  },
+  {
+    "id": "1311",
+    "name": "Orange Cot",
+    "nameZh": "橙色的床"
+  },
+  {
+    "id": "1312",
+    "name": "Purple Cot",
+    "nameZh": "紫色的床"
+  },
+  {
+    "id": "1313",
+    "name": "Red Cot",
+    "nameZh": "红色的床"
+  },
+  {
+    "id": "1314",
+    "name": "Yellow Cot",
+    "nameZh": "黄色的床"
+  },
+  {
+    "id": "1315",
+    "name": "Blue Beach Chair",
+    "nameZh": "蓝色沙滩椅"
+  },
+  {
+    "id": "1316",
+    "name": "Green Beach Chair",
+    "nameZh": "绿色沙滩椅"
+  },
+  {
+    "id": "1317",
+    "name": "Orange Beach Chair",
+    "nameZh": "I橙色沙滩椅"
+  },
+  {
+    "id": "1318",
+    "name": "Purple Beach Chair",
+    "nameZh": "紫色沙滩椅"
+  },
+  {
+    "id": "1319",
+    "name": "Red Beach Chair",
+    "nameZh": "红色沙滩椅"
+  },
+  {
+    "id": "1320",
+    "name": "Yellow Beach Chair",
+    "nameZh": "黄色沙滩椅"
+  },
+  {
+    "id": "1321",
+    "name": "Blue Umbrella Barricade",
+    "nameZh": "蓝色雨伞"
+  },
+  {
+    "id": "1322",
+    "name": "Green Umbrella (Barricade)",
+    "nameZh": "绿色雨伞"
+  },
+  {
+    "id": "1323",
+    "name": "Orange Umbrella (Barricade)",
+    "nameZh": "橙色雨伞"
+  },
+  {
+    "id": "1324",
+    "name": "Purple Umbrella (Barricade)",
+    "nameZh": "紫色雨伞"
+  },
+  {
+    "id": "1325",
+    "name": "Red Umbrella (Barricade)",
+    "nameZh": "红色雨伞"
+  },
+  {
+    "id": "1326",
+    "name": "Yellow Umbrella (Barricade)",
+    "nameZh": "黄色雨伞"
+  },
+  {
+    "id": "1327",
+    "name": "Book",
+    "nameZh": "书本"
+  },
+  {
+    "id": "1328",
+    "name": "Note",
+    "nameZh": "便签（笔记本）"
+  },
+  {
+    "id": "1329",
+    "name": "Maple Hatch",
+    "nameZh": "枫木陷阱门"
+  },
+  {
+    "id": "1330",
+    "name": "Birch Hatch",
+    "nameZh": "桦木陷阱门"
+  },
+  {
+    "id": "1331",
+    "name": "Pine Hatch",
+    "nameZh": "松木陷阱门"
+  },
+  {
+    "id": "1332",
+    "name": "Metal Hatch",
+    "nameZh": "金属陷阱门"
+  },
+  {
+    "id": "1333",
+    "name": "Russian Military Top",
+    "nameZh": "军用上衣(俄罗斯)"
+  },
+  {
+    "id": "1334",
+    "name": "Russian Military Bottom",
+    "nameZh": "军用裤子(俄罗斯)"
+  },
+  {
+    "id": "1335",
+    "name": "Russian Military Helmet",
+    "nameZh": "军用头盔(俄罗斯)"
+  },
+  {
+    "id": "1336",
+    "name": "Russian Military Vest",
+    "nameZh": "军用防弹背心(俄罗斯)"
+  },
+  {
+    "id": "1337",
+    "name": "Paintball Gun",
+    "nameZh": "彩弹枪"
+  },
+  {
+    "id": "1339",
+    "name": "Blue Paintball Hopper",
+    "nameZh": "蓝色彩弹装料斗"
+  },
+  {
+    "id": "1340",
+    "name": "Green Paintball Hopper",
+    "nameZh": "绿色彩弹装料斗"
+  },
+  {
+    "id": "1341",
+    "name": "Orange Paintball Hopper",
+    "nameZh": "橙色彩弹装料斗"
+  },
+  {
+    "id": "1342",
+    "name": "Purple Paintball Hopper",
+    "nameZh": "紫色彩弹装料斗"
+  },
+  {
+    "id": "1343",
+    "name": "Red Paintball Hopper",
+    "nameZh": "红色彩弹装料斗"
+  },
+  {
+    "id": "1344",
+    "name": "Yellow Paintball Hopper",
+    "nameZh": "黄色彩弹装料斗"
+  },
+  {
+    "id": "1345",
+    "name": "Farming Plot",
+    "nameZh": "小块土地"
+  },
+  {
+    "id": "1346",
+    "name": "Flashbang",
+    "nameZh": "闪光弹"
+  },
+  {
+    "id": "1347",
+    "name": "Raw Minnow",
+    "nameZh": "生鲦鱼"
+  },
+  {
+    "id": "1348",
+    "name": "Cooked Minnow",
+    "nameZh": "熟鲦鱼"
+  },
+  {
+    "id": "1349",
+    "name": "Raw Goldfish",
+    "nameZh": "生金鱼"
+  },
+  {
+    "id": "1350",
+    "name": "Cooked Goldfish",
+    "nameZh": "熟金鱼"
+  },
+  {
+    "id": "1351",
+    "name": "Raw Bass",
+    "nameZh": "生鲈鱼"
+  },
+  {
+    "id": "1352",
+    "name": "Cooked Bass",
+    "nameZh": "熟鲈鱼"
+  },
+  {
+    "id": "1353",
+    "name": "Stealy Wheely Automobiley",
+    "nameZh": "撬锁器"
+  },
+  {
+    "id": "1354",
+    "name": "Russian Ghillie Top",
+    "nameZh": "吉利服上衣(俄罗斯)"
+  },
+  {
+    "id": "1355",
+    "name": "Russian Ghillie Bottom",
+    "nameZh": "吉利服裤子(俄罗斯)"
+  },
+  {
+    "id": "1356",
+    "name": "Russian Ghillie Hood",
+    "nameZh": "吉利服头罩(俄罗斯)"
+  },
+  {
+    "id": "1357",
+    "name": "Russian Ghillie Vest",
+    "nameZh": "吉利服背心(俄罗斯)"
+  },
+  {
+    "id": "1358",
+    "name": "Pilot Top",
+    "nameZh": "飞行员上衣"
+  },
+  {
+    "id": "1359",
+    "name": "Pilot Cap",
+    "nameZh": "飞行员帽"
+  },
+  {
+    "id": "1360",
+    "name": "Teklowvka",
+    "nameZh": "特克洛维卡"
+  },
+  {
+    "id": "1361",
+    "name": "Teklowvka Magazine",
+    "nameZh": "特克洛维卡弹匣"
+  },
+  {
+    "id": "1362",
+    "name": "Augewehr",
+    "nameZh": "AUG突击步枪"
+  },
+  {
+    "id": "1363",
+    "name": "Augewehr Scope",
+    "nameZh": "AUG瞄准镜"
+  },
+  {
+    "id": "1364",
+    "name": "Hells Fury",
+    "nameZh": "地狱之怒机枪"
+  },
+  {
+    "id": "1365",
+    "name": "Hell's Fury Drum",
+    "nameZh": "地狱之怒弹匣"
+  },
+  {
+    "id": "1366",
+    "name": "Vonya",
+    "nameZh": "连发霰弹枪"
+  },
+  {
+    "id": "1367",
+    "name": "Vonya Iron Sights",
+    "nameZh": "连发霰弹枪瞄准镜"
+  },
+  {
+    "id": "1368",
+    "name": "Vonya Magazine",
+    "nameZh": "连发霰弹枪弹匣"
+  },
+  {
+    "id": "1369",
+    "name": "Bulldog",
+    "nameZh": "斗牛犬"
+  },
+  {
+    "id": "1370",
+    "name": "Bulldog Iron Sights",
+    "nameZh": "斗牛犬瞄准镜"
+  },
+  {
+    "id": "1371",
+    "name": "Bulldog Magazine",
+    "nameZh": "斗牛犬弹匣"
+  },
+  {
+    "id": "1372",
+    "name": "Friendly Sentry",
+    "nameZh": "自动哨兵塔(友好)"
+  },
+  {
+    "id": "1373",
+    "name": "Hostile Sentry",
+    "nameZh": "自动哨兵塔(敌对)"
+  },
+  {
+    "id": "1375",
+    "name": "Fusilaut",
+    "nameZh": "法玛斯突击步枪"
+  },
+  {
+    "id": "1376",
+    "name": "Fusilaut Iron Sights",
+    "nameZh": "法玛斯瞄准镜"
+  },
+  {
+    "id": "1377",
+    "name": "Nightraider",
+    "nameZh": "G36步枪"
+  },
+  {
+    "id": "1378",
+    "name": "Nightraider Iron Sights",
+    "nameZh": "G36步枪瞄准镜"
+  },
+  {
+    "id": "1379",
+    "name": "Calling Card",
+    "nameZh": "波波沙冲锋枪"
+  },
+  {
+    "id": "1380",
+    "name": "Calling Card Iron Sights",
+    "nameZh": "波波沙瞄准镜"
+  },
+  {
+    "id": "1381",
+    "name": "Calling Card Magazine",
+    "nameZh": "波波沙冲锋枪弹鼓"
+  },
+  {
+    "id": "1382",
+    "name": "Ekho",
+    "nameZh": "大口径狙击枪Ekho"
+  },
+  {
+    "id": "1383",
+    "name": "Ekho Iron Sights",
+    "nameZh": "Ekho瞄准镜"
+  },
+  {
+    "id": "1384",
+    "name": "Ekho Magazine",
+    "nameZh": "Ekho弹匣"
+  },
+  {
+    "id": "1385",
+    "name": "Mafia Fedora",
+    "nameZh": "黑色西装帽"
+  },
+  {
+    "id": "1386",
+    "name": "Mafia Tuxedo Top",
+    "nameZh": "黒条纹西装上衣"
+  },
+  {
+    "id": "1387",
+    "name": "Mafia Tuxedo Bottom",
+    "nameZh": "黑条纹西装裤"
+  },
+  {
+    "id": "1389",
+    "name": "Spec Ops Beret",
+    "nameZh": "特种部队贝雷帽"
+  },
+  {
+    "id": "1390",
+    "name": "Pool Cue",
+    "nameZh": "台球杆"
+  },
+  {
+    "id": "1391",
+    "name": "Tracksuit Top",
+    "nameZh": "运动上衣"
+  },
+  {
+    "id": "1392",
+    "name": "Tracksuit Bottom",
+    "nameZh": "运动裤"
+  },
+  {
+    "id": "1393",
+    "name": "Precision Charge",
+    "nameZh": "破门炸弹"
+  },
+  {
+    "id": "1394",
+    "name": "Heavy Machine Gun (HMG)",
+    "nameZh": "HMG机枪（物品不存在）"
+  },
+  {
+    "id": "1395",
+    "name": "Heavy Machine Gun Box (HMG Box)",
+    "nameZh": "HMG弹药"
+  },
+  {
+    "id": "1396",
+    "name": "Ghillie Netting",
+    "nameZh": "吉利网"
+  },
+  {
+    "id": "1397",
+    "name": "Russia Ghillie Netting",
+    "nameZh": "俄罗斯吉利网"
+  },
+  {
+    "id": "1398",
+    "name": "Trout Sandwich",
+    "nameZh": "鳟鱼三明治"
+  },
+  {
+    "id": "1399",
+    "name": "Salmon Sandwich",
+    "nameZh": "三文鱼三明治"
+  },
+  {
+    "id": "1400",
+    "name": "Minnow Sandwich",
+    "nameZh": "小鱼三明治"
+  },
+  {
+    "id": "1401",
+    "name": "Goldfish Sandwich",
+    "nameZh": "金鱼三明治"
+  },
+  {
+    "id": "1402",
+    "name": "Venison Sandwich",
+    "nameZh": "鹿肉三明治"
+  },
+  {
+    "id": "1403",
+    "name": "Bass Sandwich",
+    "nameZh": "鲈鱼三明治"
+  },
+  {
+    "id": "1404",
+    "name": "Beef Sandwich",
+    "nameZh": "牛肉三明治"
+  },
+  {
+    "id": "1405",
+    "name": "Cheese Steak Sandwich",
+    "nameZh": "奶酪牛排三明治"
+  },
+  {
+    "id": "1406",
+    "name": "BLT Sandwich",
+    "nameZh": "BLT三明治"
+  },
+  {
+    "id": "1407",
+    "name": "Beef Sandwich (Inorganic)",
+    "nameZh": "牛肉三明治（无机）"
+  },
+  {
+    "id": "1408",
+    "name": "Cloth Mannequin",
+    "nameZh": "布料人偶"
+  },
+  {
+    "id": "1409",
+    "name": "Metal Mannequin",
+    "nameZh": "金属人偶"
+  },
+  {
+    "id": "1410",
+    "name": "Maple Plaque",
+    "nameZh": "枫木墙柜"
+  },
+  {
+    "id": "1411",
+    "name": "Birch Plaque",
+    "nameZh": "桦木墙柜"
+  },
+  {
+    "id": "1412",
+    "name": "Pine Plaque",
+    "nameZh": "松木墙柜"
+  },
+  {
+    "id": "1413",
+    "name": "Metal Plaque",
+    "nameZh": "金属墙柜"
+  },
+  {
+    "id": "1414",
+    "name": "Maple Ramp Wall",
+    "nameZh": "枫木斜坡墙"
+  },
+  {
+    "id": "1415",
+    "name": "Birch Ramp Wall",
+    "nameZh": "桦木斜坡墙"
+  },
+  {
+    "id": "1416",
+    "name": "Pine Ramp Wall",
+    "nameZh": "松木斜坡墙"
+  },
+  {
+    "id": "1417",
+    "name": "Metal Ramp Wall",
+    "nameZh": "金属斜坡墙"
+  },
+  {
+    "id": "1418",
+    "name": "Brick Ramp Wall",
+    "nameZh": "红砖斜坡墙"
+  },
+  {
+    "id": "1419",
+    "name": "Coalition Bottom",
+    "nameZh": "联盟裤子"
+  },
+  {
+    "id": "1420",
+    "name": "Ensign Coalition Top",
+    "nameZh": "联盟上衣"
+  },
+  {
+    "id": "1421",
+    "name": "Lieutenant Coalition Top",
+    "nameZh": "联盟上尉上衣"
+  },
+  {
+    "id": "1422",
+    "name": "Major Coalition Top",
+    "nameZh": "联盟少校上衣"
+  },
+  {
+    "id": "1423",
+    "name": "Commander Coalition Top",
+    "nameZh": "联盟指挥官上衣"
+  },
+  {
+    "id": "1424",
+    "name": "Captain Coalition Top",
+    "nameZh": "联盟船长上衣"
+  },
+  {
+    "id": "1425",
+    "name": "Coalition Vest",
+    "nameZh": "联盟防弹衣"
+  },
+  {
+    "id": "1426",
+    "name": "Coalition Cap",
+    "nameZh": "联盟帽子"
+  },
+  {
+    "id": "1427",
+    "name": "Coalition Helmet",
+    "nameZh": "联盟头盔"
+  },
+  {
+    "id": "1428",
+    "name": "Coalition Beret",
+    "nameZh": "联盟贝雷帽"
+  },
+  {
+    "id": "1429",
+    "name": "Coalition Captain Hat",
+    "nameZh": "联盟船长帽"
+  },
+  {
+    "id": "1430",
+    "name": "Upgraded Cake Blueprint",
+    "nameZh": "蛋糕升级(蓝图)"
+  },
+  {
+    "id": "1431",
+    "name": "Upgraded Cake",
+    "nameZh": "蛋糕升级(蓝图)"
+  },
+  {
+    "id": "1432",
+    "name": "Upgraded Fishing Rod",
+    "nameZh": "强化钓竿"
+  },
+  {
+    "id": "1433",
+    "name": "Upgraded Fishing Rod Blueprint",
+    "nameZh": "强化钓竿(蓝图)"
+  },
+  {
+    "id": "1434",
+    "name": "Raw Squid",
+    "nameZh": "生鱿鱼"
+  },
+  {
+    "id": "1435",
+    "name": "Cooked Squid",
+    "nameZh": "熟鱿鱼"
+  },
+  {
+    "id": "1436",
+    "name": "Quadbarrel",
+    "nameZh": "四管散弹猎枪"
+  },
+  {
+    "id": "1437",
+    "name": "Quadbarrel Blueprint",
+    "nameZh": "四管散弹猎枪(蓝图)"
+  },
+  {
+    "id": "1438",
+    "name": "Bayonet",
+    "nameZh": "刺刀"
+  },
+  {
+    "id": "1439",
+    "name": "Bayonet Blueprint",
+    "nameZh": "刺刀(蓝图)"
+  },
+  {
+    "id": "1440",
+    "name": "Industrial Gas Can",
+    "nameZh": "工业油桶"
+  },
+  {
+    "id": "1441",
+    "name": "Shadowstalker Mk II (Mk 2)",
+    "nameZh": "MK.II"
+  },
+  {
+    "id": "1442",
+    "name": "Shadowstalker Mk II (Mk 2) Scope",
+    "nameZh": "MK.II瞄准镜"
+  },
+  {
+    "id": "1443",
+    "name": "Shadowstalker Mk II (Mk 2) Drum",
+    "nameZh": "MK.II弹股"
+  },
+  {
+    "id": "1444",
+    "name": "Bluntforce Muffler",
+    "nameZh": "消音"
+  },
+  {
+    "id": "1445",
+    "name": "Walkie Talkie",
+    "nameZh": "对讲机"
+  },
+  {
+    "id": "1446",
+    "name": "Earpiece",
+    "nameZh": "耳机"
+  },
+  {
+    "id": "1447",
+    "name": "Scalar",
+    "nameZh": "Scalar冲锋枪"
+  },
+  {
+    "id": "1448",
+    "name": "Scalar Iron Sights",
+    "nameZh": "Scalar冲锋枪弹夹"
+  },
+  {
+    "id": "1449",
+    "name": "Scalar Magazine",
+    "nameZh": "Scalar冲锋枪弹夹"
+  },
+  {
+    "id": "1450",
+    "name": "Vehicle Battery",
+    "nameZh": "载具电池"
+  },
+  {
+    "id": "1451",
+    "name": "Tire",
+    "nameZh": "轮胎"
+  },
+  {
+    "id": "1452",
+    "name": "Whole Coconut",
+    "nameZh": "整个椰子"
+  },
+  {
+    "id": "1453",
+    "name": "Split Coconut",
+    "nameZh": "半个椰子"
+  },
+  {
+    "id": "1454",
+    "name": "Black Trunks",
+    "nameZh": "黑色游泳裤"
+  },
+  {
+    "id": "1455",
+    "name": "Blue Trunks",
+    "nameZh": "蓝色游泳裤"
+  },
+  {
+    "id": "1456",
+    "name": "Green Trunks",
+    "nameZh": "绿色游泳裤"
+  },
+  {
+    "id": "1457",
+    "name": "Orange Trunks",
+    "nameZh": "橘色游泳裤"
+  },
+  {
+    "id": "1458",
+    "name": "Purple Trunks",
+    "nameZh": "紫色游泳裤"
+  },
+  {
+    "id": "1459",
+    "name": "Red Trunks",
+    "nameZh": "红色游泳裤"
+  },
+  {
+    "id": "1460",
+    "name": "White Trunks",
+    "nameZh": "白色游泳裤"
+  },
+  {
+    "id": "1461",
+    "name": "Yellow Trunks",
+    "nameZh": "黄色游泳裤"
+  },
+  {
+    "id": "1462",
+    "name": "Coastguard Top",
+    "nameZh": "海岸警卫队上衣"
+  },
+  {
+    "id": "1463",
+    "name": "Coastguard Bottom",
+    "nameZh": "海岸警卫队裤子"
+  },
+  {
+    "id": "1464",
+    "name": "Blindfold",
+    "nameZh": "蒙眼布"
+  },
+  {
+    "id": "1465",
+    "name": "Picket Sign",
+    "nameZh": "路障警示牌"
+  },
+  {
+    "id": "1466",
+    "name": "Stereo",
+    "nameZh": "收音机"
+  },
+  {
+    "id": "1467",
+    "name": "Maple Placard",
+    "nameZh": "枫木标语牌"
+  },
+  {
+    "id": "1468",
+    "name": "Birch Placard",
+    "nameZh": "桦木标语牌"
+  },
+  {
+    "id": "1469",
+    "name": "Pine Placard",
+    "nameZh": "松木标语牌"
+  },
+  {
+    "id": "1470",
+    "name": "Metal Placard",
+    "nameZh": "金属标语牌"
+  },
+  {
+    "id": "1471",
+    "name": "(temp) Fighter Jet HMG",
+    "nameZh": "HMG机枪（物品不存在）"
+  },
+  {
+    "id": "1472",
+    "name": "Fighter Jet Hat",
+    "nameZh": "战斗机飞行员帽子"
+  },
+  {
+    "id": "1473",
+    "name": "Fighter Jet Top",
+    "nameZh": "战斗机飞行员上衣"
+  },
+  {
+    "id": "1474",
+    "name": "Fighter Jet Bottom",
+    "nameZh": "战斗机飞行员裤子"
+  },
+  {
+    "id": "1475",
+    "name": "Jackhammer",
+    "nameZh": "手持式电钻"
+  },
+  {
+    "id": "1476",
+    "name": "Luger",
+    "nameZh": "鲁格手枪"
+  },
+  {
+    "id": "1477",
+    "name": "MP40 Maschinengewehr",
+    "nameZh": "MP40 二战冲锋枪"
+  },
+  {
+    "id": "1479",
+    "name": "MP40 Maschinengewehr Magazine",
+    "nameZh": "MP40弹匣"
+  },
+  {
+    "id": "1480",
+    "name": "Determinator",
+    "nameZh": "散弹左轮"
+  },
+  {
+    "id": "1481",
+    "name": "Empire",
+    "nameZh": "UMP45冲锋枪"
+  },
+  {
+    "id": "1482",
+    "name": "Empire Iron Sights",
+    "nameZh": "UMP45冲锋枪瞄准镜"
+  },
+  {
+    "id": "1483",
+    "name": "Empire Magazine",
+    "nameZh": "UMP45冲锋枪弹匣"
+  },
+  {
+    "id": "1484",
+    "name": "Devil's Bane",
+    "nameZh": "AA-12 自动霰弹枪"
+  },
+  {
+    "id": "1485",
+    "name": "Devil's Bane Magazine",
+    "nameZh": "AA-12 自动霰弹枪弹匣"
+  },
+  {
+    "id": "1486",
+    "name": "Devil's Bane Iron Sights",
+    "nameZh": "AA-12 自动霰弹枪瞄准镜"
+  },
+  {
+    "id": "1487",
+    "name": "Luger Magazine",
+    "nameZh": "鲁格手枪弹匣"
+  },
+  {
+    "id": "1488",
+    "name": "Swissgewher",
+    "nameZh": "SG 551 LB突击步枪"
+  },
+  {
+    "id": "1489",
+    "name": "Swissgewehr Iron Sights",
+    "nameZh": "SG 551 LB突击步枪瞄准镜"
+  },
+  {
+    "id": "1490",
+    "name": "Swissgewehr Magazine",
+    "nameZh": "SG 551 LB突击步枪弹匣"
+  },
+  {
+    "id": "1491",
+    "name": "Military Top",
+    "nameZh": "德国军用上衣"
+  },
+  {
+    "id": "1492",
+    "name": "Ghillie Top Peaks",
+    "nameZh": "黑色吉利服上衣"
+  },
+  {
+    "id": "1493",
+    "name": "Ghillie Bottom Peaks",
+    "nameZh": "黑色吉利肤裤子"
+  },
+  {
+    "id": "1494",
+    "name": "Ghillie Hood Peaks",
+    "nameZh": "黑色吉利服头套"
+  },
+  {
+    "id": "1495",
+    "name": "Ghillie Vest Peaks",
+    "nameZh": "黑色吉利服防弹衣"
+  },
+  {
+    "id": "1498",
+    "name": "Lederhosen Top",
+    "nameZh": "皮短裤套装上衣"
+  },
+  {
+    "id": "1499",
+    "name": "Lederhosen Bottom",
+    "nameZh": "皮短裤套装裤子"
+  },
+  {
+    "id": "1500",
+    "name": "Ghillie Nettings",
+    "nameZh": "黑色吉利铁丝网"
+  },
+  {
+    "id": "1501",
+    "name": "EA Tee",
+    "nameZh": "EA T恤"
+  },
+  {
+    "id": "1502",
+    "name": "EA Beret",
+    "nameZh": "EA 贝雷帽"
+  },
+  {
+    "id": "1503",
+    "name": "Zweihander",
+    "nameZh": "德国双手剑"
+  },
+  {
+    "id": "1504",
+    "name": "Pickelhaube",
+    "nameZh": "尖顶头盔"
+  },
+  {
+    "id": "1505",
+    "name": "Kaiser Top",
+    "nameZh": "凯撒上衣"
+  },
+  {
+    "id": "1506",
+    "name": "Kaiser Bottom",
+    "nameZh": "凯撒裤子"
+  },
+  {
+    "id": "1507",
+    "name": "Socketwrench",
+    "nameZh": "套筒扳手（拆轮子）"
+  },
+  {
+    "id": "1508",
+    "name": "Compass",
+    "nameZh": "指南针"
+  },
+  {
+    "id": "1509",
+    "name": "Wall Clock",
+    "nameZh": "钟"
+  },
+  {
+    "id": "1510",
+    "name": "Explosive Chewing Gum",
+    "nameZh": "爆炸口香糖"
+  },
+  {
+    "id": "1511",
+    "name": "Arctic Alicepack",
+    "nameZh": "北极爱丽丝背包"
+  },
+  {
+    "id": "1512",
+    "name": "Arctic Ghillie Top",
+    "nameZh": "北极吉利服上衣"
+  },
+  {
+    "id": "1513",
+    "name": "Arctic Ghillie Bottom",
+    "nameZh": "北极吉利服裤子"
+  },
+  {
+    "id": "1514",
+    "name": "Arctic Ghillie Vest",
+    "nameZh": "北极吉利服防弹衣"
+  },
+  {
+    "id": "1515",
+    "name": "Arctic Ghillie Hood",
+    "nameZh": "北极吉利服头罩"
+  },
+  {
+    "id": "1516",
+    "name": "Arctic Military Top",
+    "nameZh": "北极军用上衣"
+  },
+  {
+    "id": "1517",
+    "name": "Arctic Military Bottom",
+    "nameZh": "北极军用裤子"
+  },
+  {
+    "id": "1518",
+    "name": "Arctic Military Vest",
+    "nameZh": "北极军用防弹衣"
+  },
+  {
+    "id": "1519",
+    "name": "Arctic Military Helmet",
+    "nameZh": "北极军用头盔"
+  },
+  {
+    "id": "1520",
+    "name": "Impact Grenade",
+    "nameZh": "撞击手雷"
+  },
+  {
+    "id": "1524",
+    "name": "Zero Kelvin Weapon Kit",
+    "nameZh": "零号开尔文武器箱"
+  },
+  {
+    "id": "1526",
+    "name": "Lil' EBR Rapper Hoodie (Belgium Update)",
+    "nameZh": "Lil'EBR 说唱连帽衫（比利时更新）"
+  },
+  {
+    "id": "1527",
+    "name": "Lil EBR Rapper Pants (Belgium Update)",
+    "nameZh": "Lil-EBR说唱长裤（比利时更新）"
+  },
+  {
+    "id": "1528",
+    "name": "Belgian Infantry Backpack (Belgium)",
+    "nameZh": "比利时步兵背包（比利时）"
+  },
+  {
+    "id": "1529",
+    "name": "Belgian Infantry Gear (Belgium)",
+    "nameZh": "比利时步兵装备（比利时）"
+  },
+  {
+    "id": "1530",
+    "name": "Belgian Infantry Helmet (Belgium)",
+    "nameZh": "比利时步兵头盔（比利时）"
+  },
+  {
+    "id": "1531",
+    "name": "Belgian Infantry Top (Belgium)",
+    "nameZh": "比利时步兵上衣（比利时）"
+  },
+  {
+    "id": "1532",
+    "name": "Belgian Infantry Bottom (Belgium)",
+    "nameZh": "比利时步兵裤子（比利时）"
+  },
+  {
+    "id": "1533",
+    "name": "Belgium Acid Canister",
+    "nameZh": "比利时酸液罐（背包）"
+  },
+  {
+    "id": "1534",
+    "name": "Belgium Acid Vest",
+    "nameZh": "比利时酸液背心"
+  },
+  {
+    "id": "1535",
+    "name": "Belgium Acid Visor",
+    "nameZh": "比利时酸液面罩"
+  },
+  {
+    "id": "1536",
+    "name": "Belgium Acid Shirt",
+    "nameZh": "比利时酸液上衣"
+  },
+  {
+    "id": "1537",
+    "name": "Belgium Acid Pants",
+    "nameZh": "比利时酸液裤子"
+  }
 ]
