@@ -15,9 +15,9 @@ Built with **C++17 + Qt 6** and licensed under the **MIT License**.
   form (player, item, vehicle, location, enum, boolean, integer, float, color,
   duration, map, GUID, ...).
 - **Three output formats** with live preview and one-click copy:
-  - Server terminal: `teleport Ethan/Seattle`
-  - In-game chat: `/teleport Ethan/Seattle`
-  - In-game chat: `@teleport Ethan/Seattle`
+  - Server terminal: `teleport Steve/Seattle`
+  - In-game chat: `/teleport Steve/Seattle`
+  - In-game chat: `@teleport Steve/Seattle`
 - **Multi-type parameters** (e.g. Teleport target = player *or* map location;
   Weather = preset *or* custom GUID) via a mode selector.
 - **Lookup tables** with searchable, editable dropdowns for items, vehicles,
@@ -51,6 +51,41 @@ cmake --build build
 
 The `assets/` and `translations/` directories are copied next to the
 executable automatically.
+
+## Windows packaging
+
+Build a portable executable and an **NSIS installer** (`.exe`) with
+`build.ps1`:
+
+```powershell
+.\build.ps1
+```
+
+Run it from any PowerShell — the script auto-detects and sets up the MSVC
+environment (`vcvars64.bat`), locates CMake/Ninja/NSIS and Qt under
+`C:\Qt`, so no Developer PowerShell is required.
+
+Prerequisites (Windows 10/11):
+
+- [CMake](https://cmake.org/download/) >= 3.16
+- MSVC toolchain — [Visual Studio 2022 Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
+  with the "Desktop development with C++" workload
+- [Ninja](https://ninja-build.org/) (optional; falls back to the Visual
+  Studio generator)
+- [NSIS](https://nsis.sourceforge.io/) 3.x — required for the installer
+- Qt 6 MSVC kit installed under `C:\Qt` (e.g. via the Qt Online Installer:
+  **Qt 6.7.x → MSVC 2019 64-bit**, which ships `windeployqt.exe`)
+
+What it produces in `build-win/`:
+
+- `UnturnedCmdGen.exe` — runnable anywhere (Qt runtime DLLs bundled by
+  `windeployqt` during the install step)
+- `unturnedcmdgen-<version>-win64.exe` — the NSIS installer (Start-menu +
+  desktop shortcuts, uninstaller, license page)
+
+The app auto-detects `assets/` and `translations/` next to the executable, so
+the install layout is flat and requires no code changes. Use
+`.\build.ps1 -SkipInstaller` to build only the executable.
 
 ## Tests
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(unturnedCmdGen VERSION 1.0.0 LANGUAGES CXX)
+project(unturnedCmdGen VERSION 1.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -28,6 +28,20 @@ if(CMAKE_CROSSCOMPILING)
     if(HOST_RCC)
         set_target_properties(Qt6::rcc PROPERTIES IMPORTED_LOCATION "${HOST_RCC}")
     endif()
+endif()
+
+# --- Windows resource file (application icon + version info) ---------------
+# The .rc is generated so the icon path can be made absolute (rc.exe and
+# windres resolve resource paths relative to the .rc location otherwise).
+set(WINDOWS_RC)
+if(WIN32)
+    set(RC_VERSION "${PROJECT_VERSION}")
+    string(REPLACE "." "," RC_VERSION "${RC_VERSION}")
+    set(RC_VERSION "${RC_VERSION},0") # VERSIONINFO needs major,minor,revision,build
+    set(WIN_ICON_PATH "${CMAKE_CURRENT_SOURCE_DIR}/icons/unturned.ico")
+    string(REPLACE "/" "\\\\" WIN_ICON_PATH "${WIN_ICON_PATH}")
+    configure_file(windows/app.rc.in "${CMAKE_CURRENT_BINARY_DIR}/app.rc" @ONLY)
+    set(WINDOWS_RC "${CMAKE_CURRENT_BINARY_DIR}/app.rc")
 endif()
 
 # --- Test target -----------------------------------------------------------
@@ -121,7 +135,7 @@ set(HEADERS
     src/util/Translator.h
 )
 
-add_executable(unturnedCmdGen ${SOURCES} ${HEADERS}
+add_executable(unturnedCmdGen WIN32 ${SOURCES} ${HEADERS} ${WINDOWS_RC}
     resources.qrc)
 
 # The installed binary is "UnturnedCmdGen" (capitalized), matching the desktop
@@ -147,36 +161,109 @@ add_custom_command(TARGET unturnedCmdGen POST_BUILD
     COMMENT "Copying assets and translations next to executable"
 )
 
-install(TARGETS unturnedCmdGen DESTINATION bin)
-install(DIRECTORY assets/ DESTINATION share/unturnedCmdGen/assets)
-install(DIRECTORY translations/ DESTINATION share/unturnedCmdGen/translations)
+# Install layout. The app probes for assets/ and translations/ next to the
+# executable first, so Windows uses a flat layout under the install root;
+# Linux keeps the FHS share/ layout used by the .deb package.
+if(WIN32)
+    install(TARGETS unturnedCmdGen DESTINATION .)
+    install(DIRECTORY assets/ DESTINATION assets)
+    install(DIRECTORY translations/ DESTINATION translations)
 
-# Desktop integration (used by the .deb package).
-install(FILES packaging/unturnedcmdgen.desktop
-        DESTINATION share/applications)
-install(FILES packaging/unturnedcmdgen.svg
-        DESTINATION share/icons/hicolor/scalable/apps)
+    # Bundle the Qt runtime next to the installed exe. Runs during the CPack
+    # staging install, so the DLLs/plugins land in the same place the installer
+    # packages. Skipped when cross-compiling (windeployqt is a Windows tool).
+    if(NOT CMAKE_CROSSCOMPILING)
+        get_filename_component(_qt_root
+            "${Qt6_DIR}/../../.." ABSOLUTE)
+        find_program(WINDEPLOYQT_EXECUTABLE windeployqt
+            HINTS "${_qt_root}/bin" "${_qt_root}/lib/qt6/bin")
+        if(WINDEPLOYQT_EXECUTABLE)
+            install(CODE "
+                message(STATUS \"Running windeployqt on installed executable\")
+                execute_process(
+                    COMMAND \"${WINDEPLOYQT_EXECUTABLE}\"
+                            --release
+                            --no-translations
+                            --no-system-d3d-compiler
+                            --no-opengl-sw
+                            \"\${CMAKE_INSTALL_PREFIX}/UnturnedCmdGen.exe\"
+                    RESULT_VARIABLE _wdq_result
+                    ERROR_VARIABLE _wdq_err
+                )
+                if(NOT _wdq_result EQUAL 0)
+                    message(WARNING \"windeployqt failed: \${_wdq_err}\")
+                endif()
+            ")
+        else()
+            message(WARNING "windeployqt not found; Qt runtime DLLs will not be "
+                            "bundled and the installer may not run without Qt.")
+        endif()
+    endif()
+else()
+    install(TARGETS unturnedCmdGen DESTINATION bin)
+    install(DIRECTORY assets/ DESTINATION share/unturnedCmdGen/assets)
+    install(DIRECTORY translations/ DESTINATION share/unturnedCmdGen/translations)
 
-# --- Packaging (deb) --------------------------------------------------------
-set(CPACK_GENERATOR "DEB")
+    # Desktop integration (used by the .deb package).
+    install(FILES packaging/unturnedcmdgen.desktop
+            DESTINATION share/applications)
+    install(FILES packaging/unturnedcmdgen.svg
+            DESTINATION share/icons/hicolor/scalable/apps)
+endif()
+
+# --- Packaging --------------------------------------------------------------
 set(CPACK_PACKAGE_NAME "unturnedcmdgen")
 set(CPACK_PACKAGE_VENDOR "Ethan Zhou")
 set(CPACK_PACKAGE_CONTACT "Ethan Zhou <evil.jellyfish@outlook.com>")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Unturned server command generator")
-set(CPACK_DEBIAN_PACKAGE_DESCRIPTION
-    "Generates Unturned server commands in terminal or in-game chat format with ease.")
-set(CPACK_DEBIAN_PACKAGE_SECTION "games")
-set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
-set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://github.com/ether0x20/UnturnedCmdGen")
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Ethan Zhou <evil.jellyfish@outlook.com>")
-# Compute Depends automatically from the binary's shared library requirements,
-# falling back to the known Qt6 runtime packages.
-set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-set(CPACK_DEBIAN_PACKAGE_DEPENDS
-    "libqt6core6t64, libqt6gui6t64, libqt6widgets6t64, libqt6network6t64")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
-set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
-set(CPACK_PACKAGE_FILE_NAME
-    "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}_${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+
+if(WIN32)
+    set(CPACK_GENERATOR "NSIS")
+    set(CPACK_PACKAGE_INSTALL_DIRECTORY "UnturnedCmdGen")
+    set(CPACK_NSIS_DISPLAY_NAME "Unturned Command Generator")
+    set(CPACK_NSIS_PACKAGE_NAME "Unturned Command Generator ${PROJECT_VERSION}")
+    set(CPACK_NSIS_MUI_ICON "${CMAKE_CURRENT_SOURCE_DIR}/icons/unturned.ico")
+    set(CPACK_NSIS_MUI_UNIICON "${CMAKE_CURRENT_SOURCE_DIR}/icons/unturned.ico")
+    set(CPACK_NSIS_INSTALLED_ICON_NAME "UnturnedCmdGen.exe")
+    set(CPACK_NSIS_INSTALL_ROOT "$PROGRAMFILES64")
+    set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
+    set(CPACK_NSIS_MANIFEST_DPI_AWARE ON)
+    set(CPACK_NSIS_HELP_LINK "https://github.com/ether0x20/UnturnedCmdGen")
+    set(CPACK_NSIS_URL_INFO_ABOUT "https://github.com/ether0x20/UnturnedCmdGen")
+    set(CPACK_NSIS_CONTACT "Ethan Zhou <evil.jellyfish@outlook.com>")
+    set(CPACK_PACKAGE_EXECUTABLES
+        "UnturnedCmdGen;Unturned Command Generator")
+    set(CPACK_CREATE_DESKTOP_LINKS "UnturnedCmdGen")
+    set(CPACK_PACKAGE_FILE_NAME "unturnedcmdgen-${PROJECT_VERSION}-win64")
+    # Version resource for the installer itself. Without these the file
+    # properties show Publisher/Product as "(Unknown)".
+    set(_nsis_ver_num "${PROJECT_VERSION}.0") # NSIS wants dotted X.X.X.X
+    set(CPACK_NSIS_DEFINES "VIProductVersion \\\"${_nsis_ver_num}\\\"
+VIAddVersionKey \\\"ProductName\\\" \\\"Unturned Command Generator\\\"
+VIAddVersionKey \\\"ProductVersion\\\" \\\"${PROJECT_VERSION}\\\"
+VIAddVersionKey \\\"FileDescription\\\" \\\"Unturned server command generator\\\"
+VIAddVersionKey \\\"FileVersion\\\" \\\"${PROJECT_VERSION}\\\"
+VIAddVersionKey \\\"CompanyName\\\" \\\"Ethan Zhou\\\"
+VIAddVersionKey \\\"LegalCopyright\\\" \\\"Copyright (c) Ethan Zhou. MIT License.\\\"
+VIAddVersionKey \\\"OriginalFilename\\\" \\\"${CPACK_PACKAGE_FILE_NAME}.exe\\\"")
+else()
+    set(CPACK_GENERATOR "DEB")
+    set(CPACK_DEBIAN_PACKAGE_DESCRIPTION
+        "Generates Unturned server commands in terminal or in-game chat format with ease.")
+    set(CPACK_DEBIAN_PACKAGE_SECTION "games")
+    set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
+    set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://github.com/ether0x20/UnturnedCmdGen")
+    set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Ethan Zhou <evil.jellyfish@outlook.com>")
+    # Compute Depends automatically from the binary's shared library requirements,
+    # falling back to the known Qt6 runtime packages.
+    set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+    set(CPACK_DEBIAN_PACKAGE_DEPENDS
+        "libqt6core6t64, libqt6gui6t64, libqt6widgets6t64, libqt6network6t64")
+    set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
+    set(CPACK_PACKAGE_FILE_NAME
+        "${CPACK_PACKAGE_NAME}_${CPACK_PACKAGE_VERSION}_${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
+endif()
 
 include(CPack)

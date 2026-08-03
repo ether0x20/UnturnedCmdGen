@@ -129,7 +129,7 @@
   "RCON port": "RCON 端口",
   "RCON password": "RCON 密码",
 
-  "Unturned Command Generator v0.1.0\n\nGenerates Unturned server commands in terminal or in-game chat format.\n\nData tables are editable JSON files under the assets/ directory next to this executable.": "Unturned 指令生成器 v0.1.0\n\n以终端或游戏内聊天格式生成 Unturned 服务器指令。\n\n数据表是可编辑的 JSON 文件，位于可执行文件旁的 assets/ 目录。",
+  "Unturned Command Generator\n\nGenerates Unturned server commands in terminal or in-game chat format.\n\nData tables are editable JSON files under the assets/ directory next to this executable.": "Unturned 指令生成器\n\n以终端或游戏内聊天格式生成 Unturned 服务器指令。\n\n数据表是可编辑的 JSON 文件，位于可执行文件旁的 assets/ 目录。",
   "Failed to load commands.json from the assets directory.\n\nMake sure the assets/ folder sits next to this executable.": "无法从 assets 目录加载 commands.json。\n\n请确保 assets/ 文件夹位于可执行文件旁。",
 
   "Commands: %1": "指令：%1",

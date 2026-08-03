@@ -1,5 +1,6 @@
 # Build output
 build/
+build-win/
 *.o
 *.obj
 *.a
@@ -7,9 +8,11 @@ build/
 *.dll
 *.dylib
 
-# Built executable / Debian package
+# Built executable / Debian package / Windows installer
 UnturnedCmdGen
+UnturnedCmdGen.exe
 unturnedcmdgen_*.deb
+unturnedcmdgen-*-win64.exe
 
 # CMake
 CMakeCache.txt

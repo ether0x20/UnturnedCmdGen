@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file alias="icons/unturned.png">icons/unturned.png</file>
+        <file alias="icons/unturned.ico">icons/unturned.ico</file>
     </qresource>
 </RCC>

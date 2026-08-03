@@ -186,7 +186,7 @@ void MainWindow::openSettingsDialog()
 void MainWindow::showAbout()
 {
     QMessageBox::about(this, tr("About"),
-                       tr("Unturned Command Generator v0.1.0\n\n"
+                       tr("Unturned Command Generator\n\n"
                           "Generates Unturned server commands in terminal "
                           "or in-game chat format.\n\n"
                           "Data tables are editable JSON files under the "
