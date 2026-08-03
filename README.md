@@ -1,4 +1,4 @@
-# Unturned Command Generator (AI Generated)
+# Unturned Command Generator
 
 A cross-platform desktop tool that builds Unturned server commands in either
 **server-terminal** or **in-game chat** format, with searchable lookup tables,
