@@ -1,8 +1,7 @@
 # Unturned Command Generator
 
 A cross-platform desktop tool that builds Unturned server commands in either
-**server-terminal** or **in-game chat** format, with searchable lookup tables,
-bilingual (English/Chinese) item annotations, and an optional RCON/TCP bridge
+**server-terminal** or **in-game chat** format, with searchable lookup tables, item annotations, and an optional RCON/TCP bridge
 to send commands directly to your server.
 
 Built with **C++17 + Qt 6** and licensed under the **MIT License**.
@@ -23,14 +22,12 @@ Built with **C++17 + Qt 6** and licensed under the **MIT License**.
 - **Lookup tables** with searchable, editable dropdowns for items, vehicles,
   animals, effects, quests, achievements and skillsets, plus a user-maintained
   player table.
-- **Bilingual data**: optional `nameZh` Chinese annotations are shown as
-  `[id] name / 中文` and searchable, while commands always use the English name.
 - **In-app CRUD** for every table from the `Data` menu; edits persist back to
   the source JSON files.
 - **Import / Export JSON** with merge-or-replace and a built-in format tutorial.
-- **Language switching** (English / 中文) from the `Language` menu, persisted
+- **Language switching**  from the `Language` menu, persisted
   across restarts.
-- **Optional RCON/TCP bridge** to send generated commands to the server.
+- **Optional RCON/TCP bridge (Experimental) ** to send generated commands to the server.
 
 ---
 
@@ -87,6 +84,15 @@ The app auto-detects `assets/` and `translations/` next to the executable, so
 the install layout is flat and requires no code changes. Use
 `.\build.ps1 -SkipInstaller` to build only the executable.
 
+## Windows portable version packaging
+
+Build a portable executable and environment required with
+`build_portable.ps1`:
+
+```powershell
+.\build.ps1
+```
+
 ## Tests
 
 The logic tests and a headless GUI smoke test are enabled with
@@ -120,7 +126,7 @@ Add your own data (items, mod content, players) via
 ```
 assets/          Bundled data tables & command definitions (JSON)
 translations/    UI translations (JSON, English source -> Chinese)
-docs/            Import format documentation (EN / 中文)
+docs/            Import format documentation
 src/model/       Data models (Command, Parameter, AppData)
 src/controller/  Command generation, tables, RCON, app wiring
 src/ui/          Qt widgets (main window, dynamic parameter form, dialogs)
